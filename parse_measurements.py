@@ -61,7 +61,7 @@ for domain, summary in summaries.items():
     total_checks_ru = summary["successes_ru"] + summary["errors_ru"]
     uptime_rate_ru = summary["successes_ru"] / total_checks_ru
 
-    print(f"### {domain}")
+    print(f"### `{domain}`")
     print(f"* {summary['successes_ww']}/{total_checks_ww} SSL checks passed worlwide")
     print(f"* {summary['successes_ru']}/{total_checks_ru} SSL checks passed in Russia")
     print("")
