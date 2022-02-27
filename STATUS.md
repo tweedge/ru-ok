@@ -1,368 +1,98 @@
-### `belta.by`
-* 0/25 SSL checks passed worlwide
-* 1/25 SSL checks passed in Russia
-
-### `president.gov.by`
-* 24/24 SSL checks passed worlwide
-* 23/23 SSL checks passed in Russia
-
-### `magnit.ru`
-* 21/24 SSL checks passed worlwide
-* 25/25 SSL checks passed in Russia
-
-### `gazeta.ru`
-* 24/24 SSL checks passed worlwide
-* 25/25 SSL checks passed in Russia
-
-### `radiobrestfm.by`
-* 1/23 SSL checks passed worlwide
-* 0/26 SSL checks passed in Russia
-
-### `mil.ru`
-* 1/25 SSL checks passed worlwide
-* 22/22 SSL checks passed in Russia
-
-### `www.energo.by`
-* 0/23 SSL checks passed worlwide
-* 0/25 SSL checks passed in Russia
-
-### `proverki.gov.ru`
-* 0/22 SSL checks passed worlwide
-* 7/26 SSL checks passed in Russia
-
-### `www.ctv.by`
-* 0/25 SSL checks passed worlwide
-* 0/22 SSL checks passed in Russia
-
-### `www.evraz.com`
-* 24/24 SSL checks passed worlwide
-* 24/24 SSL checks passed in Russia
-
-### `www.government.by`
-* 0/25 SSL checks passed worlwide
-* 0/25 SSL checks passed in Russia
-
-### `www.prokuratura.gov.by`
-* 5/24 SSL checks passed worlwide
-* 24/24 SSL checks passed in Russia
-
-### `rkn.gov.ru`
-* 21/22 SSL checks passed worlwide
-* 26/26 SSL checks passed in Russia
-
-### `www.belneftekhim.by`
-* 1/25 SSL checks passed worlwide
-* 0/23 SSL checks passed in Russia
-
-### `belinvestbank.by`
-* 17/25 SSL checks passed worlwide
-* 19/24 SSL checks passed in Russia
-
-### `www.gazprom.ru`
-* 0/24 SSL checks passed worlwide
-* 2/26 SSL checks passed in Russia
-
-### `www.metalloinvest.com`
-* 24/24 SSL checks passed worlwide
-* 23/23 SSL checks passed in Russia
-
-### `www.024.by`
-* 25/25 SSL checks passed worlwide
-* 25/25 SSL checks passed in Russia
-
-### `api.developer.sber.ru`
-* 5/23 SSL checks passed worlwide
-* 1/23 SSL checks passed in Russia
-
-### `www.mos.ru`
-* 0/24 SSL checks passed worlwide
-* 0/24 SSL checks passed in Russia
-
-### `lukoil.ru`
-* 18/23 SSL checks passed worlwide
-* 25/25 SSL checks passed in Russia
-
-### `mk.ru`
-* 9/24 SSL checks passed worlwide
-* 25/25 SSL checks passed in Russia
-
-### `ria.ru`
-* 19/25 SSL checks passed worlwide
-* 24/24 SSL checks passed in Russia
-
-### `www.tvrmogilev.by`
-* 0/22 SSL checks passed worlwide
-* 0/25 SSL checks passed in Russia
-
-### `pfr.gov.ru`
-* 1/22 SSL checks passed worlwide
-* 5/25 SSL checks passed in Russia
-
-### `www.sberbank.ru`
-* 2/25 SSL checks passed worlwide
-* 1/24 SSL checks passed in Russia
-
-### `pwd.wto.economy.gov.ru`
-* 1/25 SSL checks passed worlwide
-* 0/25 SSL checks passed in Russia
-
-### `www.tmk-group.ru`
-* 23/23 SSL checks passed worlwide
-* 27/27 SSL checks passed in Russia
-
-### `www.vtb.ru`
-* 1/24 SSL checks passed worlwide
-* 19/23 SSL checks passed in Russia
-
-### `www.surgutneftegas.ru`
-* 25/25 SSL checks passed worlwide
-* 23/23 SSL checks passed in Russia
-
-### `belmarket.by`
-* 24/24 SSL checks passed worlwide
-* 22/24 SSL checks passed in Russia
-
-### `stroi.gov.ru`
-* 0/25 SSL checks passed worlwide
-* 0/24 SSL checks passed in Russia
-
-### `radiostalica.by`
-* 0/24 SSL checks passed worlwide
-* 0/26 SSL checks passed in Russia
-
-### `kremlin.ru`
-* 0/24 SSL checks passed worlwide
-* 0/24 SSL checks passed in Russia
-
-### `radiusfm.by`
-* 0/25 SSL checks passed worlwide
-* 0/25 SSL checks passed in Russia
-
-### `cloud.rkn.gov.ru`
-* 0/24 SSL checks passed worlwide
-* 0/23 SSL checks passed in Russia
-
-### `radiomir.by`
-* 2/24 SSL checks passed worlwide
-* 0/25 SSL checks passed in Russia
-
-### `www.bellegprom.by`
-* 0/23 SSL checks passed worlwide
-* 0/27 SSL checks passed in Russia
-
-### `rbc.ru`
-* 20/24 SSL checks passed worlwide
-* 24/25 SSL checks passed in Russia
-
-### `government.ru`
-* 0/25 SSL checks passed worlwide
-* 0/25 SSL checks passed in Russia
-
-### `belarus24.by`
-* 0/25 SSL checks passed worlwide
-* 0/23 SSL checks passed in Russia
-
-### `customs.gov.ru`
-* 0/23 SSL checks passed worlwide
-* 0/25 SSL checks passed in Russia
-
-### `grodnonews.by`
-* 0/25 SSL checks passed worlwide
-* 0/23 SSL checks passed in Russia
-
-### `mail.rkn.gov.ru`
-* 1/23 SSL checks passed worlwide
-* 20/26 SSL checks passed in Russia
-
-### `nlmk.com`
-* 0/24 SSL checks passed worlwide
-* 19/23 SSL checks passed in Russia
-
-### `yaplakal.com`
-* 17/23 SSL checks passed worlwide
-* 19/24 SSL checks passed in Russia
-
-### `www.belapb.by`
-* 0/25 SSL checks passed worlwide
-* 0/24 SSL checks passed in Russia
-
-### `www.polymetalinternational.com`
-* 6/24 SSL checks passed worlwide
-* 9/26 SSL checks passed in Russia
-
-### `brrb.by`
-* 0/25 SSL checks passed worlwide
-* 0/25 SSL checks passed in Russia
-
-### `omk.ru`
-* 0/21 SSL checks passed worlwide
-* 0/26 SSL checks passed in Russia
-
-### `belres.by`
-* 0/25 SSL checks passed worlwide
-* 0/23 SSL checks passed in Russia
-
-### `mininform.gov.by`
-* 0/25 SSL checks passed worlwide
-* 0/23 SSL checks passed in Russia
-
-### `nangs.org`
-* 0/25 SSL checks passed worlwide
-* 0/24 SSL checks passed in Russia
-
-### `ont.by`
-* 1/23 SSL checks passed worlwide
-* 0/24 SSL checks passed in Russia
-
-### `bgp.by`
-* 22/24 SSL checks passed worlwide
-* 24/24 SSL checks passed in Russia
-
-### `radiobelarus.by`
-* 1/25 SSL checks passed worlwide
-* 0/24 SSL checks passed in Russia
-
-### `www.belarus.by`
-* 0/25 SSL checks passed worlwide
-* 0/25 SSL checks passed in Russia
-
-### `rec.gov.by`
-* 1/24 SSL checks passed worlwide
-* 0/23 SSL checks passed in Russia
-
-### `alfaradio.by`
-* 1/24 SSL checks passed worlwide
-* 0/26 SSL checks passed in Russia
-
-### `bezformata.com`
-* 25/25 SSL checks passed worlwide
-* 25/25 SSL checks passed in Russia
-
-### `belarusbank.by`
-* 0/22 SSL checks passed worlwide
-* 0/26 SSL checks passed in Russia
-
-### `www.mil.by`
-* 0/23 SSL checks passed worlwide
-* 0/24 SSL checks passed in Russia
-
-### `pikabu.ru`
-* 24/24 SSL checks passed worlwide
-* 22/23 SSL checks passed in Russia
-
-### `www.kgb.by`
-* 1/25 SSL checks passed worlwide
-* 1/23 SSL checks passed in Russia
-
-### `www.gazprombank.ru`
-* 0/24 SSL checks passed worlwide
-* 24/24 SSL checks passed in Russia
-
-### `www.tvr.by`
-* 0/24 SSL checks passed worlwide
-* 1/25 SSL checks passed in Russia
-
-### `www.uralkali.com`
-* 23/25 SSL checks passed worlwide
-* 24/24 SSL checks passed in Russia
-
-### `rmk-group.ru`
-* 24/24 SSL checks passed worlwide
-* 24/24 SSL checks passed in Russia
-
-### `sputnik.by`
-* 20/25 SSL checks passed worlwide
-* 24/25 SSL checks passed in Russia
-
-### `www.nornickel.com`
-* 18/21 SSL checks passed worlwide
-* 25/25 SSL checks passed in Russia
-
-### `kp.ru`
-* 21/24 SSL checks passed worlwide
-* 25/25 SSL checks passed in Russia
-
-### `www.gosuslugi.ru`
-* 24/25 SSL checks passed worlwide
-* 23/23 SSL checks passed in Russia
-
-### `yandex.by`
-* 23/23 SSL checks passed worlwide
-* 24/24 SSL checks passed in Russia
-
-### `riafan.ru`
-* 8/23 SSL checks passed worlwide
-* 25/26 SSL checks passed in Russia
-
-### `api.sberbank.ru`
-* 3/25 SSL checks passed worlwide
-* 25/25 SSL checks passed in Russia
-
-### `www.slonves.by`
-* 0/24 SSL checks passed worlwide
-* 0/25 SSL checks passed in Russia
-
-### `www.sb.by`
-* 1/23 SSL checks passed worlwide
-* 0/25 SSL checks passed in Russia
-
-### `www.tatneft.ru`
-* 0/25 SSL checks passed worlwide
-* 14/23 SSL checks passed in Russia
-
-### `www.belnovosti.by`
-* 20/23 SSL checks passed worlwide
-* 25/25 SSL checks passed in Russia
-
-### `mogilevnews.by`
-* 0/24 SSL checks passed worlwide
-* 0/26 SSL checks passed in Russia
-
-### `www.nbrb.by`
-* 3/24 SSL checks passed worlwide
-* 2/25 SSL checks passed in Russia
-
-### `ya.ru`
-* 21/21 SSL checks passed worlwide
-* 28/28 SSL checks passed in Russia
-
-### `minsknews.by`
-* 14/24 SSL checks passed worlwide
-* 14/24 SSL checks passed in Russia
-
-### `mvd.gov.ru`
-* 5/24 SSL checks passed worlwide
-* 24/24 SSL checks passed in Russia
-
-### `kommersant.ru`
-* 5/24 SSL checks passed worlwide
-* 7/23 SSL checks passed in Russia
-
-### `www.sibur.ru`
-* 19/25 SSL checks passed worlwide
-* 24/24 SSL checks passed in Russia
-
-### `www.nalog.gov.ru`
-* 0/25 SSL checks passed worlwide
-* 23/24 SSL checks passed in Russia
-
-### `bankdabrabyt.by`
-* 0/24 SSL checks passed worlwide
-* 0/26 SSL checks passed in Russia
-
-### `www.severstal.com`
-* 0/24 SSL checks passed worlwide
-* 0/26 SSL checks passed in Russia
-
-### `www.eurosib.ru`
-* 20/24 SSL checks passed worlwide
-* 25/25 SSL checks passed in Russia
-
-### `www.mvd.gov.by`
-* 1/25 SSL checks passed worlwide
-* 0/24 SSL checks passed in Russia
-
-### `zarya.by`
-* 22/22 SSL checks passed worlwide
-* 22/23 SSL checks passed in Russia
-
+# All-Target Statistics
+* 28/92 sites up worldwide (733/2205 checks passed)
+* 41/92 sites up in Russia (1033/2252 checks passed)
+I am considering a site 'up' when it passes 75% or more uptime checks
+
+# Specific Targets
+* `belta.by` passed 0% of checks globally, vs 4% in Russia
+* `president.gov.by` passed 100% of checks globally, vs 100% in Russia
+* `magnit.ru` passed 88% of checks globally, vs 100% in Russia
+* `gazeta.ru` passed 100% of checks globally, vs 100% in Russia
+* `radiobrestfm.by` passed 4% of checks globally, vs 0% in Russia
+* `mil.ru` passed 4% of checks globally, vs 100% in Russia
+* `www.energo.by` passed 0% of checks globally, vs 0% in Russia
+* `proverki.gov.ru` passed 0% of checks globally, vs 27% in Russia
+* `www.ctv.by` passed 0% of checks globally, vs 0% in Russia
+* `www.evraz.com` passed 100% of checks globally, vs 100% in Russia
+* `www.government.by` passed 0% of checks globally, vs 0% in Russia
+* `www.prokuratura.gov.by` passed 21% of checks globally, vs 100% in Russia
+* `rkn.gov.ru` passed 95% of checks globally, vs 100% in Russia
+* `www.belneftekhim.by` passed 4% of checks globally, vs 0% in Russia
+* `belinvestbank.by` passed 68% of checks globally, vs 79% in Russia
+* `www.gazprom.ru` passed 0% of checks globally, vs 8% in Russia
+* `www.metalloinvest.com` passed 100% of checks globally, vs 100% in Russia
+* `www.024.by` passed 100% of checks globally, vs 100% in Russia
+* `api.developer.sber.ru` passed 22% of checks globally, vs 4% in Russia
+* `www.mos.ru` passed 0% of checks globally, vs 0% in Russia
+* `lukoil.ru` passed 78% of checks globally, vs 100% in Russia
+* `mk.ru` passed 38% of checks globally, vs 100% in Russia
+* `ria.ru` passed 76% of checks globally, vs 100% in Russia
+* `www.tvrmogilev.by` passed 0% of checks globally, vs 0% in Russia
+* `pfr.gov.ru` passed 5% of checks globally, vs 20% in Russia
+* `www.sberbank.ru` passed 8% of checks globally, vs 4% in Russia
+* `pwd.wto.economy.gov.ru` passed 4% of checks globally, vs 0% in Russia
+* `www.tmk-group.ru` passed 100% of checks globally, vs 100% in Russia
+* `www.vtb.ru` passed 4% of checks globally, vs 83% in Russia
+* `www.surgutneftegas.ru` passed 100% of checks globally, vs 100% in Russia
+* `belmarket.by` passed 100% of checks globally, vs 92% in Russia
+* `stroi.gov.ru` passed 0% of checks globally, vs 0% in Russia
+* `radiostalica.by` passed 0% of checks globally, vs 0% in Russia
+* `kremlin.ru` passed 0% of checks globally, vs 0% in Russia
+* `radiusfm.by` passed 0% of checks globally, vs 0% in Russia
+* `cloud.rkn.gov.ru` passed 0% of checks globally, vs 0% in Russia
+* `radiomir.by` passed 8% of checks globally, vs 0% in Russia
+* `www.bellegprom.by` passed 0% of checks globally, vs 0% in Russia
+* `rbc.ru` passed 83% of checks globally, vs 96% in Russia
+* `government.ru` passed 0% of checks globally, vs 0% in Russia
+* `belarus24.by` passed 0% of checks globally, vs 0% in Russia
+* `customs.gov.ru` passed 0% of checks globally, vs 0% in Russia
+* `grodnonews.by` passed 0% of checks globally, vs 0% in Russia
+* `mail.rkn.gov.ru` passed 4% of checks globally, vs 77% in Russia
+* `nlmk.com` passed 0% of checks globally, vs 83% in Russia
+* `yaplakal.com` passed 74% of checks globally, vs 79% in Russia
+* `www.belapb.by` passed 0% of checks globally, vs 0% in Russia
+* `www.polymetalinternational.com` passed 25% of checks globally, vs 35% in Russia
+* `brrb.by` passed 0% of checks globally, vs 0% in Russia
+* `omk.ru` passed 0% of checks globally, vs 0% in Russia
+* `belres.by` passed 0% of checks globally, vs 0% in Russia
+* `mininform.gov.by` passed 0% of checks globally, vs 0% in Russia
+* `nangs.org` passed 0% of checks globally, vs 0% in Russia
+* `ont.by` passed 4% of checks globally, vs 0% in Russia
+* `bgp.by` passed 92% of checks globally, vs 100% in Russia
+* `radiobelarus.by` passed 4% of checks globally, vs 0% in Russia
+* `www.belarus.by` passed 0% of checks globally, vs 0% in Russia
+* `rec.gov.by` passed 4% of checks globally, vs 0% in Russia
+* `alfaradio.by` passed 4% of checks globally, vs 0% in Russia
+* `bezformata.com` passed 100% of checks globally, vs 100% in Russia
+* `belarusbank.by` passed 0% of checks globally, vs 0% in Russia
+* `www.mil.by` passed 0% of checks globally, vs 0% in Russia
+* `pikabu.ru` passed 100% of checks globally, vs 96% in Russia
+* `www.kgb.by` passed 4% of checks globally, vs 4% in Russia
+* `www.gazprombank.ru` passed 0% of checks globally, vs 100% in Russia
+* `www.tvr.by` passed 0% of checks globally, vs 4% in Russia
+* `www.uralkali.com` passed 92% of checks globally, vs 100% in Russia
+* `rmk-group.ru` passed 100% of checks globally, vs 100% in Russia
+* `sputnik.by` passed 80% of checks globally, vs 96% in Russia
+* `www.nornickel.com` passed 86% of checks globally, vs 100% in Russia
+* `kp.ru` passed 88% of checks globally, vs 100% in Russia
+* `www.gosuslugi.ru` passed 96% of checks globally, vs 100% in Russia
+* `yandex.by` passed 100% of checks globally, vs 100% in Russia
+* `riafan.ru` passed 35% of checks globally, vs 96% in Russia
+* `api.sberbank.ru` passed 12% of checks globally, vs 100% in Russia
+* `www.slonves.by` passed 0% of checks globally, vs 0% in Russia
+* `www.sb.by` passed 4% of checks globally, vs 0% in Russia
+* `www.tatneft.ru` passed 0% of checks globally, vs 61% in Russia
+* `www.belnovosti.by` passed 87% of checks globally, vs 100% in Russia
+* `mogilevnews.by` passed 0% of checks globally, vs 0% in Russia
+* `www.nbrb.by` passed 12% of checks globally, vs 8% in Russia
+* `ya.ru` passed 100% of checks globally, vs 100% in Russia
+* `minsknews.by` passed 58% of checks globally, vs 58% in Russia
+* `mvd.gov.ru` passed 21% of checks globally, vs 100% in Russia
+* `kommersant.ru` passed 21% of checks globally, vs 30% in Russia
+* `www.sibur.ru` passed 76% of checks globally, vs 100% in Russia
+* `www.nalog.gov.ru` passed 0% of checks globally, vs 96% in Russia
+* `bankdabrabyt.by` passed 0% of checks globally, vs 0% in Russia
+* `www.severstal.com` passed 0% of checks globally, vs 0% in Russia
+* `www.eurosib.ru` passed 83% of checks globally, vs 100% in Russia
+* `www.mvd.gov.by` passed 4% of checks globally, vs 0% in Russia
+* `zarya.by` passed 100% of checks globally, vs 96% in Russia
