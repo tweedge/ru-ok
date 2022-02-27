@@ -22,7 +22,7 @@
 * 1/25 SSL checks passed worlwide
 * 22/22 SSL checks passed in Russia
 
-### www.energo.by
+### `www.energo.by`
 * 0/23 SSL checks passed worlwide
 * 0/25 SSL checks passed in Russia
 
