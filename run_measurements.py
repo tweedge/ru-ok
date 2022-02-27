@@ -101,6 +101,9 @@ for domain, target_info in targets.items():
 print("Waiting fifteen minutes to ensure (under normal conditions) all results load")
 time.sleep(900)
 
+probe_cache = {}
+print("Beginning to fetch and enrich results ...")
+
 for domain, measurements in measurements.items():
     for measurement in measurements:
         backoff = 2
@@ -111,6 +114,7 @@ for domain, measurements in measurements.items():
             )
             if request.status_code == 200:
                 response = request.json()
+                print(f"Retrieved {len(response)} results from {domain} measurement {measurement}")
                 break
             else:
                 print(f"Fail - response code was {request.status_code} instead of 200")
@@ -122,9 +126,40 @@ for domain, measurements in measurements.items():
                 print(f"Failed to retrieve results")
                 break
 
+        updated_response = []
+        for result in response:
+            if result["prb_id"] in probe_cache.keys():
+                print(f"Found probe ID {result['prb_id']} in cache")
+                result["probe_data"] = probe_cache[result["prb_id"]]
+            else:
+                backoff = 0.5
+                time.sleep(backoff)
+                while True:
+                    request = requests.get(
+                        f"https://atlas.ripe.net/api/v2/probes/{result['prb_id']}/?format=json"
+                    )
+                    if request.status_code == 200:
+                        response = request.json()
+                        probe_cache[result['prb_id']] = response
+                        result["probe_data"] = response
+                        print(f"Retrieved probe data for probe {result['prb_id']} and cached result")
+                        break
+                    else:
+                        print(f"Fail - response code was {request.status_code} instead of 200")
+                    
+                    backoff = backoff * 2
+                    time.sleep(backoff)
+
+                    if backoff > 15:
+                        print(f"Failed to retrieve any probe data")
+                        break
+
+            updated_response.append(result)
+
         save_path = f"{args.output_folder}/{domain}/{measurement}/result.json"
         path = pathlib.Path(save_path)
         path.parent.mkdir(parents=True, exist_ok=True)
 
+        print(f"Saving enriched data to {save_path}")
         with open(save_path, "w") as result_file:
-            json.dump(response, result_file, indent=2)
+            json.dump(updated_response, result_file, indent=2)
