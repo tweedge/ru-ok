@@ -1,7 +1,8 @@
 # All-Target Statistics
 * 28/92 sites up worldwide (733/2205 checks passed)
 * 41/92 sites up in Russia (1033/2252 checks passed)
-I am considering a site 'up' when it passes 75% or more uptime checks
+
+Note: I am considering a site 'up' when it passes 75% or more uptime checks
 
 # Specific Targets
 * `belta.by` passed 0% of checks globally, vs 4% in Russia

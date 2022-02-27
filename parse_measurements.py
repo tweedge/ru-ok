@@ -81,7 +81,8 @@ for root, dirs, files in os.walk(args.input_folder):
 print("# All-Target Statistics")
 print(f"* {total_sites_up_ww}/{len(targets.keys())} sites up worldwide ({total_successes_ww}/{(total_successes_ww+total_errors_ww)} checks passed)")
 print(f"* {total_sites_up_ru}/{len(targets.keys())} sites up in Russia ({total_successes_ru}/{(total_successes_ru+total_errors_ru)} checks passed)")
-print(f"I am considering a site 'up' when it passes 75% or more uptime checks")
+print("")
+print("Note: I am considering a site 'up' when it passes 75% or more uptime checks")
 print("")
 print("# Specific Targets")
 
