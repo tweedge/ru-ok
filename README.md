@@ -4,7 +4,7 @@
 
 This is a very quick project to assess the status of Russian internet properties (via RIPE Atlas) being targeted by hacktivists. Specifically, I am evaluating every target listed in Ukraine's hacktivist "IT ARMY" Telegram group with 50 unique probes (25 worldwide, and 25 *within Russia*) to check for service availability.
 
-I wanted to check connectivity from within Russia's borders because I saw many mixed reports across Twitter and Reddit, with international parties (Americans, Ukrainians, etc.) claiming many sites had been knocked offline, where Russians chimed in that many sites remained online for them. Given that Russia has a sovereign internet policy and can do as much as [disconnect themselves from the internet entirely](https://www.reuters.com/technology/russia-disconnected-global-internet-tests-rbc-daily-2021-07-22/) - could Russia simply be dropping DDoS traffic at the edge of the country (ex. using their transit providers) before the traffic hit the targets?
+I wanted to check connectivity from within Russia's borders because I saw many mixed reports across Twitter and Reddit, with international parties (Americans, Ukrainians, etc.) claiming many sites had been knocked offline, where Russians chimed in that many sites remained online for them. Given that Russia has a sovereign internet policy and can do as much as [disconnect themselves from the internet entirely](https://www.reuters.com/technology/russia-disconnected-global-internet-tests-rbc-daily-2021-07-22/) - could Russia be dropping most/all traffic at the edge of the country (ex. using their transit providers) before the DDoS traffic hit the targets?
 
 Based on the measurements I took, I was partially correct - per the last run around 2022-02-27 ~19:15:00 UTC, the status of all targets is:
 * **28/92** sites up worldwide (733/2205 checks passed)
@@ -29,7 +29,7 @@ So, how can we get a higher-accuracy assessment of the situation without:
 * Trying to use a VPN to 'appear' in Russia (which undoubtedly many others are doing right now, and may be rate-limited or blocked)
 * Physically being in Russia
 
-### Methodology
+## Methodology
 
 To get a better sense of the global situation, I elected to use [RIPE Atlas](https://atlas.ripe.net/) to run some active measurements against each domain targeted by the IT ARMY of Ukraine Telegram.
 
@@ -44,3 +44,23 @@ For each measurement:
 * I collect the measurement information after waiting 15 minutes and analysis on it
 
 Afterwards, results are uploaded to this GitHub. Due to the daily cap on results I can collect, I will try to run this analysis every few hours, but cannot run this continually without breaching my account quotas.
+
+## FAQ
+
+#### Why did you make a snide comment about websites that "DDoS" people earlier?
+
+They're low throughput compared to any real DDoS tool, they're especially easy to neuter (site operators can disable all [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) requests by denying the HTTP OPTIONS method), several are made anonymously (and who knows if your IP/information is being logged straight to the Kremlin), etc. It's not a good way to get involved.
+
+#### How can I get involved?
+
+Read over the resources [here](https://www.npr.org/2022/02/25/1082992947/ukraine-support-help). Spread factual information about the invasion - even take the time to fact-check yourself before you post. Accept that many Russians do not want this. Practice compassion. There are thousands of soldiers dying on both sides at a politicians' whim again.
+
+#### I meant how can I get involved in *hacktivism*.
+
+I'm not going to tell you that and I'm explicitly not encouraging it.
+
+#### How can I help you measure this stuff?
+
+If you have RIPE Atlas credits, run your own analysis, do new studies, fork this hacked-together code, have fun with it!
+
+I have several million credits and don't *need* donations, but I still wouldn't mind them. Reach out to me on Twitter if you have credits you don't want.
