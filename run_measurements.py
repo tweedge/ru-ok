@@ -5,8 +5,6 @@ import requests
 import time
 from pprint import pprint
 
-from torch import save
-
 parser = argparse.ArgumentParser(
     description="Runs measurements in RIPE ATLAS of SSL connectivity to targets in targets.json"
 )
