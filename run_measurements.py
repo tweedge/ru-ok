@@ -44,7 +44,27 @@ def parameters_builder(domain, bill_email):
                 "resolve_on_probe": True,
                 "skip_dns_check": True,
                 "type": "sslcert",
-            }
+            },
+            {
+                "target": domain,
+                "af": 4,
+                "timeout": 4000,
+                "description": f'TCP "ping" measurement to {domain}',
+                "protocol": "TCP",
+                "resolve_on_probe": True,
+                "packets": 3,
+                "size": 0,
+                "first_hop": 1,
+                "max_hops": 32,
+                "spread": 60,
+                "port": 80,
+                "paris": 16,
+                "destination_option_size": 0,
+                "hop_by_hop_option_size": 0,
+                "dont_fragment": False,
+                "skip_dns_check": True,
+                "type": "traceroute",
+            },
         ],
         "probes": [
             {
@@ -71,7 +91,7 @@ with open("targets.json") as targets_file:
 measurements = {}
 
 for domain, target_info in targets.items():
-    backoff = 2
+    backoff = 10
     time.sleep(backoff)
     while True:
         request = requests.post(
@@ -85,14 +105,18 @@ for domain, target_info in targets.items():
                 measurements[domain] = response["measurements"]
                 break
             else:
-                print(f"Request for {domain} measurement failed, no 'measurements' key in JSON response")
+                print(
+                    f"Request for {domain} measurement failed, no 'measurements' key in JSON response"
+                )
         else:
-            print(f"Request for {domain} measurement failed, response code was {request.status_code} instead of 201")
-        
+            print(
+                f"Request for {domain} measurement failed, response code was {request.status_code} instead of 201"
+            )
+
         backoff = backoff * 2
         time.sleep(backoff)
 
-        if backoff > 60:
+        if backoff > 600:
             print(f"Failed to create measurement for {domain} too many times, skipping")
             break
 
@@ -112,11 +136,13 @@ for domain, measurements in measurements.items():
             )
             if request.status_code == 200:
                 response = request.json()
-                print(f"Retrieved {len(response)} results from {domain} measurement {measurement}")
+                print(
+                    f"Retrieved {len(response)} results from {domain} measurement {measurement}"
+                )
                 break
             else:
                 print(f"Fail - response code was {request.status_code} instead of 200")
-            
+
             backoff = backoff * 2
             time.sleep(backoff)
 
@@ -138,13 +164,17 @@ for domain, measurements in measurements.items():
                     )
                     if request.status_code == 200:
                         response = request.json()
-                        probe_cache[result['prb_id']] = response
+                        probe_cache[result["prb_id"]] = response
                         result["probe_data"] = response
-                        print(f"Retrieved probe data for probe {result['prb_id']} and cached result")
+                        print(
+                            f"Retrieved probe data for probe {result['prb_id']} and cached result"
+                        )
                         break
                     else:
-                        print(f"Fail - response code was {request.status_code} instead of 200")
-                    
+                        print(
+                            f"Fail - response code was {request.status_code} instead of 200"
+                        )
+
                     backoff = backoff * 2
                     time.sleep(backoff)
 
