@@ -59,6 +59,12 @@ The caveat to this approach is that, while we have access to reliable connectivi
 
 ## FAQ
 
+#### How can I help you measure this stuff?
+
+If you have RIPE Atlas credits, run your own analysis, do new studies, fork this hacked-together code, have fun with it!
+
+If you have spare RIPE Atlas credits that you don't want/need, I'd certainly appreciate any credit donation you can spare! Reach out to me on [Twitter](https://twitter.com/_tweedge) or [Reddit](https://www.reddit.com/user/tweedge) if that's the case and I'll send you my RIPE Atlas email.
+
 #### Why did you make a snide comment about websites that "DDoS" people earlier?
 
 They're low throughput compared to any real DDoS tool, they're especially easy to neuter (site operators can disable all [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) requests by denying the HTTP OPTIONS method), several are made anonymously (and who knows if your IP/information is being logged straight to the Kremlin), etc. It's not a good way to get involved.
@@ -70,12 +76,6 @@ Read over the resources [here](https://www.npr.org/2022/02/25/1082992947/ukraine
 #### I meant how can I get involved in *hacktivism*.
 
 I'm not going to tell you that and I'm explicitly not encouraging it.
-
-#### How can I help you measure this stuff?
-
-If you have RIPE Atlas credits, run your own analysis, do new studies, fork this hacked-together code, have fun with it!
-
-I have several million credits and don't *need* donations, but I still wouldn't mind them. Reach out to me on Twitter if you have credits you don't want.
 
 #### How are you connecting to a specific TCP port using RIPE Atlas?
 
