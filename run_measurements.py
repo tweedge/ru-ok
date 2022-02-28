@@ -91,7 +91,7 @@ with open("targets.json") as targets_file:
 measurements = {}
 
 for domain, target_info in targets.items():
-    backoff = 10
+    backoff = 20
     time.sleep(backoff)
     while True:
         request = requests.post(
