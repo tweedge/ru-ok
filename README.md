@@ -14,7 +14,7 @@ Based on the measurements I took, I was partially correct - per the last run aro
 
 So there is measurably higher availability for several target sites within Russia's borders, but unless traffic from known RIPE Atlas probes is also filtered (unlikely), Russia is still facing substantial outages in the face of hacktivism.
 
-The most recent uptime statistics for each site are also available in [STATUS.md](https://github.com/tweedge/ru-ok/blob/main/STATUS.md), and you can use this to see which sites have the most interesting availability characteristics at-a-glance. For example, the Kremlin site has been quoted as offline by many people on Reddit and Twitter. As of the last scan, we can clearly see that while `kremlin.ru` has <20% availability internationally, it has ~80% availability within Russia - a start difference.
+The most recent uptime statistics for each site are also available in [STATUS.md](https://github.com/tweedge/ru-ok/blob/main/STATUS.md), and you can use this to see which sites have the most interesting availability characteristics at-a-glance. For example, the Kremlin site has been quoted as offline by many people on Reddit and Twitter. As of the last scan, we can clearly see that while `kremlin.ru` has <20% availability internationally, it has ~80% availability within Russia - a stark difference.
 
 ## Why?
 
@@ -49,6 +49,14 @@ For each measurement:
 
 Afterwards, results are uploaded to this GitHub. Due to the daily cap on results I can collect, I will try to run this analysis every few hours, but cannot run this continually without breaching my account quotas.
 
+### Measurements Taken
+
+The caveat to this approach is that, while we have access to reliable connectivity data from within Russia itself, the measurements themselves are not application-layer. RIPE Atlas is designed for network operators and only supports common network protocols - it explicitly and intentionally does *not* support application-layer checks.
+
+**For HTTP**: The measurement connects via TCP (i.e. this is *not* application layer) to port 80 with an empty payload. This checks that the port is open and responsive, but not necessarily that the service itself is functioning. However, if the connection *failed* we should reasonably expect that the service is down as well - it is rare that sites do not run HTTP, even if only to redirect to HTTPS.
+
+**For HTTPS**: The measurement connects via SSL/TLS to port 443 with the SNI set to the corresponding domain. This checks that the port is open and responsive *and* that a secure connection can be established, but not necessarily that the service itself is functioning. However, if the connection *failed* we may be able to expect that the service is down as well. Not all sites run HTTPS, but for those that were *previously* known to use HTTPS, this would reasonably indicate that those HTTPS services are down.
+
 ## FAQ
 
 #### Why did you make a snide comment about websites that "DDoS" people earlier?
@@ -68,3 +76,7 @@ I'm not going to tell you that and I'm explicitly not encouraging it.
 If you have RIPE Atlas credits, run your own analysis, do new studies, fork this hacked-together code, have fun with it!
 
 I have several million credits and don't *need* donations, but I still wouldn't mind them. Reach out to me on Twitter if you have credits you don't want.
+
+#### How are you connecting to a specific TCP port using RIPE Atlas?
+
+It's a "TCP Ping" - using traceroute with TCP instead of the usual ICMP. You can see this workaround described by Vesna Manojlovic in [Measuring Reachability of your Web Server using RIPE Atlas](https://www.ripe.net/support/training/ripe-ncc-educa/presentations/measuring-reachability-of-your-web-server-using-ripe-atlas.pdf) - it's a neat trick.
