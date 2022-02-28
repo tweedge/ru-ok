@@ -128,21 +128,23 @@ print("")
 
 for test in ["HTTP (80)", "HTTPS (443)"]:
     print(f"# Testing Individual Targets on {test}")
+    print("| Remark | Domain | % Success WW | % Success RU |")
+    print("| -------|--------|--------------|--------------|")
 
     for summary in summaries:
         if summary["type"] != test:
             continue
 
-        quip = ""
+        quip = " "
         pct_ww = round(summary['worldwide']['uptime_rate'] * 100)
         pct_ru = round(summary['in Russia']['uptime_rate'] * 100)
 
         if pct_ww + 25 < pct_ru:
-            quip = "**INTERESTING**, "
+            quip = "**INTERESTING**"
         if pct_ru + 25 < pct_ww:
-            quip = "**WEIRD**, "
+            quip = "**WEIRD**"
         print(
-            f"* {quip}`{summary['domain']}` passed {pct_ww}% of checks globally, vs {pct_ru}% in Russia"
+            f"| {quip} | `{summary['domain']}` | {pct_ww}% | {pct_ru}% |"
         )
 
     if test == "HTTP (80)":
