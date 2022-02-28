@@ -47,7 +47,7 @@ For each measurement:
 * Probes report the data retrieved - or any errors encountered - to RIPE Atlas
 * I collect the measurement information after waiting 15 minutes and analysis on it
 
-Afterwards, results are uploaded to this GitHub. Due to the daily cap on results I can collect, I will try to run this analysis every few hours, but cannot run this continually without breaching my account quotas.
+Afterwards, results are uploaded to this GitHub. Due to the daily cap on results I can collect, I will try to run this analysis every 8-12 hours, but cannot run this continually without breaching my account quotas.
 
 ### Measurements Taken
 
