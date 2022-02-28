@@ -2,15 +2,19 @@
 
 **Note: While this repository discusses the results of hacktivism in the Russo-Ukrainian War, I am not personally participating in that hacktivism, and I am not condoning or encouraging hacktivism in this repository. For people looking to help Ukraine, especially nontechnical people who have been using certain webpages to "DDoS" Russia, please look into safe and legal options [listed here](https://www.npr.org/2022/02/25/1082992947/ukraine-support-help).**
 
-This is a very quick project to assess the status of Russian internet properties (via RIPE Atlas) being targeted by hacktivists. Specifically, I am evaluating every target listed in Ukraine's hacktivist "IT ARMY" Telegram group with 50 unique probes (25 worldwide, and 25 *within Russia*) to check for service availability.
+This is a very quick project to assess the status of Russian internet properties (via RIPE Atlas) being targeted by hacktivists. Specifically, I am evaluating every target listed in Ukraine's hacktivist "IT ARMY" Telegram group with 100 unique probes (50 worldwide, and 50 *within Russia*) to check for service availability on both HTTP and HTTPS.
 
 I wanted to check connectivity from within Russia's borders because I saw many mixed reports across Twitter and Reddit, with international parties (Americans, Ukrainians, etc.) claiming many sites had been knocked offline, where Russians chimed in that many sites remained online for them. Given that Russia has a sovereign internet policy and can do as much as [disconnect themselves from the internet entirely](https://www.reuters.com/technology/russia-disconnected-global-internet-tests-rbc-daily-2021-07-22/) - could Russia be dropping most/all traffic at the edge of the country (ex. using their transit providers) before the DDoS traffic hit the targets?
 
-Based on the measurements I took, I was partially correct - per the last run around 2022-02-27 ~19:15:00 UTC, the status of all targets is:
-* **25/92** sites up worldwide (706/2199 checks passed)
-* **38/92** sites up in Russia (987/2261 checks passed)
+Based on the measurements I took, I was partially correct - per the last run around 2022-02-28 ~03:00:00 UTC, the status of all targets is:
+* **42/92** HTTP (80) targeted sites up in Russia
+* **20/92** HTTP (80) targeted sites up worldwide
+* **38/92** HTTPS (443) targeted sites up in Russia
+* **28/92** HTTPS (443) targeted sites up worldwide
 
-So there is measurably higher availability for several target sites within Russia's borders, but unless traffic from known RIPE Atlas probes is also filtered (unlikely), Russia is still facing substantial outages in the face of hacktivism. For those curious, the most recent uptime statistics for each site are also available in [STATUS.md](https://github.com/tweedge/ru-ok/blob/main/STATUS.md).
+So there is measurably higher availability for several target sites within Russia's borders, but unless traffic from known RIPE Atlas probes is also filtered (unlikely), Russia is still facing substantial outages in the face of hacktivism.
+
+The most recent uptime statistics for each site are also available in [STATUS.md](https://github.com/tweedge/ru-ok/blob/main/STATUS.md), and you can use this to see which sites have the most interesting availability characteristics at-a-glance. For example, the Kremlin site has been quoted as offline by many people on Reddit and Twitter. As of the last scan, we can clearly see that while `kremlin.ru` has <20% availability internationally, it has ~80% availability within Russia - a start difference.
 
 ## Why?
 
@@ -39,8 +43,8 @@ For each measurement:
 * I input a target domain
 * I request 25 probes from anywhere in the world, and another 25 probes from only within Russian IP space
 * All probes individually perform a DNS lookup for the target domain
-* If the DNS lookup is successful, all probes individually to make an SSL/TLS connection on port 443
-* Probes report the certificate retrieved - or any errors encountered - to RIPE Atlas
+* If the DNS lookup is successful, all probes perform their desired measurement check (more on this in a minute)
+* Probes report the data retrieved - or any errors encountered - to RIPE Atlas
 * I collect the measurement information after waiting 15 minutes and analysis on it
 
 Afterwards, results are uploaded to this GitHub. Due to the daily cap on results I can collect, I will try to run this analysis every few hours, but cannot run this continually without breaching my account quotas.

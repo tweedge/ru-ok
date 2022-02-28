@@ -92,8 +92,12 @@ for results in all_results:
             else:
                 bin = "successes"
         elif m_type == "HTTP (80)":
-            print("not implemented, smartass")
-            exit()
+            bin = "successes"
+            for hop in result["result"]:
+                if "error" in hop.keys():
+                    bin = "errors"
+                elif hop["hop"] == 255:
+                    bin = "errors"
         else:
             print("not implemented, smartass")
             exit()
@@ -153,7 +157,7 @@ for test in ["HTTP (80)", "HTTPS (443)"]:
         print("")
     elif test == "HTTPS (443)":
         print("")
-        print("*Additional information:* The above data is gathered via RIPE Atlas. The measurement connects via SSL/TLS (i.e. this is *not* application layer) to port 443 with the SNI set to the corresponding domain. This checks that the port is open and responsive *and* that a secure connection can be established, but not necessarily that the service itself is functioning. However, if the connection *failed* we may be able to expect that the service is down as well. Not all sites run HTTPS (ex. `kremlin.ru` does not) - but for those that were *previously* known to use HTTPS, this would reasonably indicate that those HTTPS services are down.")
+        print("*Additional information:* The above data is gathered via RIPE Atlas. The measurement connects via SSL/TLS (i.e. this is *not* application layer) to port 443 with the SNI set to the corresponding domain. This checks that the port is open and responsive *and* that a secure connection can be established, but not necessarily that the service itself is functioning. However, if the connection *failed* we may be able to expect that the service is down as well. Not all sites run HTTPS, but for those that were *previously* known to use HTTPS, this would reasonably indicate that those HTTPS services are down.")
         print("")
     else:
         print("")
