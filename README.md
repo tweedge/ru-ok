@@ -63,11 +63,7 @@ The caveat to this approach is that, while we have access to reliable connectivi
 
 ### Caveats
 
-In addition to the lack of application-level uptime checking, we also cannot check the functionality of certain other servers "IT ARMY" instructed viewers to attack. These are:
-
-#### DNS (UDP 53)
-
-On 2022-02-28, IT ARMY instructed readers to DDoS DNS servers belonging to `www.sberbank.ru`:
+**No direct DNS server testing.** On 2022-02-28, IT ARMY instructed readers to DDoS DNS servers belonging to `www.sberbank.ru`:
 
 * 194.54.14.186
 * 194.54.14.187
@@ -77,6 +73,8 @@ On 2022-02-28, IT ARMY instructed readers to DDoS DNS servers belonging to `www.
 I cannot measure the impact to these servers, as I haven't found a way to reliably do UDP port checking with RIPE Atlas (for a transport-level check), and the DNS resolution measurement is resolving a domain name with the *probe's* resolver (you cannot input a custom resolver to test).
 
 *If* these are the authoritative servers for `www.sberbank.ru` - I don't know/haven't checked - then that would be caught in any existing measurement with a DNS failure. Further, a success doesn't necessarily mean the targeted DNS servers would be up or down *anyway* (due to resolver caching). So in my opinion, this is not worth pursuing.
+
+**No testing internationalized domain names.** On 2022-03-01, IT ARMY instructed readers to take down `объясняем.рф`. Attempting to start RIPE Atlas measurements against this domain, the requests failed with a status code of 400. I am triaging this for later results and hope to add this to the sample, for examply by punycoding the domain before attempting to start the sample.
 
 ## FAQ
 
