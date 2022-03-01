@@ -66,7 +66,7 @@ for results in all_results:
     for result in results:
         if result["probe_data"]["country_code"] == "RU":
             cc = "in Russia"
-        elif result["probe_data"]["country_code"] == "RU":
+        elif result["probe_data"]["country_code"] == "BY":
             cc = "in Belarus"
         else:
             cc = "worldwide"
@@ -138,9 +138,9 @@ for test in ["HTTP (80)", "HTTPS (443)"]:
         pct_ru = summary["in Russia"]["uptime_rate"]
         pct_by = summary["in Belarus"]["uptime_rate"]
 
-        if pct_ww + 20 < pct_ru: # or pct_ww + 20 < pct_by
+        if pct_ww + 40 < pct_ru or pct_ww + 40 < pct_by:
             quip = "**INTERESTING**"
-        elif pct_ru + 20 < pct_ww: # or pct_by + 20 < pct_ww
+        elif pct_ru + 40 < pct_ww or pct_by + 40 < pct_ww:
             quip = "**WEIRD**"
         else:
             quip = " "
