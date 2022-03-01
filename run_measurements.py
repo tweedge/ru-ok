@@ -1,6 +1,7 @@
 import argparse
 import json
 import pathlib
+import random
 import requests
 import time
 from pprint import pprint
@@ -71,13 +72,19 @@ def parameters_builder(domain, bill_email):
                 "tags": {"include": [], "exclude": []},
                 "type": "area",
                 "value": "WW",
-                "requested": 25,
+                "requested": 12,
             },
             {
                 "tags": {"include": [], "exclude": []},
                 "type": "country",
                 "value": "RU",
-                "requested": 25,
+                "requested": 10,
+            },
+            {
+                "tags": {"include": [], "exclude": []},
+                "type": "country",
+                "value": "BY",
+                "requested": 10,
             },
         ],
         "is_oneoff": True,
@@ -88,37 +95,45 @@ def parameters_builder(domain, bill_email):
 with open("targets.json") as targets_file:
     targets = json.load(targets_file)
 
-measurements = {}
+print("Randomizing domains to measure to more effectively sample if credits run out")
+domains_shuf = list(targets.keys())
+random.shuffle(domains_shuf)
 
-for domain, target_info in targets.items():
+measurements = {}
+skip_remaining = False
+
+for domain in domains_shuf:
     backoff = 20
     time.sleep(backoff)
-    while True:
-        request = requests.post(
-            f"https://atlas.ripe.net/api/v2/measurements//?key={args.ripe_atlas_key}",
-            json=parameters_builder(domain, args.ripe_atlas_email),
-        )
-        if request.status_code == 201:
-            response = request.json()
-            if "measurements" in response.keys():
-                print(f"Started measurements for {domain}")
-                measurements[domain] = response["measurements"]
-                break
+    if not skip_remaining:
+        while True:
+            request = requests.post(
+                f"https://atlas.ripe.net/api/v2/measurements//?key={args.ripe_atlas_key}",
+                json=parameters_builder(domain, args.ripe_atlas_email),
+            )
+            if request.status_code == 201:
+                response = request.json()
+                if "measurements" in response.keys():
+                    print(f"Started measurements for {domain}")
+                    measurements[domain] = response["measurements"]
+                    break
+                else:
+                    print(
+                        f"Request for {domain} measurement failed, no 'measurements' key in JSON response"
+                    )
             else:
                 print(
-                    f"Request for {domain} measurement failed, no 'measurements' key in JSON response"
+                    f"Request for {domain} measurement failed, response code was {request.status_code} instead of 201"
                 )
-        else:
-            print(
-                f"Request for {domain} measurement failed, response code was {request.status_code} instead of 201"
-            )
 
-        backoff = backoff * 2
-        time.sleep(backoff)
+            backoff = backoff * 2
+            time.sleep(backoff)
 
-        if backoff > 600:
-            print(f"Failed to create measurement for {domain} too many times, skipping")
-            break
+            if backoff > 600:
+                print(f"Failed to create measurement for {domain} too many times ...")
+                print("This script probably exceeded a RIPE Atlas limit and is now stopping collection.")
+                skip_remaining = True
+                break
 
 print("Waiting fifteen minutes to ensure (under normal conditions) all results load")
 time.sleep(900)
