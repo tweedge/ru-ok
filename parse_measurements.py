@@ -68,6 +68,15 @@ for results in all_results:
             cc = "in Russia"
         elif result["probe_data"]["country_code"] == "BY":
             cc = "in Belarus"
+        elif result["probe_data"]["country_code"] == "UA":
+            # not implemented yet
+            continue
+        elif result["probe_data"]["country_code"] == "PL":
+            # not implemented yet
+            continue
+        elif result["probe_data"]["country_code"] == "RO":
+            # not implemented yet
+            continue
         else:
             cc = "worldwide"
 
@@ -77,12 +86,16 @@ for results in all_results:
             else:
                 bin = "successes"
         elif m_type == "HTTP (80)":
-            bin = "successes"
+            bin = "errors"
             for hop in result["result"]:
                 if "error" in hop.keys():
-                    bin = "errors"
-                elif hop["hop"] == 255:
-                    bin = "errors"
+                    continue
+                else:
+                    destination = result["dst_addr"]
+                for packet in hop["result"]:
+                    if "from" in packet.keys():
+                        if packet["from"] == destination:
+                            bin = "successes"
         else:
             print("not implemented, smartass")
             exit()
@@ -101,7 +114,8 @@ for results in all_results:
             if uptime_rate > 70:
                 totals[m_type][cc]["sites_up"] += 1
         except ZeroDivisionError:
-            uptime_rate = "N/A"
+            pprint(summary)
+            exit()
 
         summary[cc]["uptime_rate"] = uptime_rate
 
@@ -146,8 +160,10 @@ for test in ["HTTP (80)", "HTTPS (443)"]:
         else:
             quip = " "
 
-        table_contents.append(f"| {targets[summary['domain']]['sector']} | `{summary['domain']}` | {pct_ww}% | {pct_ru}% | {pct_by}% | {quip} |")
-    
+        table_contents.append(
+            f"| {targets[summary['domain']]['sector']} | `{summary['domain']}` | {pct_ww}% | {pct_ru}% | {pct_by}% | {quip} |"
+        )
+
     table_contents.sort()
     for line in table_contents:
         print(line)

@@ -2,17 +2,17 @@
 
 **Note: While this repository discusses the results of hacktivism in the Russo-Ukrainian War, I am not personally participating in that hacktivism, and I am not condoning or encouraging hacktivism in this repository. For people looking to help Ukraine, especially nontechnical people who have been using certain webpages to "DDoS" Russia, please look into safe and legal options [listed here](https://www.npr.org/2022/02/25/1082992947/ukraine-support-help).**
 
-This is a very quick project to assess the status of Russian internet properties (via RIPE Atlas) being targeted by hacktivists. Specifically, I am evaluating every target listed in Ukraine's hacktivist "IT ARMY" Telegram group with 64 unique probes (24 worldwide, plus 20 *each* in Russia and Belarus) to check for service availability on both HTTP and HTTPS.
+This is a very quick project to assess the status of Russian internet properties (via RIPE Atlas) being targeted by hacktivists. Specifically, I am evaluating every target listed in Ukraine's hacktivist "IT ARMY" Telegram group with many unique probes to check for service availability on both HTTP and HTTPS.
 
 I wanted to check connectivity from within Russia's borders because I saw many mixed reports across Twitter and Reddit, with international parties (Americans, Ukrainians, etc.) claiming many sites had been knocked offline, where Russians chimed in that many sites remained online for them. The trust is more complex - availability for Russians is being prioritized by many RU-local sites, and international traffic may be facing extreme congestion, or simply be sinkholed in some cases.
 
 Per the last run around 2022-02-29 ~03:30:00 UTC, the status of sampled targets is:
-* **65/124** HTTP (80) sampled target sites up in Russia
+* **62/124** HTTP (80) sampled target sites up in Russia
 * **76/124** HTTP (80) sampled target sites up in Belarus
-* **36/124** HTTP (80) sampled target sites up worldwide
-* **73/124** HTTPS (443) sampled target sites up in Russia
-* **88/124** HTTPS (443) sampled target sites up in Belarus
-* **56/124** HTTPS (443) sampled target sites up worldwide
+* **32/124** HTTP (80) sampled target sites up worldwide
+* **57/124** HTTPS (443) sampled target sites up in Russia
+* **79/124** HTTPS (443) sampled target sites up in Belarus
+* **37/124** HTTPS (443) sampled target sites up worldwide
 
 So there is measurably higher availability for several target sites within Russia's borders, but unless traffic from known RIPE Atlas probes is also filtered (unlikely), Russia is still facing substantial outages in the face of hacktivism.
 
