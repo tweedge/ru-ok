@@ -127,9 +127,10 @@ print("")
 
 for test in ["HTTP (80)", "HTTPS (443)"]:
     print(f"# Testing Individual Targets on {test}")
-    print("| Remark | Domain | % Success WW | % Success RU | % Success BY |")
-    print("| -------|--------|--------------|--------------|--------------|")
+    print("| Sector | Domain | % Up WW | % Up RU | % Up BY | Remark |")
+    print("|--------|--------|---------|---------|---------|--------|")
 
+    table_contents = []
     for summary in summaries:
         if summary["type"] != test:
             continue
@@ -145,7 +146,11 @@ for test in ["HTTP (80)", "HTTPS (443)"]:
         else:
             quip = " "
 
-        print(f"| {quip} | `{summary['domain']}` | {pct_ww}% | {pct_ru}% | {pct_by}% |")
+        table_contents.append(f"| {targets[summary['domain']]['sector']} | `{summary['domain']}` | {pct_ww}% | {pct_ru}% | {pct_by}% | {quip} |")
+    
+    table_contents.sort()
+    for line in table_contents:
+        print(line)
 
     if test == "HTTP (80)":
         print("")
