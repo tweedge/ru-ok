@@ -103,7 +103,7 @@ measurements = {}
 skip_remaining = False
 
 for domain in domains_shuf:
-    backoff = 20
+    backoff = 30
     time.sleep(backoff)
     if not skip_remaining:
         while True:
@@ -131,7 +131,9 @@ for domain in domains_shuf:
 
             if backoff > 600:
                 print(f"Failed to create measurement for {domain} too many times ...")
-                print("This script probably exceeded a RIPE Atlas limit and is now stopping collection.")
+                print(
+                    "This script probably exceeded a RIPE Atlas limit and is now stopping collection."
+                )
                 skip_remaining = True
                 break
 

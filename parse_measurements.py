@@ -30,29 +30,15 @@ summaries = []
 domains_in_sample = {}
 totals = {
     "HTTP (80)": {
-        "worldwide": {
-            "successes": 0,
-            "errors": 0,
-            "sites_up": 0
-        },
-       "in Russia": {
-            "successes": 0,
-            "errors": 0,
-            "sites_up": 0
-        }
+        "worldwide": {"successes": 0, "errors": 0, "sites_up": 0},
+        "in Russia": {"successes": 0, "errors": 0, "sites_up": 0},
+        "in Belarus": {"successes": 0, "errors": 0, "sites_up": 0},
     },
     "HTTPS (443)": {
-        "worldwide": {
-            "successes": 0,
-            "errors": 0,
-            "sites_up": 0
-        },
-       "in Russia": {
-            "successes": 0,
-            "errors": 0,
-            "sites_up": 0
-        }
-    }
+        "worldwide": {"successes": 0, "errors": 0, "sites_up": 0},
+        "in Russia": {"successes": 0, "errors": 0, "sites_up": 0},
+        "in Belarus": {"successes": 0, "errors": 0, "sites_up": 0},
+    },
 }
 
 for results in all_results:
@@ -72,21 +58,16 @@ for results in all_results:
     summary = {
         "domain": domain,
         "type": m_type,
-        "worldwide": {
-            "successes": 0,
-            "errors": 0,
-            "uptime_rate": 0
-        },
-        "in Russia": {
-            "successes": 0,
-            "errors": 0,
-            "uptime_rate": 0
-        }
+        "worldwide": {"successes": 0, "errors": 0, "uptime_rate": 0},
+        "in Russia": {"successes": 0, "errors": 0, "uptime_rate": 0},
+        "in Belarus": {"successes": 0, "errors": 0, "uptime_rate": 0},
     }
 
     for result in results:
         if result["probe_data"]["country_code"] == "RU":
             cc = "in Russia"
+        elif result["probe_data"]["country_code"] == "RU":
+            cc = "in Belarus"
         else:
             cc = "worldwide"
 
@@ -109,61 +90,74 @@ for results in all_results:
         summary[cc][bin] += 1
         totals[m_type][cc][bin] += 1
 
-    for cc in ["in Russia", "worldwide"]:
+    for cc in ["in Russia", "in Belarus", "worldwide"]:
         measurement_count = 0
         for bin in ["successes", "errors"]:
             measurement_count += summary[cc][bin]
 
-        uptime_rate = summary[cc]["successes"] / measurement_count
-        summary[cc]["uptime_rate"] = uptime_rate
+        try:
+            uptime_rate = round((summary[cc]["successes"] / measurement_count) * 100)
 
-        if uptime_rate > 0.75:
-            totals[m_type][cc]["sites_up"] += 1
+            if uptime_rate > 70:
+                totals[m_type][cc]["sites_up"] += 1
+        except ZeroDivisionError:
+            uptime_rate = "N/A"
+
+        summary[cc]["uptime_rate"] = uptime_rate
 
     summaries.append(summary)
 
 print("# All-Target Statistics")
 
-domains = len(domains_in_sample.keys())
+domains_count = len(domains_in_sample.keys())
+targets_count = len(targets.keys())
 up = "sites_up"
 for test in ["HTTP (80)", "HTTPS (443)"]:
-    for cc in ["in Russia", "worldwide"]:
-        print(f"* **{totals[test][cc][up]}/{domains}** {test} sampled target sites up {cc}")
+    for cc in ["in Russia", "in Belarus", "worldwide"]:
+        print(
+            f"* **{totals[test][cc][up]}/{domains_count}** {test} sampled target sites up {cc}"
+        )
 
 print("")
 print("Notes:")
-print("* I am considering a site 'up' when it passes 75% or more uptime checks.")
-print("* Not all targeted sites are guaranteed to be in in a given sample. Most are.")
+print("* I am considering a site 'up' when it passes 70% or more uptime checks.")
+print("* Not all targeted sites are guaranteed to be in in a given sample.")
+print(f"* In this case, {domains_count}/{targets_count} targets sites were measured.")
 print("")
 
 for test in ["HTTP (80)", "HTTPS (443)"]:
     print(f"# Testing Individual Targets on {test}")
-    print("| Remark | Domain | % Success WW | % Success RU |")
-    print("| -------|--------|--------------|--------------|")
+    print("| Remark | Domain | % Success WW | % Success RU | % Success BY |")
+    print("| -------|--------|--------------|--------------|--------------|")
 
     for summary in summaries:
         if summary["type"] != test:
             continue
 
-        quip = " "
-        pct_ww = round(summary['worldwide']['uptime_rate'] * 100)
-        pct_ru = round(summary['in Russia']['uptime_rate'] * 100)
+        pct_ww = summary["worldwide"]["uptime_rate"]
+        pct_ru = summary["in Russia"]["uptime_rate"]
+        pct_by = summary["in Belarus"]["uptime_rate"]
 
-        if pct_ww + 25 < pct_ru:
+        if pct_ww + 20 < pct_ru: # or pct_ww + 20 < pct_by
             quip = "**INTERESTING**"
-        if pct_ru + 25 < pct_ww:
+        elif pct_ru + 20 < pct_ww: # or pct_by + 20 < pct_ww
             quip = "**WEIRD**"
-        print(
-            f"| {quip} | `{summary['domain']}` | {pct_ww}% | {pct_ru}% |"
-        )
+        else:
+            quip = " "
+
+        print(f"| {quip} | `{summary['domain']}` | {pct_ww}% | {pct_ru}% | {pct_by}% |")
 
     if test == "HTTP (80)":
         print("")
-        print("*Additional information:* The above data is gathered via RIPE Atlas. The measurement connects via TCP (i.e. this is *not* application layer) to port 80 with an empty payload. This checks that the port is open and responsive, but not necessarily that the service itself is functioning. However, if the connection *failed* we should reasonably expect that the service is down as well - it is rare that sites do not run HTTP, even if only to redirect to HTTPS.")
+        print(
+            "*Additional information:* The above data is gathered via RIPE Atlas. The measurement connects via TCP (i.e. this is *not* application layer) to port 80 with an empty payload. This checks that the port is open and responsive, but not necessarily that the service itself is functioning. However, if the connection *failed* we should reasonably expect that the service is down as well - it is rare that sites do not run HTTP, even if only to redirect to HTTPS."
+        )
         print("")
     elif test == "HTTPS (443)":
         print("")
-        print("*Additional information:* The above data is gathered via RIPE Atlas. The measurement connects via SSL/TLS (i.e. this is *not* application layer) to port 443 with the SNI set to the corresponding domain. This checks that the port is open and responsive *and* that a secure connection can be established, but not necessarily that the service itself is functioning. However, if the connection *failed* we may be able to expect that the service is down as well. Not all sites run HTTPS, but for those that were *previously* known to use HTTPS, this would reasonably indicate that those HTTPS services are down.")
+        print(
+            "*Additional information:* The above data is gathered via RIPE Atlas. The measurement connects via SSL/TLS (i.e. this is *not* application layer) to port 443 with the SNI set to the corresponding domain. This checks that the port is open and responsive *and* that a secure connection can be established, but not necessarily that the service itself is functioning. However, if the connection *failed* we may be able to expect that the service is down as well. Not all sites run HTTPS, but for those that were *previously* known to use HTTPS, this would reasonably indicate that those HTTPS services are down."
+        )
         print("")
     else:
         print("")
