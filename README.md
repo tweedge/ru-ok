@@ -76,7 +76,7 @@ On 2022-02-28, IT ARMY instructed readers to DDoS DNS servers belonging to `www.
 
 I cannot measure the impact to these servers, as I haven't found a way to reliably do UDP port checking with RIPE Atlas (for a transport-level check), and the DNS resolution measurement is resolving a domain name with the *probe's* resolver (you cannot input a custom resolver to test).
 
-I could simply create a DNS resolution test - but that would be caught in any existing measurement with a DNS failure, and a success doesn't necessarily mean the targeted DNS servers are up or down *anyway* (due to resolver caching).
+*If* these are the authoritative servers for `www.sberbank.ru` - I don't know/haven't checked - then that would be caught in any existing measurement with a DNS failure. Further, a success doesn't necessarily mean the targeted DNS servers would be up or down *anyway* (due to resolver caching). So in my opinion, this is not worth pursuing.
 
 ## FAQ
 
