@@ -6,17 +6,17 @@ This is a very quick project to assess the status of Russian internet properties
 
 I wanted to check connectivity from within Russia's borders because I saw many mixed reports across Twitter and Reddit, with international parties (Americans, Ukrainians, etc.) claiming many sites had been knocked offline, where Russians chimed in that many sites remained online for them. The trust is more complex - availability for Russians is being prioritized by many RU-local sites, and international traffic may be facing extreme congestion, or simply be sinkholed in some cases.
 
-Per the last run around 2022-03-01 ~15:30:00 UTC, the status of sampled targets is:
-* **62/124** HTTP (80) sampled target sites up in Russia
-* **76/124** HTTP (80) sampled target sites up in Belarus
-* **32/124** HTTP (80) sampled target sites up worldwide
-* **57/124** HTTPS (443) sampled target sites up in Russia
-* **79/124** HTTPS (443) sampled target sites up in Belarus
-* **37/124** HTTPS (443) sampled target sites up worldwide
+Per the last run around 2022-03-02 ~03:45:00 UTC, the status of sampled targets is:
+* **78/166** HTTP (80) sampled target sites up in Russia
+* **88/166** HTTP (80) sampled target sites up in Belarus
+* **37/166** HTTP (80) sampled target sites up worldwide
+* **84/166** HTTPS (443) sampled target sites up in Russia
+* **106/166** HTTPS (443) sampled target sites up in Belarus
+* **67/166** HTTPS (443) sampled target sites up worldwide
 
 So there is measurably higher availability for several target sites within Russia's borders, but unless traffic from known RIPE Atlas probes is also filtered (unlikely), Russia is still facing substantial outages in the face of hacktivism.
 
-The most recent uptime statistics for each site are also available in [STATUS.md](https://github.com/tweedge/ru-ok/blob/main/STATUS.md), and you can use this to see which sites have the most interesting availability characteristics at-a-glance. For example, the Kremlin site has been quoted as offline by many people on Reddit and Twitter. From my scanning, we can clearly see that while `kremlin.ru` often appears 'down' internationally, it has near-normal (80%+) availability within Russia - a stark difference.
+The most recent uptime statistics for each site (binned by sector) are also available in [STATUS.md](https://github.com/tweedge/ru-ok/blob/main/STATUS.md), and you can use this to see which sites have the most interesting availability characteristics at-a-glance. For example, the Kremlin site has been quoted as offline by many people on Reddit and Twitter. From my scanning, we can clearly see that while `kremlin.ru` often appears 'down' internationally, it has near-normal (80%+) availability within Russia - a stark difference.
 
 ## Why?
 
