@@ -167,17 +167,20 @@ def parameters_builder(domain, bill_email):
 with open("targets.json") as targets_file:
     targets = json.load(targets_file)
 
-print("Randomizing domains to measure to more effectively sample if credits run out")
+print(
+    "INFO: Randomizing domains to measure to more effectively sample if credits run out"
+)
 domains_shuf = list(targets.keys())
 random.shuffle(domains_shuf)
+count_domains = len(domains_shuf)
 
 measurements = {}
 skip_remaining = False
-
+finished = 0
 for domain in domains_shuf:
-    backoff = 30
-    time.sleep(backoff)
     if not skip_remaining:
+        backoff = 30
+        time.sleep(backoff)
         while True:
             request = requests.post(
                 f"https://atlas.ripe.net/api/v2/measurements//?key={args.ripe_atlas_key}",
@@ -186,34 +189,41 @@ for domain in domains_shuf:
             if request.status_code == 201:
                 response = request.json()
                 if "measurements" in response.keys():
-                    print(f"Started measurements for {domain}")
+                    finished += 1
+                    print(
+                        f"OK: {finished}/{count_domains} Started measurements for {domain}"
+                    )
                     measurements[domain] = response["measurements"]
                     break
                 else:
                     print(
-                        f"Request for {domain} measurement failed, no 'measurements' key in JSON response"
+                        f"ERROR: Request for {domain} measurement failed, no 'measurements' key in JSON response"
                     )
             else:
                 print(
-                    f"Request for {domain} measurement failed, response code was {request.status_code} instead of 201"
+                    f"ERROR: Request for {domain} measurement failed, response code was {request.status_code} instead of 201"
                 )
 
             backoff = backoff * 2
             time.sleep(backoff)
 
-            if backoff > 600:
-                print(f"Failed to create measurement for {domain} too many times ...")
+            if backoff > 1200:
                 print(
-                    "This script probably exceeded a RIPE Atlas limit and is now stopping collection."
+                    f"FATAL: Failed to create measurement for {domain} too many times ..."
+                )
+                print(
+                    "INFO: This script probably exceeded a RIPE Atlas limit and is now stopping collection."
                 )
                 skip_remaining = True
                 break
 
-print("Waiting fifteen minutes to ensure (under normal conditions) all results load")
+print(
+    "INFO: Waiting fifteen minutes to ensure (under normal conditions) all results load"
+)
 time.sleep(900)
 
 probe_cache = {}
-print("Beginning to fetch and enrich results ...")
+print("INFO: Beginning to fetch and enrich results ...")
 
 for domain, measurements in measurements.items():
     for measurement in measurements:
@@ -226,17 +236,21 @@ for domain, measurements in measurements.items():
             if request.status_code == 200:
                 response = request.json()
                 print(
-                    f"Retrieved {len(response)} results from {domain} measurement {measurement}"
+                    f"OK: Retrieved {len(response)} results from {domain} measurement {measurement}"
                 )
                 break
             else:
-                print(f"Fail - response code was {request.status_code} instead of 200")
+                print(
+                    f"ERROR: Couldn't retrieve results for measurement #{measurement}, response code was {request.status_code} instead of 200"
+                )
 
             backoff = backoff * 2
             time.sleep(backoff)
 
             if backoff > 60:
-                print(f"Failed to retrieve results")
+                print(
+                    f"FATAL: Failed to retrieve measurement data for #{measurement} too many times ..."
+                )
                 break
 
         updated_response = []
@@ -256,19 +270,21 @@ for domain, measurements in measurements.items():
                         probe_cache[result["prb_id"]] = response
                         result["probe_data"] = response
                         print(
-                            f"Retrieved probe data for probe {result['prb_id']} and cached result"
+                            f"OK: Retrieved probe data for probe {result['prb_id']} and cached result"
                         )
                         break
                     else:
                         print(
-                            f"Fail - response code was {request.status_code} instead of 200"
+                            f"ERROR: Couldn't retrieve probe metadata for {result['prb_id']}, code was {request.status_code} instead of 200"
                         )
 
                     backoff = backoff * 2
                     time.sleep(backoff)
 
                     if backoff > 15:
-                        print(f"Failed to retrieve any probe data")
+                        print(
+                            f"FATAL: Failed to retrieve probe metadata for probe {result['prb_id']} too many times"
+                        )
                         break
 
             updated_response.append(result)
@@ -277,6 +293,6 @@ for domain, measurements in measurements.items():
         path = pathlib.Path(save_path)
         path.parent.mkdir(parents=True, exist_ok=True)
 
-        print(f"Saving enriched data to {save_path}")
+        print(f"INFO: Saving enriched data to {save_path}")
         with open(save_path, "w") as result_file:
             json.dump(updated_response, result_file, indent=2)
