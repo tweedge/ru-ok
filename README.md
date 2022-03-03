@@ -58,11 +58,13 @@ Afterwards, results are uploaded to this GitHub. Due to the daily cap on results
 
 The caveat to this approach is that, while we have access to reliable connectivity data from within Russia itself, the measurements themselves are not application-layer. RIPE Atlas is designed for network operators and only supports common network protocols - it explicitly and intentionally does *not* support application-layer checks.
 
-**For HTTP**: The measurement connects via TCP (i.e. this is *not* application layer) to port 80 with an empty payload. This checks that the port is open and responsive, but not necessarily that the service itself is functioning. However, if the connection *failed* we should reasonably expect that the service is down as well - it is rare that sites do not run HTTP, even if only to redirect to HTTPS.
+**For HTTP**: The measurement connects via TCP (i.e. this is *not* application layer) to port 80 with an empty payload. **This checks that the port is open and responsive, but not necessarily that the service itself is functioning.** However, if the connection *failed* we should reasonably expect that the service is down as well - it is rare that sites do not run HTTP, even if only to redirect to HTTPS.
 
-**For HTTPS**: The measurement connects via SSL/TLS to port 443 with the SNI set to the corresponding domain. This checks that the port is open and responsive *and* that a secure connection can be established, but not necessarily that the service itself is functioning. However, if the connection *failed* we may be able to expect that the service is down as well. Not all sites run HTTPS, but for those that were *previously* known to use HTTPS, this would reasonably indicate that those HTTPS services are down.
+**For HTTPS**: The measurement connects via SSL/TLS to port 443 with the SNI set to the corresponding domain. **This checks that the port is open and responsive *and* that a secure connection can be established, but not necessarily that the service itself is functioning.** However, if the connection *failed* we may be able to expect that the service is down as well. Not all sites run HTTPS, but for those that were *previously* known to use HTTPS, this would reasonably indicate that those HTTPS services are down.
 
-### Caveats
+TL;DR: if HTTP and HTTPS checks are failing, a tested entity is confidently down *at the time this project checked, from the probes used to test with*. However, it is possible for sites to be marked "up" if the *website's network layer* is functioning, but the *website's application* is not (ex. if connecting to a CDN, the CDN may be up, even if the website's backend is overloaded and offline).
+
+### Gaps
 
 **No direct DNS server testing.** On 2022-02-28, IT ARMY instructed readers to DDoS DNS servers belonging to `www.sberbank.ru`:
 
