@@ -7,12 +7,12 @@ This is a very quick project to assess the status of Russian internet properties
 I wanted to check connectivity from within Russia's borders because I saw many mixed reports across Twitter and Reddit, with international parties (Americans, Ukrainians, etc.) claiming many sites had been knocked offline, where Russians chimed in that many sites remained online for them. The truth is more complex - availability for Russians is being prioritized by many RU-local sites, and international traffic may be facing extreme congestion, or simply be sinkholed in some cases.
 
 Per the last run around 2022-03-02 ~15:45:00 UTC, the status of sampled targets is:
-* **91/184** HTTP (80) sampled target sites up in Russia
-* **103/184** HTTP (80) sampled target sites up in Belarus
-* **39/184** HTTP (80) sampled target sites up worldwide
-* **95/184** HTTPS (443) sampled target sites up in Russia
-* **114/184** HTTPS (443) sampled target sites up in Belarus
-* **72/184** HTTPS (443) sampled target sites up worldwide
+* **85/175** HTTP (80) sampled target sites up in Russia
+* **102/175** HTTP (80) sampled target sites up in Belarus
+* **24/175** HTTP (80) sampled target sites up worldwide
+* **95/175** HTTPS (443) sampled target sites up in Russia
+* **109/175** HTTPS (443) sampled target sites up in Belarus
+* **70/175** HTTPS (443) sampled target sites up worldwide
 
 So there is measurably higher availability for several target sites within Russia's borders, but unless traffic from known RIPE Atlas probes is also filtered (unlikely), Russia is still facing substantial outages in the face of hacktivism.
 
