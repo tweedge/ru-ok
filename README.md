@@ -43,13 +43,14 @@ Why RIPE Atlas? Atlas is a project by [RIPE NCC](https://www.ripe.net/) is a glo
 
 For each measurement:
 * I input a target domain or IP
-* I request 12 probes from anywhere in the world, plus 10 probes from only within Russian IP space, plus 10 *more* probes from only within Belarusian IP space
+* I request 10 probes from a sample major internet-connected countries worldwide, plus 10 probes from only within Russian IP space, plus 10 *more* probes from only within Belarusian IP space
+  * **New:** I'm also collecting 3 measurements from Ukraine, 1 from Poland, and 1 from Romainia. Not doing anything with them yet though - stay tuned!
 * If required, all probes individually perform a DNS lookup for the target domain
 * All probes perform their desired measurement check (more on this in a minute)
 * Probes report the data retrieved - or any errors encountered - to RIPE Atlas
-* I collect the measurement information after waiting 15 minutes and run analysis on it
+* I collect the measurement information after waiting a minimum of 15 minutes and run analysis on it
 
-Afterwards, results are uploaded to this GitHub. Due to the daily cap on results I can collect, I will try to run this analysis every ~24 hours, but cannot run this continually without breaching my account quotas.
+Afterwards, results are uploaded to this GitHub. Due to the daily cap on results I can collect, I will try to run this analysis every ~12 hours, but cannot run this continually without breaching my account quotas.
 
 **New:** Due to an ever-increasing number of targets listed by "IT ARMY of Ukraine" this repository will now randomly sample targets, grabbing partial results if/when I run out of credits.
 
@@ -94,7 +95,7 @@ I'm not going to tell you that.
 
 #### Why did you make a snide comment about websites that "DDoS" people earlier?
 
-They're low throughput compared to any real DDoS tool, they're especially easy to neuter (site operators can disable all [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) requests by denying the HTTP OPTIONS method), several are made anonymously (and who knows if your IP/information is being logged straight to the Kremlin), etc. It's not a good way to get involved.
+They're low throughput compared to any real DDoS tool, they're especially easy to neuter (site operators can disable all [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) requests by denying the HTTP OPTIONS method, and you shouldn't disable CORS in your browser to bypass this...), several are made anonymously (and who knows if your IP/information is being logged straight to the Kremlin), etc. It's not a good way to get involved.
 
 #### How are you connecting to a specific TCP port using RIPE Atlas?
 
