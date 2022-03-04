@@ -43,6 +43,11 @@ totals = {
 
 for results in all_results:
     domain = results[0]["dst_name"]
+
+    # need to implement non-webserver parsing
+    if not targets[domain]["test_type"] == "Webserver":
+        continue
+
     if not domain in domains_in_sample.keys():
         domains_in_sample[domain] = True
 
@@ -114,8 +119,7 @@ for results in all_results:
             if uptime_rate > 70:
                 totals[m_type][cc]["sites_up"] += 1
         except ZeroDivisionError:
-            pprint(summary)
-            exit()
+            pass
 
         summary[cc]["uptime_rate"] = uptime_rate
 
