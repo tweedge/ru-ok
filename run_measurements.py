@@ -5,6 +5,7 @@ import random
 import requests
 import time
 from pprint import pprint
+from define_measurements import request_tcp_ping, request_ssl
 
 parser = argparse.ArgumentParser(
     description="Runs measurements in RIPE ATLAS of SSL connectivity to targets in targets.json"
@@ -32,176 +33,76 @@ parser.add_argument(
 )
 args = parser.parse_args()
 
-
-def parameters_builder(domain, bill_email):
-    return {
-        "definitions": [
-            {
-                "target": domain,
-                "af": 4,
-                "port": 443,
-                "hostname": domain,
-                "description": f"SSL measurement to {domain}",
-                "resolve_on_probe": True,
-                "skip_dns_check": True,
-                "type": "sslcert",
-            },
-            {
-                "target": domain,
-                "af": 4,
-                "timeout": 4000,
-                "description": f'TCP "ping" measurement to {domain}',
-                "protocol": "TCP",
-                "resolve_on_probe": True,
-                "packets": 3,
-                "size": 0,
-                "first_hop": 1,
-                "max_hops": 32,
-                "spread": 60,
-                "port": 80,
-                "paris": 16,
-                "destination_option_size": 0,
-                "hop_by_hop_option_size": 0,
-                "dont_fragment": False,
-                "skip_dns_check": True,
-                "type": "traceroute",
-            },
-        ],
-        "probes": [
-            {
-                "tags": {"include": [], "exclude": []},
-                "type": "country",
-                "value": "RU",
-                "requested": 10,
-            },
-            {
-                "tags": {"include": [], "exclude": []},
-                "type": "country",
-                "value": "BY",
-                "requested": 10,
-            },
-            {
-                "tags": {"include": [], "exclude": []},
-                "type": "country",
-                "value": "UA",
-                "requested": 3,
-            },
-            {
-                "tags": {"include": [], "exclude": []},
-                "type": "country",
-                "value": "PL",
-                "requested": 1,
-            },
-            {
-                "tags": {"include": [], "exclude": []},
-                "type": "country",
-                "value": "RO",
-                "requested": 1,
-            },
-            {
-                "tags": {"include": [], "exclude": []},
-                "type": "country",
-                "value": "US",
-                "requested": 1,
-            },
-            {
-                "tags": {"include": [], "exclude": []},
-                "type": "country",
-                "value": "DE",
-                "requested": 1,
-            },
-            {
-                "tags": {"include": [], "exclude": []},
-                "type": "country",
-                "value": "AU",
-                "requested": 1,
-            },
-            {
-                "tags": {"include": [], "exclude": []},
-                "type": "country",
-                "value": "CA",
-                "requested": 1,
-            },
-            {
-                "tags": {"include": [], "exclude": []},
-                "type": "country",
-                "value": "BR",
-                "requested": 1,
-            },
-            {
-                "tags": {"include": [], "exclude": []},
-                "type": "country",
-                "value": "IN",
-                "requested": 1,
-            },
-            {
-                "tags": {"include": [], "exclude": []},
-                "type": "country",
-                "value": "CN",
-                "requested": 1,
-            },
-            {
-                "tags": {"include": [], "exclude": []},
-                "type": "country",
-                "value": "JP",
-                "requested": 1,
-            },
-            {
-                "tags": {"include": [], "exclude": []},
-                "type": "country",
-                "value": "ZA",
-                "requested": 1,
-            },
-            {
-                "tags": {"include": [], "exclude": []},
-                "type": "country",
-                "value": "GB",
-                "requested": 1,
-            },
-        ],
-        "is_oneoff": True,
-        "bill_to": bill_email,
-    }
-
-
 with open("targets.json") as targets_file:
     targets = json.load(targets_file)
 
 print(
-    "INFO: Randomizing domains to measure to more effectively sample if credits run out"
+    "INFO: Building list of tasks from targets.json"
 )
-domains_shuf = list(targets.keys())
-random.shuffle(domains_shuf)
-count_domains = len(domains_shuf)
+tasks = []
+for target, definition in targets.items():
+    if definition["test_type"] == "Webserver":
+        tasks.append({
+            "id": f"{target}#HTTP",
+            "target": target,
+            "params": request_tcp_ping(target, args.ripe_atlas_email, 80),
+        })
+        tasks.append({
+            "id": f"{target}#HTTPS",
+            "target": target,
+            "params": request_ssl(target, args.ripe_atlas_email),
+        })
+    elif definition["test_type"] == "TCP on Ports":
+        for port in definition["ports"]:
+            tasks.append({
+                "id": f"{target}#{port}",
+                "target": target,
+                "params": request_tcp_ping(target, args.ripe_atlas_email, port),
+            })
+    else:
+        print("FATAL: Not implemented, quitting")
+        exit()
 
-measurements = {}
+print(
+    "INFO: Randomizing tasks to measure to more effectively sample if credits run out"
+)
+random.shuffle(tasks)
+count_tasks = len(tasks)
+
+print(
+    f"INFO: Starting up to {count_tasks} measurements"
+)
+measurements = []
 skip_remaining = False
 finished = 0
-for domain in domains_shuf:
+for task in tasks:
     if not skip_remaining:
         backoff = 30
         time.sleep(backoff)
         while True:
             request = requests.post(
                 f"https://atlas.ripe.net/api/v2/measurements//?key={args.ripe_atlas_key}",
-                json=parameters_builder(domain, args.ripe_atlas_email),
+                json=task["params"],
             )
             if request.status_code == 201:
                 response = request.json()
                 if "measurements" in response.keys():
                     finished += 1
                     print(
-                        f"OK: {finished}/{count_domains} Started measurements for {domain}"
+                        f"OK: Started task {finished}/{count_tasks} for {task['id']}"
                     )
-                    measurements[domain] = response["measurements"]
+                    measurements.append({
+                        "task": task,
+                        "measurement": response["measurements"]
+                    })
                     break
                 else:
                     print(
-                        f"ERROR: Request for {domain} measurement failed, no 'measurements' key in JSON response"
+                        f"ERROR: Request for {task['id']} measurement failed, no 'measurements' key in JSON response"
                     )
             else:
                 print(
-                    f"ERROR: Request for {domain} measurement failed, response code was {request.status_code} instead of 201"
+                    f"ERROR: Request for {task['id']} measurement failed, response code was {request.status_code} instead of 201"
                 )
 
             backoff = backoff * 2
@@ -209,7 +110,7 @@ for domain in domains_shuf:
 
             if backoff > 1200:
                 print(
-                    f"FATAL: Failed to create measurement for {domain} too many times ..."
+                    f"FATAL: Failed to create measurement for {task['id']} too many times ..."
                 )
                 print(
                     "INFO: This script probably exceeded a RIPE Atlas limit and is now stopping collection."
@@ -222,77 +123,79 @@ print(
 )
 time.sleep(900)
 
-probe_cache = {}
 print("INFO: Beginning to fetch and enrich results ...")
+probe_cache = {}
+for measurement in measurements:
+    target = measurement["task"]["target"]
+    task_id = measurement["task"]["id"]
+    measurement_id = measurement["measurement"][0]
 
-for domain, measurements in measurements.items():
-    for measurement in measurements:
-        backoff = 2
-        time.sleep(backoff)
-        while True:
-            request = requests.get(
-                f"https://atlas.ripe.net/api/v2/measurements/{measurement}/results/?format=json"
+    backoff = 2
+    time.sleep(backoff)
+    while True:
+        request = requests.get(
+            f"https://atlas.ripe.net/api/v2/measurements/{measurement_id}/results/?format=json"
+        )
+        if request.status_code == 200:
+            response = request.json()
+            print(
+                f"OK: Retrieved {len(response)} results from {task_id} measurement (#{measurement_id})"
             )
-            if request.status_code == 200:
-                response = request.json()
-                print(
-                    f"OK: Retrieved {len(response)} results from {domain} measurement {measurement}"
-                )
-                break
-            else:
-                print(
-                    f"ERROR: Couldn't retrieve results for measurement #{measurement}, response code was {request.status_code} instead of 200"
-                )
+            break
+        else:
+            print(
+                f"ERROR: Couldn't retrieve results for measurement #{measurement_id}, response code was {request.status_code} instead of 200"
+            )
 
-            backoff = backoff * 2
+        backoff = backoff * 2
+        time.sleep(backoff)
+
+        if backoff > 600:
+            print(
+                f"FATAL: Failed to retrieve measurement data for #{measurement_id} too many times ..."
+            )
+            break
+
+    updated_response = []
+    for result in response:
+        if result["prb_id"] in probe_cache.keys():
+            print(f"Found probe ID {result['prb_id']} in cache")
+            result["probe_data"] = probe_cache[result["prb_id"]]
+        else:
+            backoff = 0.5
             time.sleep(backoff)
-
-            if backoff > 60:
-                print(
-                    f"FATAL: Failed to retrieve measurement data for #{measurement} too many times ..."
+            while True:
+                request = requests.get(
+                    f"https://atlas.ripe.net/api/v2/probes/{result['prb_id']}/?format=json"
                 )
-                break
-
-        updated_response = []
-        for result in response:
-            if result["prb_id"] in probe_cache.keys():
-                print(f"Found probe ID {result['prb_id']} in cache")
-                result["probe_data"] = probe_cache[result["prb_id"]]
-            else:
-                backoff = 0.5
-                time.sleep(backoff)
-                while True:
-                    request = requests.get(
-                        f"https://atlas.ripe.net/api/v2/probes/{result['prb_id']}/?format=json"
+                if request.status_code == 200:
+                    response = request.json()
+                    probe_cache[result["prb_id"]] = response
+                    result["probe_data"] = response
+                    print(
+                        f"OK: Retrieved probe data for probe {result['prb_id']} and cached result"
                     )
-                    if request.status_code == 200:
-                        response = request.json()
-                        probe_cache[result["prb_id"]] = response
-                        result["probe_data"] = response
-                        print(
-                            f"OK: Retrieved probe data for probe {result['prb_id']} and cached result"
-                        )
-                        break
-                    else:
-                        print(
-                            f"ERROR: Couldn't retrieve probe metadata for {result['prb_id']}, code was {request.status_code} instead of 200"
-                        )
+                    break
+                else:
+                    print(
+                        f"ERROR: Couldn't retrieve probe metadata for {result['prb_id']}, code was {request.status_code} instead of 200"
+                    )
 
-                    backoff = backoff * 2
-                    time.sleep(backoff)
+                backoff = backoff * 2
+                time.sleep(backoff)
 
-                    if backoff > 15:
-                        print(
-                            f"FATAL: Failed to retrieve probe metadata for probe {result['prb_id']} too many times"
-                        )
-                        break
+                if backoff > 150:
+                    print(
+                        f"FATAL: Failed to retrieve probe metadata for probe {result['prb_id']} too many times"
+                    )
+                    break
 
-            updated_response.append(result)
+        updated_response.append(result)
 
-        save_path = f"{args.output_folder}/{domain}/{measurement}/result.json"
-        path = pathlib.Path(save_path)
-        path.parent.mkdir(parents=True, exist_ok=True)
+    save_path = f"{args.output_folder}/{target}/{measurement_id}/result.json"
+    path = pathlib.Path(save_path)
+    path.parent.mkdir(parents=True, exist_ok=True)
 
-        print(f"INFO: Saving enriched data to {save_path}")
-        with open(save_path, "w") as result_file:
-            json.dump(updated_response, result_file, indent=2)
+    print(f"INFO: Saving enriched data to {save_path}")
+    with open(save_path, "w") as result_file:
+        json.dump(updated_response, result_file, indent=2)
