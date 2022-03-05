@@ -72,7 +72,8 @@ for results in all_results:
         if result["probe_data"]["country_code"] == "RU":
             cc = "in Russia"
         elif result["probe_data"]["country_code"] == "BY":
-            cc = "in Belarus"
+            # removed because I don't want this conflated with prior data
+            continue
         elif result["probe_data"]["country_code"] == "UA":
             # not implemented yet
             continue
@@ -108,7 +109,7 @@ for results in all_results:
         summary[cc][bin] += 1
         totals[m_type][cc][bin] += 1
 
-    for cc in ["in Russia", "in Belarus", "worldwide"]:
+    for cc in ["in Russia", "worldwide"]:
         measurement_count = 0
         for bin in ["successes", "errors"]:
             measurement_count += summary[cc][bin]
@@ -131,7 +132,7 @@ domains_count = len(domains_in_sample.keys())
 targets_count = len(targets.keys())
 up = "sites_up"
 for test in ["HTTP (80)", "HTTPS (443)"]:
-    for cc in ["in Russia", "in Belarus", "worldwide"]:
+    for cc in ["in Russia", "worldwide"]:
         print(
             f"* **{totals[test][cc][up]}/{domains_count}** {test} sampled target sites up {cc}"
         )
@@ -145,8 +146,8 @@ print("")
 
 for test in ["HTTP (80)", "HTTPS (443)"]:
     print(f"# Testing Individual Targets on {test}")
-    print("| Sector | Domain | % Up WW | % Up RU | % Up BY | Remark |")
-    print("|--------|--------|---------|---------|---------|--------|")
+    print("| Sector | Domain | % Up WW | % Up RU | Remark |")
+    print("|--------|--------|---------|---------|--------|")
 
     table_contents = []
     for summary in summaries:
@@ -155,17 +156,16 @@ for test in ["HTTP (80)", "HTTPS (443)"]:
 
         pct_ww = summary["worldwide"]["uptime_rate"]
         pct_ru = summary["in Russia"]["uptime_rate"]
-        pct_by = summary["in Belarus"]["uptime_rate"]
 
-        if pct_ww + 40 < pct_ru or pct_ww + 40 < pct_by:
+        if pct_ww + 40 < pct_ru:
             quip = "**INTERESTING**"
-        elif pct_ru + 40 < pct_ww or pct_by + 40 < pct_ww:
+        elif pct_ru + 40 < pct_ww:
             quip = "**WEIRD**"
         else:
             quip = " "
 
         table_contents.append(
-            f"| {targets[summary['domain']]['sector']} | `{summary['domain']}` | {pct_ww}% | {pct_ru}% | {pct_by}% | {quip} |"
+            f"| {targets[summary['domain']]['sector']} | `{summary['domain']}` | {pct_ww}% | {pct_ru}% | {quip} |"
         )
 
     table_contents.sort()
