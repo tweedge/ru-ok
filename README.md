@@ -1,4 +1,4 @@
-# ru-ok "Are you (RU) ok?"
+# RU-OK? ("Are you - RU - ok?")
 
 **Note: While this repository discusses the results of hacktivism in the Russo-Ukrainian War, I am not personally participating in that hacktivism, and I am not condoning or encouraging hacktivism in this repository. For people looking to help Ukraine, especially nontechnical people who have been using certain webpages to "DDoS" Russia, please look into safe and legal options [listed here](https://www.npr.org/2022/02/25/1082992947/ukraine-support-help).**
 
