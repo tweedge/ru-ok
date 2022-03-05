@@ -43,8 +43,9 @@ Why RIPE Atlas? Atlas is a project by [RIPE NCC](https://www.ripe.net/) is a glo
 
 For each measurement:
 * I input a target domain or IP
-* I request 10 probes from a sample major internet-connected countries worldwide, plus 10 probes from only within Russian IP space, plus 10 *more* probes from only within Belarusian IP space
+* I request 10 probes from a sample major internet-connected countries worldwide, plus 10 probes from only within Russian IP space, plus 5 *more* probes from only within Belarusian IP space
   * **New:** I'm also collecting 3 measurements from Ukraine, 1 from Poland, and 1 from Romainia. Not doing anything with them yet though - stay tuned!
+  * **Changed:** Due to the number of targets and relatively low number of Belarusian targets, the sampling rate for Belarus has decreased to 5 probes per measurement from 10.
 * If required, all probes individually perform a DNS lookup for the target domain
 * All probes perform their desired measurement check (more on this in a minute)
 * Probes report the data retrieved - or any errors encountered - to RIPE Atlas
@@ -62,7 +63,9 @@ The caveat to this approach is that, while we have access to reliable connectivi
 
 **For HTTPS**: The measurement connects via SSL/TLS to port 443 with the SNI set to the corresponding domain. **This checks that the port is open and responsive *and* that a secure connection can be established, but not necessarily that the service itself is functioning.** However, if the connection *failed* we may be able to expect that the service is down as well. Not all sites run HTTPS, but for those that were *previously* known to use HTTPS, this would reasonably indicate that those HTTPS services are down.
 
-TL;DR: if HTTP and HTTPS checks are failing, a tested entity is confidently down *at the time this project checked, from the probes used to test with*. However, it is possible for sites to be marked "up" if the *website's network layer* is functioning, but the *website's application* is not (ex. if connecting to a CDN, the CDN may be up, even if the website's backend is overloaded and offline).
+**For unusual TCP ports**: The measurement connects via TCP to the specified port with an empty payload. **This *usually* works to check that the port is open and responsive, but requires further analysis before I add this data to summaries.** Currently, the data is collected but not reported on in the README or STATUS documents.
+
+TL;DR: if the connection checks (especially HTTP/HTTPS) are failing, a tested entity is confidently down *at the time this project checked, from the probes used to test with*. However, it is possible for sites to be marked "up" if the *website's network layer* is functioning, but the *website's application* is not (ex. if connecting to a CDN, the CDN may be up, even if the website's backend is overloaded and offline).
 
 ### Gaps
 
