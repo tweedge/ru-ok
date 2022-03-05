@@ -79,6 +79,10 @@ I cannot measure the impact to these servers, as I haven't found a way to reliab
 
 **No testing internationalized domain names.** On 2022-03-01, IT ARMY instructed readers to take down `объясняем.рф`. Attempting to start RIPE Atlas measurements against this domain, the requests failed with a status code of 400. I am triaging this for later results and hope to add this to the sample, for examply by punycoding the domain before attempting to start the sample.
 
+**No testing where existing service ports aren't known.** On 2022-03-04, IT ARMY's only new targets were NSPK public IPs (serving "Myr" bank cards), which do not have known open ports via Shodan or Censys, either due to a request from NSPK, or blocking their scanners, etc. Given no ports are known, I cannot assess uptime accurately with RIPE Atlas' tooling.
+
+**No immediate testing**: On 2022-03-05, IT ARMY intelligently weaponized their audience to take down a fake website, `savelife.pw` (by reporting it to the registrar, hosting companies, etc.). The scans I am running are long-term, meant to understand the cyber-conflict broadly, and not ongoing or immediate assessments of sites. Before I could add this to uptime checks, the site was taken down.
+
 ## FAQ
 
 #### How can I help you measure this stuff?

@@ -58,7 +58,7 @@ def standard_probe_requisition():
             "tags": {"include": [], "exclude": []},
             "type": "country",
             "value": "BY",
-            "requested": 10,
+            "requested": 5,
         },
         {
             "tags": {"include": [], "exclude": []},
