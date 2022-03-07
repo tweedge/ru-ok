@@ -8,9 +8,9 @@ I wanted to check connectivity from within Russia's borders because I saw many m
 
 From the most recent measurements collected, the status of sampled targets is:
 * **111/201** HTTP (80) sampled target sites up in Russia
-* **69/201** HTTP (80) sampled target sites up worldwide
-* **117/201** HTTPS (443) sampled target sites up in Russia
-* **92/201** HTTPS (443) sampled target sites up worldwide
+* **62/201** HTTP (80) sampled target sites up worldwide
+* **120/201** HTTPS (443) sampled target sites up in Russia
+* **90/201** HTTPS (443) sampled target sites up worldwide
 
 So there is measurably higher availability for several target sites within Russia's borders, but unless traffic from known RIPE Atlas probes is also filtered (unlikely), Russia is still facing substantial outages in the face of hacktivism.
 
