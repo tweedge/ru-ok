@@ -119,6 +119,12 @@ for task in tasks:
                 break
 
 print(
+    "INFO: Saving measurements to measurements.tmp.json in case of result collection failure"
+)
+with open("measurements.tmp.json", "w") as status_file:
+    json.dump(measurements, status_file, indent=2)
+
+print(
     "INFO: Waiting fifteen minutes to ensure (under normal conditions) all results load"
 )
 time.sleep(900)
@@ -148,7 +154,7 @@ for measurement in measurements:
                 print(
                     f"ERROR: Couldn't retrieve results for measurement #{measurement_id}, response code was {request.status_code} instead of 200"
                 )
-                
+
         except Exception as e:
             print(f"ERROR: Silenced error '{e}'")
 
