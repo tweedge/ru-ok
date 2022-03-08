@@ -133,19 +133,24 @@ for measurement in measurements:
     backoff = 2
     time.sleep(backoff)
     while True:
-        request = requests.get(
-            f"https://atlas.ripe.net/api/v2/measurements/{measurement_id}/results/?format=json"
-        )
-        if request.status_code == 200:
-            response = request.json()
-            print(
-                f"OK: Retrieved {len(response)} results from {task_id} measurement (#{measurement_id})"
+        try:
+            request = requests.get(
+                f"https://atlas.ripe.net/api/v2/measurements/{measurement_id}/results/?format=json"
             )
-            break
-        else:
-            print(
-                f"ERROR: Couldn't retrieve results for measurement #{measurement_id}, response code was {request.status_code} instead of 200"
-            )
+
+            if request.status_code == 200:
+                response = request.json()
+                print(
+                    f"OK: Retrieved {len(response)} results from {task_id} measurement (#{measurement_id})"
+                )
+                break
+            else:
+                print(
+                    f"ERROR: Couldn't retrieve results for measurement #{measurement_id}, response code was {request.status_code} instead of 200"
+                )
+                
+        except Exception as e:
+            print(f"ERROR: Silenced error '{e}'")
 
         backoff = backoff * 2
         time.sleep(backoff)
@@ -165,21 +170,26 @@ for measurement in measurements:
             backoff = 0.5
             time.sleep(backoff)
             while True:
-                request = requests.get(
-                    f"https://atlas.ripe.net/api/v2/probes/{result['prb_id']}/?format=json"
-                )
-                if request.status_code == 200:
-                    response = request.json()
-                    probe_cache[result["prb_id"]] = response
-                    result["probe_data"] = response
-                    print(
-                        f"OK: Retrieved probe data for probe {result['prb_id']} and cached result"
+                try:
+                    request = requests.get(
+                        f"https://atlas.ripe.net/api/v2/probes/{result['prb_id']}/?format=json"
                     )
-                    break
-                else:
-                    print(
-                        f"ERROR: Couldn't retrieve probe metadata for {result['prb_id']}, code was {request.status_code} instead of 200"
-                    )
+
+                    if request.status_code == 200:
+                        response = request.json()
+                        probe_cache[result["prb_id"]] = response
+                        result["probe_data"] = response
+                        print(
+                            f"OK: Retrieved probe data for probe {result['prb_id']} and cached result"
+                        )
+                        break
+                    else:
+                        print(
+                            f"ERROR: Couldn't retrieve probe metadata for {result['prb_id']}, code was {request.status_code} instead of 200"
+                        )
+
+                except Exception as e:
+                    print(f"ERROR: Silenced error '{e}'")
 
                 backoff = backoff * 2
                 time.sleep(backoff)
