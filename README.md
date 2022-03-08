@@ -49,7 +49,7 @@ For each measurement:
 * Probes report the data retrieved - or any errors encountered - to RIPE Atlas
 * I collect the measurement information after waiting a minimum of 15 minutes and run analysis on it
 
-Afterwards, results are uploaded to this GitHub. Due to the daily cap on results I can collect, I will try to run this analysis every ~12 hours, but cannot run this continually without breaching my account quotas.
+Afterwards, results are uploaded to this GitHub. **Edit:** I will be running this analysis every *24 hours* starting March 8th instead of every 12 hours. This is due to RIPE's quotas and the ever-increasing number of targeted sites.
 
 **New:** Due to an ever-increasing number of targets listed by "IT ARMY of Ukraine" this repository will now randomly sample targets, grabbing partial results if/when I run out of credits.
 
