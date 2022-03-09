@@ -36,29 +36,33 @@ args = parser.parse_args()
 with open("targets.json") as targets_file:
     targets = json.load(targets_file)
 
-print(
-    "INFO: Building list of tasks from targets.json"
-)
+print("INFO: Building list of tasks from targets.json")
 tasks = []
 for target, definition in targets.items():
     if definition["test_type"] == "Webserver":
-        tasks.append({
-            "id": f"{target}#HTTP",
-            "target": target,
-            "params": request_tcp_ping(target, args.ripe_atlas_email, 80),
-        })
-        tasks.append({
-            "id": f"{target}#HTTPS",
-            "target": target,
-            "params": request_ssl(target, args.ripe_atlas_email),
-        })
+        tasks.append(
+            {
+                "id": f"{target}#HTTP",
+                "target": target,
+                "params": request_tcp_ping(target, args.ripe_atlas_email, 80),
+            }
+        )
+        tasks.append(
+            {
+                "id": f"{target}#HTTPS",
+                "target": target,
+                "params": request_ssl(target, args.ripe_atlas_email),
+            }
+        )
     elif definition["test_type"] == "TCP on Ports":
         for port in definition["ports"]:
-            tasks.append({
-                "id": f"{target}#{port}",
-                "target": target,
-                "params": request_tcp_ping(target, args.ripe_atlas_email, port),
-            })
+            tasks.append(
+                {
+                    "id": f"{target}#{port}",
+                    "target": target,
+                    "params": request_tcp_ping(target, args.ripe_atlas_email, port),
+                }
+            )
     else:
         print("FATAL: Not implemented, quitting")
         exit()
@@ -69,41 +73,43 @@ print(
 random.shuffle(tasks)
 count_tasks = len(tasks)
 
-print(
-    f"INFO: Starting up to {count_tasks} measurements"
-)
+print(f"INFO: Starting up to {count_tasks} measurements")
 measurements = []
 skip_remaining = False
 finished = 0
 for task in tasks:
     if not skip_remaining:
-        backoff = 30
+        backoff = 15
         time.sleep(backoff)
         while True:
-            request = requests.post(
-                f"https://atlas.ripe.net/api/v2/measurements//?key={args.ripe_atlas_key}",
-                json=task["params"],
-            )
-            if request.status_code == 201:
-                response = request.json()
-                if "measurements" in response.keys():
-                    finished += 1
-                    print(
-                        f"OK: Started task {finished}/{count_tasks} for {task['id']}"
-                    )
-                    measurements.append({
-                        "task": task,
-                        "measurement": response["measurements"]
-                    })
-                    break
+            try:
+                request = requests.post(
+                    f"https://atlas.ripe.net/api/v2/measurements//?key={args.ripe_atlas_key}",
+                    json=task["params"],
+                )
+
+                if request.status_code == 201:
+                    response = request.json()
+                    if "measurements" in response.keys():
+                        finished += 1
+                        print(
+                            f"OK: Started task {finished}/{count_tasks} for {task['id']}"
+                        )
+                        measurements.append(
+                            {"task": task, "measurement": response["measurements"]}
+                        )
+                        break
+                    else:
+                        print(
+                            f"ERROR: Request for {task['id']} measurement failed, no 'measurements' key in JSON response"
+                        )
                 else:
                     print(
-                        f"ERROR: Request for {task['id']} measurement failed, no 'measurements' key in JSON response"
+                        f"ERROR: Request for {task['id']} measurement failed, response code was {request.status_code} instead of 201"
                     )
-            else:
-                print(
-                    f"ERROR: Request for {task['id']} measurement failed, response code was {request.status_code} instead of 201"
-                )
+
+            except Exception as e:
+                print(f"ERROR: Silenced error '{e}'")
 
             backoff = backoff * 2
             time.sleep(backoff)

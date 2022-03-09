@@ -27,6 +27,7 @@ def request_tcp_ping(domain, bill_email, port):
         "bill_to": bill_email,
     }
 
+
 def request_ssl(domain, bill_email):
     return {
         "definitions": [
@@ -45,6 +46,7 @@ def request_ssl(domain, bill_email):
         "is_oneoff": True,
         "bill_to": bill_email,
     }
+
 
 def standard_probe_requisition():
     return [
