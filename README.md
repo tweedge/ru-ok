@@ -67,16 +67,15 @@ TL;DR: if the connection checks (especially HTTP/HTTPS) are failing, a tested en
 
 ### Gaps
 
-**No direct DNS server testing.** On 2022-02-28, IT ARMY instructed readers to DDoS DNS servers belonging to `www.sberbank.ru`:
-
-* 194.54.14.186
-* 194.54.14.187
-* 194.67.7.1
-* 194.67.2.109
+**No direct DNS server testing.** On 2022-02-28, IT ARMY instructed readers to DDoS DNS servers belonging to `www.sberbank.ru` - `194.54.14.186`, `194.54.14.187`, `194.67.7.1`, and `194.67.2.109`.
 
 I cannot measure the impact to these servers, as I haven't found a way to reliably do UDP port checking with RIPE Atlas (for a transport-level check), and the DNS resolution measurement is resolving a domain name with the *probe's* resolver (you cannot input a custom resolver to test).
 
 *If* these are the authoritative servers for `www.sberbank.ru` - I don't know/haven't checked - then that would be caught in any existing measurement with a DNS failure. Further, a success doesn't necessarily mean the targeted DNS servers would be up or down *anyway* (due to resolver caching). So in my opinion, this is not worth pursuing.
+
+Again on 2022-03-08, IT ARMY instructed readers to DDoS DNS servers, this time belonging to the Russian Railway. These were `217.175.155.100`, `217.175.155.12`, and `217.175.140.71`.
+
+**No UDP testing.** Same problem as above, new port. On 2022-03-09, IT ARMY listed UDP 500 as open on IP `77.247.242.173` (belonging to `nspk.ru`) - UDP reachability cannot be reliably assessed using RIPE Atlas to my knowledge.
 
 **No testing internationalized domain names.** On 2022-03-01, IT ARMY instructed readers to take down `объясняем.рф`. Attempting to start RIPE Atlas measurements against this domain, the requests failed with a status code of 400. I am triaging this for later results and hope to add this to the sample, for examply by punycoding the domain before attempting to start the sample.
 
