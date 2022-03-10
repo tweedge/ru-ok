@@ -114,7 +114,7 @@ for task in tasks:
             backoff = backoff * 2
             time.sleep(backoff)
 
-            if backoff > 1200:
+            if backoff > 1800:
                 print(
                     f"FATAL: Failed to create measurement for {task['id']} too many times ..."
                 )
