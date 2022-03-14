@@ -7,10 +7,10 @@ This is a very quick project to assess the status of Russian internet properties
 I wanted to check connectivity from within Russia's borders because I saw many mixed reports across Twitter and Reddit, with international parties (Americans, Ukrainians, etc.) claiming many sites had been knocked offline, where Russians chimed in that many sites remained online for them. The truth is more complex - availability for Russians is being prioritized by many RU-local sites, and international traffic may be facing extreme congestion, or simply be sinkholed in some cases.
 
 From the most recent measurements collected, the status of sampled targets is:
-* **240/345** HTTP (80) sampled target sites up in Russia
-* **121/345** HTTP (80) sampled target sites up worldwide
-* **221/345** HTTPS (443) sampled target sites up in Russia
-* **167/345** HTTPS (443) sampled target sites up worldwide
+* **250/357** HTTP (80) sampled target sites up in Russia
+* **119/357** HTTP (80) sampled target sites up worldwide
+* **238/357** HTTPS (443) sampled target sites up in Russia
+* **182/357** HTTPS (443) sampled target sites up worldwide
 
 So there is measurably higher availability for several target sites within Russia's borders, but unless traffic from known RIPE Atlas probes is also filtered (unlikely), Russia is still facing substantial outages in the face of hacktivism.
 
@@ -74,6 +74,8 @@ I cannot measure the impact to these servers, as I haven't found a way to reliab
 *If* these are the authoritative servers for `www.sberbank.ru` - I don't know/haven't checked - then that would be caught in any existing measurement with a DNS failure. Further, a success doesn't necessarily mean the targeted DNS servers would be up or down *anyway* (due to resolver caching). So in my opinion, this is not worth pursuing.
 
 Again on 2022-03-08, IT ARMY instructed readers to DDoS DNS servers, this time belonging to the Russian Railway. These were `217.175.155.100`, `217.175.155.12`, and `217.175.140.71`.
+
+And again on 2022-03-13, IT ARMY instructed readers to DDoS `92.53.97.198` (which this project cannot measure) as part of the attacks on `alfabank.ru`.
 
 **No UDP testing.** Same problem as above, new port. On 2022-03-09, IT ARMY listed UDP 500 as open on IP `77.247.242.173` (belonging to `nspk.ru`) - UDP reachability cannot be reliably assessed using RIPE Atlas to my knowledge.
 
