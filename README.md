@@ -14,11 +14,11 @@ From the most recent measurements collected, the status of sampled targets is:
 
 So there is measurably higher availability for several target sites within Russia's borders, but unless traffic from known RIPE Atlas probes is also filtered (unlikely), Russia is still facing substantial outages in the face of hacktivism.
 
-The most recent uptime statistics for each site (binned by sector) are also available in [STATUS.md](https://github.com/tweedge/ru-ok/blob/main/STATUS.md), and you can use this to see which sites have the most interesting availability characteristics at-a-glance. For example, the Kremlin site has been quoted as offline by many people on Reddit and Twitter. From my scanning, we can clearly see that while `kremlin.ru` often appears 'down' internationally, it has near-normal (80%+) availability within Russia - a stark difference.
+The most recent uptime statistics for each site (binned by sector) are also available in [STATUS.md](https://github.com/tweedge/ru-ok/blob/main/STATUS.md), and you can use this to see which sites have the most interesting availability characteristics at-a-glance. For example, the Kremlin site has been quoted as offline by many people on Reddit and Twitter. From my scanning, we can clearly see that while `kremlin.ru` may appear 'down' internationally, it has near-normal (80%+) availability within Russia - a stark difference.
 
 ## Why?
 
-This is a phenomenally interesting time to be working in cybersecurity - we are seeing hacktivism sanctioned and employed directly in international conflicts for the first time. All cybersecurity professionals should be paying attention to this, and I want to find out as much as possible about the *results* of Ukraine's committment to hacktivism during this conflict.
+This is a phenomenally interesting time to be working in cybersecurity - we are seeing hacktivism sanctioned and employed directly in international conflicts for the first time. All cybersecurity professionals should be paying attention to this - while "cyberwar" is not the forefront of conflict in the sense that it's costing lives on either side of the battlefield, the disruptions and defender-chaos that Ukraine has caused through its rallying is going to be a blueprint for hacktivism's role in future global conflicts. I want to find out as much as possible about the *results* of Ukraine's committment to hacktivism during this conflict, as this is the only time that data such as this can be collected - while it happens.
 
 ## Problems with Existing Measurements
 
@@ -41,9 +41,10 @@ Why RIPE Atlas? Atlas is a project by [RIPE NCC](https://www.ripe.net/) is a glo
 
 For each measurement:
 * I input a target domain or IP
-* I request 10 probes from a sample major internet-connected countries worldwide, plus 10 probes from only within Russian IP space, plus 5 *more* probes from only within Belarusian IP space
+* I request 10 probes from a sample major internet-connected countries worldwide, plus 10 probes from only within Russian IP space, plus 5 *more* probes from only within Belarusian IP space (for SSL measurements)
   * **New:** I'm also collecting 3 measurements from Ukraine, 1 from Poland, and 1 from Romainia. Not doing anything with them yet though - stay tuned!
   * **Changed:** Due to the number of targets and relatively low number of Belarusian targets, the sampling rate for Belarus has decreased to 5 probes per measurement from 10.
+  * **Changed:** Due to the high cost of TCP "ping" measurements in the RIPE Atlas system (these are actually TCP-based traceroutes, see FAQ), the results collected are going to be halved starting on 2022-03-17.
 * If required, all probes individually perform a DNS lookup for the target domain
 * All probes perform their desired measurement check (more on this in a minute)
 * Probes report the data retrieved - or any errors encountered - to RIPE Atlas
@@ -77,6 +78,8 @@ Again on 2022-03-08, IT ARMY instructed readers to DDoS DNS servers, this time b
 
 And again on 2022-03-13, IT ARMY instructed readers to DDoS `92.53.97.198` (which this project cannot measure) as part of the attacks on `alfabank.ru`.
 
+...and so on. This keeps occasionally happening, and is no longer a unique enough event to note. TL;DR it's a known gap.
+
 **No UDP testing.** Same problem as above, new port. On 2022-03-09, IT ARMY listed UDP 500 as open on IP `77.247.242.173` (belonging to `nspk.ru`) - UDP reachability cannot be reliably assessed using RIPE Atlas to my knowledge.
 
 **No testing internationalized domain names.** On 2022-03-01, IT ARMY instructed readers to take down `объясняем.рф`. Attempting to start RIPE Atlas measurements against this domain, the requests failed with a status code of 400. I am triaging this for later results and hope to add this to the sample, for examply by punycoding the domain before attempting to start the sample.
@@ -84,6 +87,8 @@ And again on 2022-03-13, IT ARMY instructed readers to DDoS `92.53.97.198` (whic
 **No testing where existing service ports aren't known.** On 2022-03-04, IT ARMY's only new targets were NSPK public IPs (serving "Myr" bank cards), which do not have known open ports via Shodan or Censys, either due to a request from NSPK, or blocking their scanners, etc. Given no ports are known, I cannot assess uptime accurately with RIPE Atlas' tooling.
 
 **No immediate testing**: On 2022-03-05, IT ARMY intelligently weaponized their audience to take down a fake website, `savelife.pw` (by reporting it to the registrar, hosting companies, etc.). The scans I am running are long-term, meant to understand the cyber-conflict broadly, and not ongoing or immediate assessments of sites. Before I could add this to uptime checks, the site was taken down.
+
+**TCP results for non-port-80 pings prior to 2022-03-17 are invalid**: This was due to a (dumb, preventable) bug in my code, and I apologize. All webserver tests, which are summarized in this README and in STATUS.md, are however 100% valid. I wasn't doing anything with the TCP data and therefore didn't notice the inconsistent results which pointed to a bug.
 
 ## FAQ
 
