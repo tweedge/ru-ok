@@ -23,13 +23,6 @@ parser.add_argument(
     required=True,
     help="RIPE Atlas APIv2 key, required to start measurements",
 )
-parser.add_argument(
-    "--output-folder",
-    action="store",
-    type=str,
-    required=True,
-    help="Specifies output folder relative to the current working directory",
-)
 args = parser.parse_args()
 
 with open("targets.json") as targets_file:
