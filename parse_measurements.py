@@ -27,7 +27,10 @@ for root, dirs, files in os.walk(args.input_folder):
             all_results.append(results)
 
 summaries = []
-domains_in_sample = {}
+targets_in_sample = {
+    "HTTP (80)": {},
+    "HTTPS (443)": {}
+}
 totals = {
     "HTTP (80)": {
         "worldwide": {"successes": 0, "errors": 0, "sites_up": 0},
@@ -48,9 +51,6 @@ for results in all_results:
     if not targets[domain]["test_type"] == "Webserver":
         continue
 
-    if not domain in domains_in_sample.keys():
-        domains_in_sample[domain] = True
-
     raw_m_type = results[0]["type"]
     if raw_m_type == "sslcert":
         m_type = "HTTPS (443)"
@@ -59,6 +59,11 @@ for results in all_results:
     else:
         print("not implemented, smartass")
         exit()
+
+    targets_in_sample_of_type = targets_in_sample[m_type]
+    if not domain in targets_in_sample_of_type.keys():
+        targets_in_sample_of_type[domain] = True
+        targets_in_sample[m_type] = targets_in_sample_of_type
 
     summary = {
         "domain": domain,
@@ -127,11 +132,10 @@ for results in all_results:
     summaries.append(summary)
 
 print("# All-Target Statistics")
-
-domains_count = len(domains_in_sample.keys())
 targets_count = len(targets.keys())
 up = "sites_up"
 for test in ["HTTP (80)", "HTTPS (443)"]:
+    domains_count = len(targets_in_sample[test])
     for cc in ["in Russia", "worldwide"]:
         print(
             f"* **{totals[test][cc][up]}/{domains_count}** {test} sampled target sites up {cc}"
@@ -141,7 +145,6 @@ print("")
 print("Notes:")
 print("* I am considering a site 'up' when it passes 70% or more uptime checks.")
 print("* Not all targeted sites are guaranteed to be in in a given sample.")
-print(f"* In this case, {domains_count}/{targets_count} targets sites were measured.")
 print("")
 
 for test in ["HTTP (80)", "HTTPS (443)"]:

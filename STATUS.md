@@ -1,13 +1,12 @@
 # All-Target Statistics
-* **333/482** HTTP (80) sampled target sites up in Russia
-* **230/482** HTTP (80) sampled target sites up worldwide
-* **312/482** HTTPS (443) sampled target sites up in Russia
-* **232/482** HTTPS (443) sampled target sites up worldwide
+* **333/453** HTTP (80) sampled target sites up in Russia
+* **230/453** HTTP (80) sampled target sites up worldwide
+* **312/450** HTTPS (443) sampled target sites up in Russia
+* **232/450** HTTPS (443) sampled target sites up worldwide
 
 Notes:
 * I am considering a site 'up' when it passes 70% or more uptime checks.
 * Not all targeted sites are guaranteed to be in in a given sample.
-* In this case, 482/563 targets sites were measured.
 
 # Testing Individual Targets on HTTP (80)
 | Sector | Domain | % Up WW | % Up RU | Remark |
