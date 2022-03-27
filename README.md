@@ -20,6 +20,16 @@ The most recent uptime statistics for each site (binned by sector) are also avai
 
 This is a phenomenally interesting time to be working in cybersecurity - we are seeing hacktivism sanctioned and employed directly in international conflicts for the first time. All cybersecurity professionals should be paying attention to this - while "cyberwar" is not the forefront of conflict in the sense that it's costing lives on either side of the battlefield, the disruptions and defender-chaos that Ukraine has caused through its rallying is going to be a blueprint for hacktivism's role in future global conflicts. I want to find out as much as possible about the *results* of Ukraine's committment to hacktivism during this conflict, as this is the only time that data such as this can be collected - while it happens.
 
+**Edit** - I'm not the only one interested in Ukraine's impact, and these results (or my analysis of them) have been cited in the following articles, among others:
+
+* Ukraine’s IT army is doing well, hitting Russia with ‘cost and chaos’ - [VentureBeat](https://venturebeat.com/2022/03/04/ukraines-it-army-is-doing-well-hitting-russia-with-cost-and-chaos/)
+* Ukraine deserves an IT army. We have to live with the fallout - [VentureBeat](https://venturebeat.com/2022/03/04/ukraine-deserves-an-it-army-we-have-to-live-with-the-fallout/)
+* Ukraine: We’ve repelled ‘nonstop’ DDoS attacks from Russia - [VentureBeat](https://venturebeat.com/2022/03/07/ukraine-weve-repelled-nonstop-ddos-attacks-from-russia/)
+* Guerre en Ukraine : les cyberattaques contre la Russie, le « cri de colère » d’une armée de volontaires - [Le Monde](https://www.lemonde.fr/pixels/article/2022/03/25/guerre-en-ukraine-face-a-la-russie-les-cyberattaques-en-forme-de-cri-de-colere-d-une-armee-de-volontaires_6119064_4408996.html)
+* Ukraine Demanded Cloudflare Stop Protecting Russians From Cyberattacks. Cloudflare Said No - [Forbes](https://www.forbes.com/sites/thomasbrewster/2022/03/07/cloudflare-rejects-ukraines-call-to-stop-protecting-russians-from-cyberattacks/)
+
+I am available via Twitter, Keybase, etc. to discuss or provide analysis where I can, and am comfortable going on the record about areas I am a subject matter expert in. For example, I generally won't comment on what Ukrainian/Russian sites are being *breached* as that isn't what this project measures - only the results of DDoS-centric hacktivism that Ukraine has cultivated.
+
 ## Problems with Existing Measurements
 
 Beyond the conflicting reports that I covered earlier - usually from anonymous people on the internet, so who knows how reliable their claims are or how they're connected to the world - there are problems even in "official" reporting. Ukraine itself has been claiming that all or almost all targets were offline via the IT ARMY of Ukraine Telegram channel, and their screenshot tipped me off to a problem: I'd used the uptime-checking service they were using before.
