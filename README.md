@@ -92,7 +92,7 @@ And again on 2022-03-13, IT ARMY instructed readers to DDoS `92.53.97.198` (whic
 
 **No UDP testing.** Same problem as above, new port. On 2022-03-09, IT ARMY listed UDP 500 as open on IP `77.247.242.173` (belonging to `nspk.ru`) - UDP reachability cannot be reliably assessed using RIPE Atlas to my knowledge.
 
-**No testing internationalized domain names.** On 2022-03-01, IT ARMY instructed readers to take down `объясняем.рф`. Attempting to start RIPE Atlas measurements against this domain, the requests failed with a status code of 400. I am triaging this for later results and hope to add this to the sample, for examply by punycoding the domain before attempting to start the sample.
+**No testing internationalized domain names.** On 2022-03-01, IT ARMY instructed readers to take down `объясняем.рф`. Attempting to start RIPE Atlas measurements against this domain, the requests failed with a status code of 400. As IDNs are not a significant minority of targets, I'm electing to skip these. The same goes for `пиломатериалы.рф`, which IT ARMY targeted starting on 2022-03-29.
 
 **No testing where existing service ports aren't known.** On 2022-03-04, IT ARMY's only new targets were NSPK public IPs (serving "Myr" bank cards), which do not have known open ports via Shodan or Censys, either due to a request from NSPK, or blocking their scanners, etc. Given no ports are known, I cannot assess uptime accurately with RIPE Atlas' tooling.
 
