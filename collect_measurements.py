@@ -61,7 +61,7 @@ for measurement in measurements:
     updated_response = []
     for result in response:
         if result["prb_id"] in probe_cache.keys():
-            print(f"Found probe ID {result['prb_id']} in cache")
+            #print(f"Found probe ID {result['prb_id']} in cache")
             result["probe_data"] = probe_cache[result["prb_id"]]
         else:
             backoff = 0.5
