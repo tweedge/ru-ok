@@ -1,8 +1,8 @@
 # All-Target Statistics
-* **333/452** HTTP (80) sampled target sites up in Russia
-* **253/452** HTTP (80) sampled target sites up worldwide
-* **334/427** HTTPS (443) sampled target sites up in Russia
-* **301/427** HTTPS (443) sampled target sites up worldwide
+* **328/447** HTTP (80) sampled target sites up in Russia
+* **251/447** HTTP (80) sampled target sites up worldwide
+* **362/465** HTTPS (443) sampled target sites up in Russia
+* **316/465** HTTPS (443) sampled target sites up worldwide
 
 Notes:
 * I am considering a site 'up' when it passes 70% or more uptime checks.
@@ -11,891 +11,924 @@ Notes:
 # Testing Individual Targets on HTTP (80)
 | Sector | Domain | % Up WW | % Up RU | Remark |
 |--------|--------|---------|---------|--------|
-|  | `10-img.onrealt.ru` | 80% | 100% |   |
-|  | `104.17.33.82` | 60% | 100% |   |
-|  | `109.207.5.98` | 0% | 100% | **INTERESTING** |
-|  | `141.101.233.39` | 0% | 0% |   |
-|  | `146.120.90.247` | 0% | 0% |   |
-|  | `146.120.90.29` | 0% | 0% |   |
-|  | `146.120.90.95` | 80% | 100% |   |
-|  | `146.158.48.16` | 100% | 100% |   |
-|  | `146.158.54.16` | 60% | 100% |   |
-|  | `152.89.216.244` | 100% | 100% |   |
-|  | `152.89.217.251` | 0% | 0% |   |
-|  | `178.248.234.2` | 80% | 100% |   |
-|  | `178.248.234.39` | 80% | 80% |   |
-|  | `178.248.234.76` | 60% | 100% |   |
-|  | `178.248.235.57` | 100% | 100% |   |
-|  | `178.248.236.155` | 80% | 100% |   |
-|  | `178.248.236.201` | 80% | 80% |   |
-|  | `178.248.237.112` | 100% | 100% |   |
-|  | `178.248.237.223` | 100% | 100% |   |
-|  | `178.248.237.57` | 100% | 100% |   |
-|  | `178.248.238.117` | 60% | 100% |   |
-|  | `178.248.238.24` | 100% | 100% |   |
-|  | `178.248.238.32` | 80% | 100% |   |
-|  | `178.248.239.19` | 100% | 80% |   |
+|  | `109.207.1.123` | 0% | 0% |   |
+|  | `109.207.5.162` | 0% | 100% | **INTERESTING** |
+|  | `109.238.243.245` | 0% | 0% |   |
+|  | `109.71.14.75` | 100% | 100% |   |
+|  | `146.120.90.25` | 80% | 100% |   |
+|  | `146.120.90.28` | 0% | 0% |   |
+|  | `146.120.90.72` | 0% | 0% |   |
+|  | `146.158.52.16` | 100% | 100% |   |
+|  | `146.158.52.24` | 100% | 80% |   |
+|  | `146.158.52.7` | 80% | 100% |   |
+|  | `146.158.54.24` | 100% | 100% |   |
+|  | `146.158.54.7` | 80% | 100% |   |
+|  | `151.236.80.50` | 80% | 100% |   |
+|  | `151.236.80.51` | 100% | 100% |   |
+|  | `159.255.25.2` | 0% | 0% |   |
+|  | `159.255.25.50` | 0% | 0% |   |
+|  | `176.57.216.109` | 0% | 0% |   |
+|  | `178.210.71.24` | 100% | 100% |   |
+|  | `178.210.92.25` | 40% | 100% | **INTERESTING** |
+|  | `178.216.96.114` | 100% | 100% |   |
+|  | `178.248.232.171` | 100% | 100% |   |
+|  | `178.248.232.222` | 100% | 100% |   |
+|  | `178.248.232.33` | 100% | 100% |   |
+|  | `178.248.234.119` | 80% | 100% |   |
+|  | `178.248.234.51` | 80% | 100% |   |
+|  | `178.248.235.156` | 60% | 100% |   |
+|  | `178.248.235.59` | 60% | 100% |   |
+|  | `178.248.236.155` | 100% | 100% |   |
+|  | `178.248.237.91` | 100% | 100% |   |
+|  | `178.248.238.15` | 100% | 80% |   |
+|  | `178.248.238.184` | 100% | 100% |   |
+|  | `178.248.238.97` | 80% | 75% |   |
+|  | `178.248.239.17` | 80% | 100% |   |
 |  | `178.248.239.21` | 100% | 100% |   |
-|  | `178.57.71.182` | 0% | 0% |   |
-|  | `185.10.61.116` | 0% | 0% |   |
-|  | `185.111.84.212` | 100% | 100% |   |
-|  | `185.12.154.16` | 100% | 100% |   |
-|  | `185.12.155.21` | 100% | 100% |   |
-|  | `185.129.100.112` | 60% | 100% |   |
-|  | `185.165.123.145` | 60% | 100% |   |
-|  | `185.169.155.118` | 100% | 100% |   |
-|  | `185.169.155.77` | 100% | 100% |   |
-|  | `185.179.146.43` | 80% | 100% |   |
-|  | `185.179.199.48` | 80% | 100% |   |
-|  | `185.179.85.65` | 60% | 100% |   |
-|  | `185.200.242.150` | 100% | 100% |   |
+|  | `178.57.71.189` | 0% | 0% |   |
+|  | `178.57.71.190` | 0% | 0% |   |
+|  | `185.10.61.125` | 0% | 0% |   |
+|  | `185.104.105.14` | 60% | 50% |   |
+|  | `185.12.152.27` | 0% | 0% |   |
+|  | `185.12.95.94` | 100% | 100% |   |
+|  | `185.138.254.1` | 80% | 100% |   |
+|  | `185.151.241.112` | 0% | 0% |   |
+|  | `185.165.123.176` | 100% | 100% |   |
+|  | `185.165.123.50` | 0% | 0% |   |
+|  | `185.169.155.116` | 80% | 100% |   |
+|  | `185.169.155.16` | 100% | 100% |   |
+|  | `185.169.155.28` | 100% | 100% |   |
+|  | `185.170.204.95` | 100% | 100% |   |
+|  | `185.170.207.63` | 100% | 100% |   |
+|  | `185.175.45.19` | 100% | 100% |   |
+|  | `185.178.208.163` | 100% | 100% |   |
+|  | `185.179.199.85` | 60% | 100% |   |
+|  | `185.179.85.62` | 80% | 100% |   |
+|  | `185.179.85.65` | 100% | 100% |   |
 |  | `185.200.242.185` | 100% | 100% |   |
 |  | `185.215.4.10` | 100% | 100% |   |
-|  | `185.31.134.103` | 100% | 100% |   |
-|  | `185.71.67.105` | 100% | 100% |   |
+|  | `185.46.11.253` | 80% | 25% | **WEIRD** |
+|  | `185.62.200.36` | 80% | 100% |   |
 |  | `185.71.67.4` | 80% | 100% |   |
-|  | `188.225.43.89` | 20% | 0% |   |
-|  | `188.246.235.133` | 40% | 33% |   |
-|  | `188.64.160.172` | 0% | 0% |   |
-|  | `193.0.214.142` | 80% | 100% |   |
-|  | `193.0.214.247` | 20% | 100% | **INTERESTING** |
-|  | `193.104.207.121` | 0% | 100% | **INTERESTING** |
-|  | `193.104.241.10` | 100% | 100% |   |
+|  | `185.71.67.94` | 100% | 100% |   |
+|  | `185.79.118.12` | 100% | 100% |   |
+|  | `185.79.118.3` | 100% | 100% |   |
+|  | `185.79.118.6` | 100% | 100% |   |
+|  | `185.84.184.5` | 0% | 0% |   |
+|  | `188.68.216.77` | 100% | 100% |   |
+|  | `193.0.214.27` | 100% | 100% |   |
+|  | `193.0.214.30` | 80% | 100% |   |
+|  | `193.104.207.121` | 20% | 100% | **INTERESTING** |
+|  | `193.104.241.10` | 0% | 0% |   |
+|  | `193.104.243.114` | 100% | 100% |   |
 |  | `193.104.243.137` | 0% | 0% |   |
-|  | `193.104.243.71` | 80% | 100% |   |
-|  | `193.164.150.212` | 100% | 100% |   |
-|  | `193.19.103.237` | 80% | 100% |   |
-|  | `193.93.29.82` | 0% | 100% | **INTERESTING** |
-|  | `194.1.214.254` | 0% | 100% | **INTERESTING** |
-|  | `194.190.12.167` | 80% | 100% |   |
-|  | `194.226.54.42` | 60% | 100% |   |
-|  | `194.54.14.131` | 100% | 80% |   |
-|  | `194.54.14.255` | 20% | 20% |   |
-|  | `194.58.122.214` | 0% | 40% |   |
-|  | `195.128.124.71` | 0% | 0% |   |
-|  | `195.208.1.100` | 80% | 100% |   |
-|  | `195.211.221.55` | 100% | 75% |   |
-|  | `195.80.224.185` | 100% | 100% |   |
-|  | `212.164.137.137` | 80% | 100% |   |
-|  | `212.164.138.169` | 100% | 100% |   |
-|  | `212.193.153.140` | 100% | 100% |   |
-|  | `212.193.158.175` | 80% | 100% |   |
-|  | `212.193.48.97` | 100% | 100% |   |
-|  | `212.45.14.92` | 0% | 100% | **INTERESTING** |
-|  | `213.171.56.46` | 0% | 20% |   |
-|  | `213.180.204.71` | 100% | 100% |   |
-|  | `213.252.120.116` | 0% | 0% |   |
-|  | `213.59.254.7` | 20% | 25% |   |
-|  | `213.59.254.8` | 50% | 0% | **WEIRD** |
-|  | `217.175.24.107` | 80% | 100% |   |
-|  | `217.175.24.112` | 20% | 100% | **INTERESTING** |
-|  | `217.175.24.200` | 0% | 0% |   |
-|  | `217.175.24.21` | 0% | 0% |   |
-|  | `217.175.24.27` | 100% | 100% |   |
+|  | `193.189.120.196` | 100% | 100% |   |
+|  | `193.189.120.65` | 100% | 100% |   |
+|  | `193.189.120.74` | 100% | 100% |   |
+|  | `194.226.54.22` | 80% | 100% |   |
+|  | `194.54.14.131` | 60% | 100% |   |
+|  | `194.54.15.144` | 40% | 50% |   |
+|  | `194.54.15.168` | 0% | 0% |   |
+|  | `194.85.30.210` | 80% | 100% |   |
+|  | `195.112.120.237` | 0% | 0% |   |
+|  | `195.19.220.23` | 100% | 100% |   |
+|  | `195.19.96.198` | 100% | 75% |   |
+|  | `195.225.39.107` | 40% | 80% |   |
+|  | `195.239.161.204` | 0% | 0% |   |
+|  | `195.93.246.165` | 100% | 80% |   |
+|  | `1line.info` | 100% | 100% |   |
+|  | `2.58.68.200` | 100% | 100% |   |
+|  | `2022.polkrf.ru` | 100% | 100% |   |
+|  | `212.164.137.119` | 100% | 100% |   |
+|  | `212.164.137.137` | 100% | 100% |   |
+|  | `212.164.137.229` | 80% | 100% |   |
+|  | `212.164.137.233` | 100% | 100% |   |
+|  | `212.164.137.253` | 100% | 100% |   |
+|  | `212.193.152.42` | 100% | 100% |   |
+|  | `213.156.210.18` | 20% | 50% |   |
+|  | `213.180.204.4` | 100% | 100% |   |
+|  | `213.5.80.161` | 20% | 100% | **INTERESTING** |
+|  | `213.59.254.8` | 20% | 20% |   |
+|  | `217.172.26.140` | 80% | 100% |   |
+|  | `217.175.24.192` | 0% | 0% |   |
+|  | `217.175.24.74` | 0% | 0% |   |
 |  | `217.175.24.93` | 0% | 0% |   |
-|  | `217.195.78.217` | 40% | 25% |   |
-|  | `217.21.210.211` | 0% | 100% | **INTERESTING** |
-|  | `217.21.220.243` | 0% | 100% | **INTERESTING** |
-|  | `223.etp-ets.ru` | 80% | 100% |   |
-|  | `223fz.rus-on.ru` | 0% | 100% | **INTERESTING** |
-|  | `31.31.196.218` | 100% | 100% |   |
-|  | `31.31.198.181` | 80% | 100% |   |
-|  | `31.31.198.91` | 80% | 100% |   |
-|  | `44.gosuslugi.ru` | 0% | 100% | **INTERESTING** |
+|  | `217.195.78.217` | 50% | 60% |   |
+|  | `217.21.217.5` | 0% | 0% |   |
+|  | `223etp.zakazrf.ru` | 0% | 75% | **INTERESTING** |
+|  | `31.31.196.249` | 80% | 100% |   |
+|  | `45.130.41.3` | 60% | 80% |   |
 |  | `45.134.27.204` | 100% | 100% |   |
-|  | `46.17.200.242` | 100% | 100% |   |
-|  | `46.17.203.102` | 80% | 100% |   |
-|  | `46.17.203.11` | 100% | 100% |   |
-|  | `46.17.203.245` | 40% | 100% | **INTERESTING** |
-|  | `46.17.203.73` | 100% | 100% |   |
-|  | `46.235.185.176` | 80% | 100% |   |
-|  | `46.235.191.53` | 80% | 100% |   |
-|  | `46.235.53.117` | 0% | 0% |   |
-|  | `46.254.20.38` | 100% | 100% |   |
-|  | `46.38.57.241` | 0% | 0% |   |
-|  | `5.101.152.179` | 100% | 100% |   |
-|  | `5.142.253.152` | 0% | 0% |   |
-|  | `5.188.186.134` | 100% | 100% |   |
-|  | `62.109.1.23` | 20% | 0% |   |
-|  | `62.152.56.125` | 80% | 100% |   |
+|  | `46.17.203.250` | 100% | 100% |   |
+|  | `46.17.204.249` | 60% | 100% |   |
+|  | `46.17.206.13` | 100% | 100% |   |
+|  | `46.235.185.176` | 100% | 100% |   |
+|  | `46.235.187.127` | 100% | 100% |   |
+|  | `46.254.19.78` | 0% | 0% |   |
+|  | `46.255.97.148` | 0% | 100% | **INTERESTING** |
+|  | `5.188.186.133` | 100% | 100% |   |
+|  | `5.61.236.230` | 0% | 100% | **INTERESTING** |
+|  | `5.61.236.234` | 25% | 100% | **INTERESTING** |
+|  | `5.61.236.235` | 80% | 100% |   |
+|  | `52.157.82.117` | 80% | 100% |   |
+|  | `62.152.56.125` | 100% | 100% |   |
 |  | `62.76.145.221` | 0% | 0% |   |
-|  | `77.236.61.16` | 0% | 0% |   |
+|  | `62.76.145.81` | 40% | 100% | **INTERESTING** |
+|  | `62.76.145.85` | 40% | 100% | **INTERESTING** |
 |  | `78.142.221.116` | 0% | 0% |   |
-|  | `78.41.111.106` | 100% | 100% |   |
-|  | `79.142.100.40` | 0% | 0% |   |
 |  | `79.142.100.44` | 100% | 100% |   |
-|  | `80.247.38.109` | 0% | 0% |   |
-|  | `80.67.43.1` | 100% | 75% |   |
-|  | `80.87.197.227` | 100% | 100% |   |
-|  | `80.92.34.6` | 0% | 0% |   |
-|  | `80.92.36.160` | 0% | 100% | **INTERESTING** |
-|  | `81.19.72.3` | 40% | 40% |   |
-|  | `81.211.33.101` | 100% | 100% |   |
-|  | `82.202.190.169` | 0% | 100% | **INTERESTING** |
-|  | `82.202.251.98` | 0% | 0% |   |
-|  | `83.169.194.26` | 100% | 100% |   |
-|  | `83.169.194.48` | 0% | 0% |   |
+|  | `79.142.16.48` | 100% | 100% |   |
+|  | `79.171.117.82` | 0% | 0% |   |
+|  | `80.246.18.43` | 0% | 0% |   |
+|  | `80.87.203.131` | 100% | 100% |   |
+|  | `80.87.203.23` | 80% | 100% |   |
+|  | `80.92.164.136` | 0% | 75% | **INTERESTING** |
+|  | `81.177.156.250` | 0% | 0% |   |
+|  | `81.19.72.39` | 20% | 40% |   |
+|  | `82.146.48.243` | 60% | 100% |   |
+|  | `82.202.172.188` | 100% | 100% |   |
+|  | `82.202.172.51` | 100% | 100% |   |
+|  | `82.202.190.198` | 0% | 100% | **INTERESTING** |
+|  | `82.202.190.72` | 0% | 0% |   |
 |  | `83.69.207.146` | 0% | 0% |   |
-|  | `84.252.146.82` | 0% | 0% |   |
-|  | `85.12.217.152` | 0% | 0% |   |
-|  | `85.31.123.212` | 0% | 0% |   |
-|  | `87.226.162.78` | 0% | 0% |   |
-|  | `87.236.16.254` | 0% | 0% |   |
-|  | `88.212.253.201` | 0% | 0% |   |
-|  | `89.108.107.180` | 0% | 0% |   |
-|  | `89.108.120.14` | 100% | 100% |   |
-|  | `89.17.45.18` | 0% | 0% |   |
+|  | `85.119.149.175` | 100% | 100% |   |
+|  | `85.119.149.231` | 100% | 100% |   |
+|  | `87.236.16.207` | 60% | 100% |   |
+|  | `87.251.91.3` | 0% | 0% |   |
+|  | `91.142.90.228` | 0% | 0% |   |
+|  | `91.205.181.91` | 20% | 80% | **INTERESTING** |
 |  | `91.206.147.2` | 0% | 0% |   |
-|  | `91.230.251.101` | 0% | 0% |   |
+|  | `91.206.147.4` | 0% | 0% |   |
+|  | `91.225.24.41` | 80% | 80% |   |
+|  | `91.230.251.101` | 20% | 0% |   |
+|  | `91.230.251.70` | 40% | 100% | **INTERESTING** |
+|  | `91.230.251.79` | 0% | 0% |   |
+|  | `91.232.230.126` | 100% | 100% |   |
 |  | `91.232.230.165` | 100% | 100% |   |
-|  | `92.255.104.152` | 80% | 100% |   |
-|  | `92.255.104.35` | 60% | 100% |   |
+|  | `91.232.230.202` | 100% | 100% |   |
+|  | `91.239.5.19` | 0% | 0% |   |
+|  | `91.90.213.172` | 20% | 0% |   |
+|  | `92.255.104.152` | 60% | 100% |   |
+|  | `92.255.104.35` | 100% | 75% |   |
+|  | `92.255.106.45` | 80% | 100% |   |
 |  | `92.53.124.101` | 80% | 100% |   |
-|  | `92.53.64.62` | 100% | 100% |   |
-|  | `92.53.80.162` | 100% | 100% |   |
-|  | `92.53.96.182` | 80% | 100% |   |
-|  | `93.187.73.22` | 0% | 0% |   |
-|  | `94.124.200.0` | 80% | 100% |   |
-|  | `94.198.55.22` | 0% | 0% |   |
-|  | `94.228.121.101` | 100% | 80% |   |
-|  | `94.26.241.164` | 80% | 100% |   |
-|  | `94.26.255.58` | 20% | 0% |   |
-|  | `95.131.25.23` | 0% | 0% |   |
-|  | `95.131.30.226` | 0% | 0% |   |
-|  | `95.163.119.211` | 60% | 100% |   |
+|  | `92.53.124.242` | 100% | 100% |   |
+|  | `92.53.96.174` | 0% | 0% |   |
+|  | `92.53.96.177` | 100% | 100% |   |
+|  | `92.53.96.46` | 100% | 80% |   |
+|  | `93.174.48.173` | 0% | 0% |   |
+|  | `93.187.73.154` | 0% | 0% |   |
+|  | `93.93.89.150` | 100% | 100% |   |
+|  | `94.228.125.167` | 0% | 0% |   |
+|  | `94.26.241.164` | 100% | 100% |   |
+|  | `94.79.10.194` | 0% | 100% | **INTERESTING** |
+|  | `95.161.154.197` | 0% | 0% |   |
+|  | `95.161.154.198` | 0% | 0% |   |
+|  | `95.163.119.211` | 100% | 100% |   |
 |  | `95.163.181.225` | 0% | 0% |   |
-|  | `95.173.157.11` | 0% | 80% | **INTERESTING** |
-|  | `95.181.181.21` | 0% | 0% |   |
-|  | `95.181.228.235` | 100% | 100% |   |
-|  | `aia.etpgpb.ru` | 0% | 100% | **INTERESTING** |
-|  | `amocrm-proxy.notisend.ru` | 80% | 100% |   |
+|  | `95.163.85.60` | 0% | 0% |   |
+|  | `95.181.181.254` | 0% | 0% |   |
+|  | `ac.atol.ru` | 0% | 0% |   |
+|  | `admin.kino.1tv.ru` | 80% | 100% |   |
+|  | `admin.tvigle.ru` | 20% | 0% |   |
+|  | `adminestate.etprf.ru` | 100% | 80% |   |
+|  | `agents.lot-online.ru` | 40% | 100% | **INTERESTING** |
+|  | `amo.tm` | 100% | 100% |   |
+|  | `amocrm-proxy.notisend.ru` | 100% | 100% |   |
 |  | `ampravda.ru` | 100% | 100% |   |
-|  | `anketolog.ru` | 100% | 100% |   |
-|  | `anti-sushi.ru` | 100% | 100% |   |
-|  | `apeti.ru` | 80% | 100% |   |
-|  | `api-v4.move.ru` | 80% | 100% |   |
-|  | `api.cmsec.notisend.ru` | 80% | 100% |   |
-|  | `api.dev.amo.tm` | 0% | 0% |   |
-|  | `api.new-market.otc.ru` | 100% | 100% |   |
+|  | `anspb.ru` | 0% | 80% | **INTERESTING** |
+|  | `apeti.ru` | 60% | 100% |   |
+|  | `api.kontur.ru` | 100% | 100% |   |
+|  | `api.mdlp.crpt.ru` | 40% | 100% | **INTERESTING** |
 |  | `api.notisend.ru` | 100% | 100% |   |
 |  | `api.stand1.dev.amo.tm` | 0% | 0% |   |
-|  | `app.amo.tm` | 80% | 100% |   |
+|  | `api.weeek.net` | 100% | 100% |   |
+|  | `api.yclients.notisend.ru` | 80% | 100% |   |
 |  | `app.develop.weeek.net` | 0% | 0% |   |
-|  | `app.notisend.ru` | 75% | 100% |   |
+|  | `app.notisend.ru` | 80% | 100% |   |
+|  | `app.rts-tender.ru` | 100% | 100% |   |
 |  | `appletest.nordwindairlines.ru` | 0% | 0% |   |
 |  | `apteka.ru` | 100% | 100% |   |
-|  | `argus.vetrf.ru` | 20% | 100% | **INTERESTING** |
-|  | `armrus.ru` | 80% | 100% |   |
-|  | `arsenal.army` | 80% | 100% |   |
-|  | `atlas.vetrf.ru` | 60% | 100% |   |
-|  | `aviasales.ru` | 60% | 75% |   |
-|  | `avito.ru` | 80% | 100% |   |
-|  | `b.roseltorg.ru` | 100% | 100% |   |
-|  | `b2b.aviasales.ru` | 80% | 80% |   |
-|  | `bankrot.zakazrf.ru` | 0% | 100% | **INTERESTING** |
-|  | `bankrupt.etpu.ru` | 75% | 100% |   |
-|  | `bg.roseltorg.ru` | 60% | 100% |   |
-|  | `bki-okb.ru` | 100% | 100% |   |
-|  | `business.ozon.ru` | 0% | 0% |   |
-|  | `byteks.biz` | 0% | 0% |   |
-|  | `ca.fsrar.ru` | 20% | 100% | **INTERESTING** |
-|  | `ca.otc.ru` | 80% | 100% |   |
-|  | `ca.roseltorg.ru` | 40% | 100% | **INTERESTING** |
-|  | `ca.rzd.ru` | 0% | 20% |   |
-|  | `cabinet.mirkvartir.ru` | 80% | 25% | **WEIRD** |
+|  | `auth.223etpt.zakazrf.ru` | 0% | 100% | **INTERESTING** |
+|  | `auth.zakaz3.zakazrf.ru` | 0% | 100% | **INTERESTING** |
+|  | `autodiscover.nordwindairlines.ru` | 20% | 75% | **INTERESTING** |
+|  | `avito.ru` | 100% | 100% |   |
+|  | `azimuth.aero` | 80% | 100% |   |
+|  | `b2b.cmlt.ru` | 80% | 100% |   |
+|  | `baikalskieogni.ru` | 0% | 80% | **INTERESTING** |
+|  | `bandzay.ru` | 0% | 0% |   |
+|  | `bankelita.ru` | 0% | 0% |   |
+|  | `billing-api-test.preprod.more.tv` | 0% | 0% |   |
+|  | `biz.price.ru` | 100% | 100% |   |
+|  | `broniboy.ru` | 100% | 100% |   |
+|  | `bstest.severstal.com` | 0% | 0% |   |
+|  | `bt.severstal.com` | 100% | 100% |   |
+|  | `ca.gisca.ru` | 80% | 100% |   |
+|  | `ca.rzd.ru` | 0% | 25% |   |
+|  | `cabinet.kontur.ru` | 100% | 100% |   |
+|  | `cabinet.mirkvartir.ru` | 60% | 100% |   |
+|  | `cabinet.okko.tv` | 100% | 100% |   |
+|  | `cafe-pushkin.ru` | 80% | 75% |   |
 |  | `career.severstal.com` | 0% | 100% | **INTERESTING** |
-|  | `cdnv.nashstore.ru` | 0% | 100% | **INTERESTING** |
-|  | `cfmc.ru` | 0% | 60% | **INTERESTING** |
-|  | `chermk.severstal.com` | 0% | 100% | **INTERESTING** |
-|  | `chernovik.net` | 60% | 75% |   |
-|  | `cloud.platon.ru` | 0% | 0% |   |
-|  | `club.techport.ru` | 80% | 100% |   |
-|  | `cm.1tv.ru` | 0% | 0% |   |
-|  | `comebackalive.info` | 0% | 0% |   |
-|  | `company.myseldon.com` | 75% | 100% |   |
-|  | `contract.mil.ru` | 40% | 100% | **INTERESTING** |
-|  | `corp.ozon.com` | 40% | 25% |   |
-|  | `delikateska.ru` | 100% | 100% |   |
-|  | `delmario.ru` | 100% | 100% |   |
-|  | `dev.amo.tm` | 0% | 0% |   |
-|  | `developer.amo.tm` | 100% | 80% |   |
-|  | `doc.mil.ru` | 40% | 100% | **INTERESTING** |
-|  | `docs.roseltorg.ru` | 100% | 75% |   |
-|  | `downloads.1c.ru` | 80% | 100% |   |
-|  | `downloads.v8.1c.ru` | 75% | 80% |   |
-|  | `dreamkas.ru` | 100% | 100% |   |
+|  | `cherkessk09.ru` | 100% | 100% |   |
+|  | `comebackalive.info` | 0% | 25% |   |
+|  | `creditural.ru` | 60% | 100% |   |
+|  | `documents-utm.egais.ru` | 100% | 100% |   |
+|  | `downloads.1c.ru` | 100% | 100% |   |
+|  | `downloads.v8.1c.ru` | 80% | 100% |   |
+|  | `duma.vetrf.ru` | 40% | 100% | **INTERESTING** |
+|  | `dvinatoday.ru` | 80% | 100% |   |
 |  | `e-trust.gosuslugi.ru` | 100% | 100% |   |
-|  | `ecert.vetrf.ru` | 40% | 75% |   |
-|  | `eda.yandex.ru` | 80% | 100% |   |
+|  | `echosevera.ru` | 100% | 100% |   |
 |  | `edo-gismt.crpt.ru` | 0% | 0% |   |
-|  | `elkursk.ru` | 100% | 100% |   |
-|  | `epnow.ru` | 0% | 0% |   |
-|  | `esia.gosuslugi.ru` | 40% | 40% |   |
-|  | `etp-ets.ru` | 100% | 100% |   |
-|  | `etp.gpb.ru` | 0% | 100% | **INTERESTING** |
-|  | `evotor.ru` | 100% | 100% |   |
-|  | `f4.fss.ru` | 100% | 100% |   |
-|  | `file.etprf.ru` | 0% | 100% | **INTERESTING** |
-|  | `flysmartavia.com` | 100% | 100% |   |
-|  | `focus.kontur.ru` | 100% | 100% |   |
-|  | `fsrar.gov.ru` | 0% | 100% | **INTERESTING** |
-|  | `fsvps.gov.ru` | 100% | 100% |   |
-|  | `ftp.amo.tm` | 100% | 100% |   |
-|  | `function.mil.ru` | 60% | 100% |   |
-|  | `garsingshop.by` | 60% | 100% |   |
-|  | `gb.etpgpb.ru` | 0% | 100% | **INTERESTING** |
-|  | `golos.rus-on.ru` | 0% | 100% | **INTERESTING** |
-|  | `gos.etpgpb.ru` | 100% | 100% |   |
-|  | `gosuslugi.ru` | 20% | 0% |   |
-|  | `grozmer.ru` | 100% | 80% |   |
+|  | `eln.fss.ru` | 80% | 100% |   |
+|  | `etprf.ru` | 0% | 100% | **INTERESTING** |
+|  | `evoprod.evotor.ru` | 100% | 100% |   |
+|  | `faradei.ru` | 80% | 100% |   |
+|  | `ff.kontur.ru` | 80% | 100% |   |
+|  | `file.etprf.ru` | 20% | 100% | **INTERESTING** |
+|  | `fkr.roseltorg.ru` | 100% | 100% |   |
+|  | `fl.rdb.ru` | 100% | 100% |   |
+|  | `forum.fsrar.ru` | 75% | 75% |   |
+|  | `function.mil.ru` | 100% | 100% |   |
+|  | `garsingshop.by` | 60% | 80% |   |
+|  | `gb.etpgpb.ru` | 0% | 80% | **INTERESTING** |
+|  | `globalstat.ru` | 100% | 100% |   |
+|  | `gorod55.ru` | 60% | 100% |   |
+|  | `gos.etpgpb.ru` | 80% | 100% |   |
+|  | `gosuslugi.ru` | 40% | 20% |   |
+|  | `gr.tvigle.ru` | 0% | 0% |   |
+|  | `grozmer.ru` | 80% | 80% |   |
+|  | `gruzovozkin.pro` | 80% | 100% |   |
+|  | `gudermes.net` | 100% | 100% |   |
+|  | `heraldy.mil.ru` | 60% | 100% |   |
 |  | `hh.ru` | 100% | 100% |   |
-|  | `host.amo.tm` | 100% | 100% |   |
-|  | `hr.zarplata.ru` | 100% | 100% |   |
-|  | `ilovesakura.ru` | 100% | 100% |   |
-|  | `info-rm.com` | 100% | 100% |   |
-|  | `ir.ozon.com` | 20% | 20% |   |
-|  | `irena.vetrf.ru` | 20% | 100% | **INTERESTING** |
-|  | `ismp.crpt.ru` | 0% | 0% |   |
-|  | `izhtender.ru` | 80% | 100% |   |
-|  | `join.cms.aeroflot.ru` | 100% | 100% |   |
-|  | `karofilm.ru` | 80% | 100% |   |
-|  | `kiyaviakrym.com` | 0% | 0% |   |
-|  | `komionline.ru` | 80% | 100% |   |
-|  | `kontur.documentoved.ru` | 100% | 100% |   |
-|  | `kraskript.com` | 80% | 100% |   |
-|  | `livetraffic.anketolog.ru` | 60% | 100% |   |
-|  | `lk.cse.ru` | 80% | 100% |   |
-|  | `lk.ofd.ru` | 100% | 100% |   |
-|  | `lkg.mil.ru` | 60% | 100% |   |
-|  | `m-food.ru` | 100% | 100% |   |
+|  | `hochyedy.ru` | 100% | 100% |   |
+|  | `in-bank.ru` | 0% | 100% | **INTERESTING** |
+|  | `inter-rao.etpgpb.ru` | 0% | 100% | **INTERESTING** |
+|  | `invitations.1c-edo.keydisk.ru` | 0% | 0% |   |
+|  | `iom.anketolog.ru` | 80% | 100% |   |
+|  | `irena.vetrf.ru` | 50% | 100% | **INTERESTING** |
+|  | `jira.anketolog.ru` | 0% | 0% |   |
+|  | `job.citilink.ru` | 0% | 100% | **INTERESTING** |
+|  | `kim.tektorg.ru` | 100% | 100% |   |
+|  | `kinosfera-imax.ru` | 100% | 100% |   |
+|  | `kiosk-monitoring.z2s.ru` | 80% | 100% |   |
+|  | `kkt.ofd-magnit.ru` | 0% | 0% |   |
+|  | `koronapay.com` | 80% | 100% |   |
+|  | `kross.etpgpb.ru` | 0% | 0% |   |
+|  | `livetraffic.anketolog.ru` | 100% | 100% |   |
+|  | `lk.platon.ru` | 100% | 100% |   |
+|  | `lk.rostec.ru` | 60% | 100% |   |
+|  | `lot-online.ru` | 80% | 100% |   |
 |  | `m.amo.tm` | 80% | 100% |   |
-|  | `m.avito.ru` | 80% | 100% |   |
-|  | `m.kino-teatr.ru` | 100% | 100% |   |
-|  | `mail01.amo.tm` | 100% | 100% |   |
-|  | `mail5.amo.tm` | 80% | 100% |   |
-|  | `market-lk.rts-tender.ru` | 100% | 100% |   |
-|  | `markirovka.crpt.ru` | 0% | 0% |   |
-|  | `milk.crpt.ru` | 0% | 0% |   |
-|  | `minenergo.gov.ru` | 0% | 100% | **INTERESTING** |
-|  | `minjust.gov.ru` | 0% | 80% | **INTERESTING** |
-|  | `mirmol.ru` | 100% | 100% |   |
-|  | `mirror.wildberries.ru` | 0% | 100% | **INTERESTING** |
-|  | `moretv-sport.preprod.more.tv` | 0% | 0% |   |
-|  | `mx.sms.notisend.ru` | 100% | 100% |   |
-|  | `new.anketolog.ru` | 20% | 0% |   |
-|  | `newbur.ru` | 40% | 100% | **INTERESTING** |
-|  | `nfo-report.1c.ru` | 0% | 0% |   |
-|  | `ngs55.ru` | 80% | 100% |   |
-|  | `norussians.xyz` | 0% | 0% |   |
-|  | `novkos.ru` | 100% | 100% |   |
-|  | `nucrf.ru` | 0% | 100% | **INTERESTING** |
-|  | `ocsp.sovcombank.ru` | 100% | 100% |   |
-|  | `ocsp1.rosatom.ru` | 100% | 100% |   |
+|  | `mail.server.email.weeek.net` | 0% | 0% |   |
+|  | `major.amediateka.ru` | 0% | 0% |   |
+|  | `map.platon.ru` | 100% | 75% |   |
+|  | `mascom-it.ru` | 0% | 0% |   |
+|  | `merchant.sdm.ru` | 100% | 100% |   |
+|  | `midag.ru` | 80% | 100% |   |
+|  | `minstroyrf.gov.ru` | 80% | 80% |   |
+|  | `mirror.wildberries.ru` | 100% | 100% |   |
+|  | `ndelo.ru` | 80% | 100% |   |
+|  | `new.ksota.ru` | 0% | 0% |   |
+|  | `nordwindairlines.ru` | 60% | 100% |   |
+|  | `novkos.ru` | 80% | 100% |   |
+|  | `ns2.tsargrad.tv` | 0% | 0% |   |
+|  | `nsqadmin.1c-edo.keydisk.ru` | 0% | 0% |   |
+|  | `nwudc.ru` | 0% | 100% | **INTERESTING** |
+|  | `ocsp.sovcombank.ru` | 60% | 80% |   |
 |  | `ocsp2.profi-mo.ru` | 0% | 0% |   |
-|  | `ocsp2.rosatom.ru` | 60% | 100% |   |
 |  | `ocsp20.taxcom.ru` | 100% | 100% |   |
-|  | `ofd.astralnalog.ru` | 0% | 0% |   |
+|  | `ofd-magnit.ru` | 100% | 80% |   |
 |  | `ofd.ru` | 100% | 100% |   |
-|  | `okko.tv` | 100% | 100% |   |
-|  | `omskinform.ru` | 80% | 80% |   |
-|  | `online.gks.ru` | 0% | 67% | **INTERESTING** |
-|  | `online.mkb.ru` | 100% | 100% |   |
-|  | `opendata.ozon.ru` | 60% | 60% |   |
-|  | `osago.sberbank.ru` | 100% | 100% |   |
-|  | `panel-new.anketolog.ru` | 0% | 0% |   |
-|  | `parking.spb.ru` | 80% | 100% |   |
-|  | `parkingkrd.ru` | 100% | 75% |   |
-|  | `partner-service.testing.anketolog.ru` | 0% | 0% |   |
-|  | `partner.weeek.net` | 40% | 80% |   |
-|  | `pki.tax.gov.ru` | 60% | 75% |   |
-|  | `pobeda.okko.tv` | 40% | 80% |   |
-|  | `qs.cryptopro.ru` | 100% | 100% |   |
-|  | `rabota.vk.com` | 60% | 100% |   |
-|  | `recrut.mil.ru` | 80% | 100% |   |
-|  | `report.keydisk.ru` | 80% | 40% |   |
-|  | `rhelper.rarus.ru` | 80% | 100% |   |
-|  | `riakalm.ru` | 80% | 80% |   |
-|  | `rim.aeroflot.ru` | 100% | 100% |   |
-|  | `rolls-and-pizza.ru` | 0% | 0% |   |
-|  | `rosgeo.roseltorg.ru` | 100% | 100% |   |
-|  | `rosnedra.etpgpb.ru` | 0% | 100% | **INTERESTING** |
-|  | `rostelecom.ru` | 80% | 100% |   |
-|  | `rt.roseltorg.ru` | 80% | 100% |   |
-|  | `rv-ryazan.ru` | 80% | 80% |   |
-|  | `samokat.ru` | 100% | 100% |   |
-|  | `samson-pharma.ru` | 60% | 100% |   |
-|  | `saratovagro.roseltorg.ru` | 60% | 80% |   |
-|  | `sberprime.sber.ru` | 60% | 50% |   |
-|  | `sc.rus-on.ru` | 0% | 0% |   |
-|  | `school.kontur.ru` | 100% | 100% |   |
-|  | `scloud.rostec.ru` | 60% | 100% |   |
-|  | `sdaminfo.ru` | 100% | 100% |   |
-|  | `service.alcolicenziat.ru` | 0% | 100% | **INTERESTING** |
-|  | `service.fsrar.ru` | 0% | 100% | **INTERESTING** |
-|  | `service.itk23.ru` | 100% | 100% |   |
-|  | `service.uc-itcom.ru` | 100% | 100% |   |
-|  | `spb.obed.ru` | 100% | 100% |   |
-|  | `squaretrade.ru` | 100% | 100% |   |
-|  | `ssca.rosatom.ru` | 80% | 100% |   |
-|  | `stage.1tv.ru` | 0% | 0% |   |
-|  | `star-pro.ru` | 0% | 0% |   |
-|  | `sterlegrad.ru` | 100% | 100% |   |
-|  | `store.stage-68d7hn.anketolog.ru` | 0% | 0% |   |
-|  | `streamer.wildberries.ru` | 100% | 100% |   |
-|  | `structure.mil.ru` | 60% | 100% |   |
+|  | `omskinform.ru` | 100% | 100% |   |
+|  | `online.sberbank.ru` | 80% | 100% |   |
+|  | `opendata.ozon.ru` | 40% | 25% |   |
+|  | `p2p.qiwi.com` | 100% | 100% |   |
+|  | `performance.ozon.ru` | 60% | 20% |   |
+|  | `pgu.gov-chr.ru` | 100% | 100% |   |
+|  | `pk.platformaofd.ru` | 100% | 100% |   |
+|  | `pki.tax.gov.ru` | 100% | 100% |   |
+|  | `planetazdorovo.ru` | 80% | 100% |   |
+|  | `portal.kuzbank.ru` | 100% | 100% |   |
+|  | `portal5.cbr.ru` | 100% | 100% |   |
+|  | `portamur.ru` | 80% | 100% |   |
+|  | `postavki.kontur.ru` | 100% | 100% |   |
+|  | `ppls-vc.aeroflot.ru` | 0% | 100% | **INTERESTING** |
+|  | `ppls-vc.f5.aeroflot.ru` | 0% | 100% | **INTERESTING** |
+|  | `premiere.okko.tv` | 100% | 100% |   |
+|  | `promo.sber.ru` | 80% | 80% |   |
+|  | `prozapass.ru` | 80% | 100% |   |
+|  | `qiwi.com` | 100% | 100% |   |
+|  | `qs.cryptopro.ru` | 80% | 100% |   |
+|  | `ra20.tax23.ru` | 0% | 0% |   |
+|  | `re-store.ru` | 100% | 100% |   |
+|  | `redmine.keydisk.ru` | 0% | 33% |   |
+|  | `reg.zakazrf.ru` | 0% | 60% | **INTERESTING** |
+|  | `region-am.ru` | 60% | 50% |   |
+|  | `region29.ru` | 100% | 100% |   |
+|  | `rencredit.ru` | 0% | 0% |   |
+|  | `rendertron.preprod.more.tv` | 0% | 0% |   |
+|  | `rg.ru` | 80% | 100% |   |
+|  | `rn.tektorg.ru` | 80% | 100% |   |
+|  | `rocket.ozon.ru` | 80% | 100% |   |
+|  | `rosleshoz.gov.ru` | 20% | 100% | **INTERESTING** |
+|  | `rsbis.ru` | 0% | 0% |   |
+|  | `rv-ryazan.ru` | 100% | 100% |   |
+|  | `sber-am.ru` | 80% | 100% |   |
+|  | `sbermarket.ru` | 100% | 100% |   |
+|  | `sberprime.sber.ru` | 40% | 20% |   |
+|  | `sedo.fss.ru` | 60% | 100% |   |
+|  | `sender01.notisend.ru` | 100% | 100% |   |
+|  | `show.okko.tv` | 60% | 100% |   |
+|  | `smtp.server.email.weeek.net` | 0% | 0% |   |
+|  | `st-aggregator01.roseltorg.ru` | 80% | 100% |   |
+|  | `stage-68d7hn.anketolog.ru` | 0% | 0% |   |
+|  | `static.more.tv` | 80% | 100% |   |
+|  | `stopnazi.xyz` | 0% | 0% |   |
 |  | `subscr.1tv.ru` | 100% | 100% |   |
-|  | `suzgrid.crpt.ru` | 0% | 0% |   |
-|  | `t2-aplms.vetrf.ru` | 40% | 100% | **INTERESTING** |
-|  | `tass.ru` | 100% | 100% |   |
-|  | `tender.otc.ru` | 80% | 100% |   |
-|  | `tender.tektorg.ru` | 100% | 100% |   |
-|  | `tickets.aviasales.ru` | 100% | 100% |   |
+|  | `tennis.cmlt.ru` | 0% | 40% |   |
+|  | `term.atol.ru` | 0% | 0% |   |
 |  | `tolknews.ru` | 100% | 100% |   |
-|  | `tomiks33.ru` | 100% | 100% |   |
-|  | `travel-safe.aeroflot.ru` | 0% | 0% |   |
-|  | `travelata.ru` | 100% | 100% |   |
-|  | `tsp.cryptopro.ru` | 50% | 100% | **INTERESTING** |
-|  | `tvigle.ru` | 60% | 100% |   |
-|  | `ufanotes.ru` | 100% | 100% |   |
-|  | `ulk.aero` | 100% | 100% |   |
-|  | `vesti95.ru` | 100% | 100% |   |
-|  | `vetrf.ru` | 20% | 100% | **INTERESTING** |
-|  | `vkusvill.ru` | 80% | 100% |   |
-|  | `voenpro.ru` | 100% | 100% |   |
-|  | `vtinform.com` | 100% | 100% |   |
-|  | `web-ppo3.zakazrf.ru` | 20% | 100% | **INTERESTING** |
-|  | `web.dev.amo.tm` | 0% | 0% |   |
-|  | `web01e.amo.tm` | 60% | 100% |   |
-|  | `web4.online.sberbank.ru` | 0% | 0% |   |
-|  | `webcust223.zakazrf.ru` | 0% | 40% |   |
-|  | `www.aeroport-mama.ru` | 100% | 100% |   |
-|  | `www.atol.ru` | 0% | 0% |   |
-|  | `www.avito.ru` | 100% | 100% |   |
-|  | `www.biglion.ru` | 100% | 100% |   |
-|  | `www.bitrix24.net` | 100% | 100% |   |
+|  | `trade.aeroflot.ru` | 100% | 100% |   |
+|  | `travel-safe.aeroflot.ru` | 20% | 0% |   |
+|  | `tsp1.rosatom.ru` | 60% | 100% |   |
+|  | `users.1tv.ru` | 80% | 75% |   |
+|  | `utp.sberbank-ast.ru` | 0% | 100% | **INTERESTING** |
+|  | `v1.ru` | 80% | 100% |   |
+|  | `vks3.rostec.ru` | 60% | 100% |   |
+|  | `vnukvnuchka.ru` | 100% | 100% |   |
+|  | `vseapteki.ru` | 100% | 100% |   |
+|  | `web.trunk.amo.tm` | 100% | 100% |   |
+|  | `wink.ru` | 80% | 100% |   |
+|  | `wsc.stand1.dev.amo.tm` | 0% | 0% |   |
+|  | `wwb1a.beta.aviasales.ru` | 0% | 0% |   |
+|  | `www.aviasales.ru` | 80% | 100% |   |
+|  | `www.avito.ru` | 80% | 100% |   |
+|  | `www.b-kontur.ru` | 100% | 100% |   |
+|  | `www.bankturov.ru` | 100% | 100% |   |
 |  | `www.br-tvr.ru` | 0% | 0% |   |
-|  | `www.center-inform.ru` | 100% | 80% |   |
+|  | `www.cmlt.ru` | 20% | 0% |   |
+|  | `www.company.rt.ru` | 60% | 100% |   |
+|  | `www.cryptopro.ru` | 80% | 100% |   |
 |  | `www.dme.ru` | 0% | 0% |   |
-|  | `www.dns-shop.ru` | 80% | 100% |   |
-|  | `www.eapteka.ru` | 80% | 100% |   |
-|  | `www.equifax.ru` | 100% | 100% |   |
-|  | `www.garantexpress.ru` | 0% | 100% | **INTERESTING** |
-|  | `www.marpravda.ru` | 80% | 100% |   |
-|  | `www.mid.ru` | 100% | 100% |   |
-|  | `www.mordovmedia.ru` | 100% | 100% |   |
-|  | `www.nordavia.ru` | 0% | 0% |   |
-|  | `www.nucrf.ru` | 0% | 100% | **INTERESTING** |
-|  | `www.okeydostavka.ru` | 80% | 100% |   |
-|  | `www.ozon.ru` | 100% | 100% |   |
-|  | `www.pnp.ru` | 100% | 100% |   |
-|  | `www.pomorie.ru` | 100% | 100% |   |
-|  | `www.sberbank.com` | 100% | 100% |   |
-|  | `www.tokyo-city.ru` | 100% | 100% |   |
-|  | `www.tutu.ru` | 80% | 100% |   |
-|  | `www.uralairlines.ru` | 100% | 100% |   |
-|  | `www.vsemayki.ru` | 100% | 100% |   |
-|  | `www.vtbcapital-pr.ru` | 100% | 100% |   |
-|  | `www.wink.ru` | 100% | 100% |   |
-|  | `www.yakutia.aero` | 100% | 80% |   |
-|  | `yamal.aero` | 80% | 100% |   |
-|  | `yocity12.com` | 100% | 100% |   |
-|  | `z2s.ru` | 60% | 40% |   |
-| Bookkeeping | `151.236.114.7` | 0% | 60% | **INTERESTING** |
-| Courier | `178.248.238.208` | 100% | 100% |   |
-| Courier | `195.189.222.56` | 80% | 80% |   |
-| Courier | `37.18.29.167` | 0% | 0% |   |
-| Courier | `api.boxberry.ru` | 100% | 100% |   |
-| Courier | `api.cdek.ru` | 80% | 100% |   |
-| Cryptocurrency | `abcobmen.com` | 80% | 40% |   |
-| Cryptocurrency | `baksman.org` | 100% | 100% |   |
-| Cryptocurrency | `cashbank.pro` | 80% | 100% |   |
+|  | `www.flyaurora.ru` | 60% | 100% |   |
+|  | `www.garsing.ru` | 100% | 100% |   |
+|  | `www.holodilnik.ru` | 100% | 100% |   |
+|  | `www.izhavia.su` | 100% | 100% |   |
+|  | `www.kartoteka.ru` | 80% | 100% |   |
+|  | `www.kbpravda.ru` | 60% | 100% |   |
+|  | `www.kontur-extern.ru` | 100% | 100% |   |
+|  | `www.krasaviaport.ru` | 100% | 100% |   |
+|  | `www.lockobank.ru` | 0% | 60% | **INTERESTING** |
+|  | `www.meriya-urus-martana.ru` | 80% | 100% |   |
+|  | `www.moypolk.ru` | 100% | 100% |   |
+|  | `www.mvideo.ru` | 100% | 100% |   |
+|  | `www.nbki.ru` | 80% | 100% |   |
+|  | `www.nwudc.ru` | 0% | 100% | **INTERESTING** |
+|  | `www.ofd.ru` | 100% | 100% |   |
+|  | `www.onlinetrade.ru` | 100% | 100% |   |
+|  | `www.otchet-online.ru` | 0% | 100% | **INTERESTING** |
+|  | `www.riakchr.ru` | 100% | 100% |   |
+|  | `www.taxcom.ru` | 100% | 100% |   |
+|  | `www.technopark.ru` | 60% | 100% |   |
+|  | `www.trekshoes.ru` | 100% | 100% |   |
+|  | `www.tutu.ru` | 60% | 100% |   |
+|  | `www.ukcomebackalive.com` | 20% | 0% |   |
+|  | `www.unibo.ru` | 100% | 100% |   |
+|  | `www.uralairlines.ru` | 80% | 80% |   |
+|  | `www.vpgazeta.ru` | 80% | 100% |   |
+|  | `www.wood.ru` | 80% | 80% |   |
+|  | `www.zarplata.ru` | 100% | 100% |   |
+|  | `www.zvezdakimry.ru` | 100% | 100% |   |
+|  | `yamal.aero` | 50% | 100% | **INTERESTING** |
+|  | `yamal.gazprom-neft.ru` | 0% | 25% |   |
+| Bookkeeping | `185.165.123.70` | 100% | 100% |   |
+| Courier | `130.193.37.150` | 0% | 0% |   |
+| Courier | `185.165.123.200` | 0% | 0% |   |
+| Courier | `185.165.123.228` | 0% | 0% |   |
+| Courier | `izusa.cdek.ru` | 75% | 100% |   |
+| Courier | `jira8.cdek.ru` | 0% | 0% |   |
+| Courier | `mail.global.cdek.ru` | 0% | 0% |   |
+| Courier | `mx12.cdek.ru` | 0% | 0% |   |
+| Courier | `mx3.cdek.ru` | 0% | 0% |   |
+| Courier | `service.boxberry.ru` | 100% | 100% |   |
+| Cryptocurrency | `abcobmen.com` | 80% | 100% |   |
+| Cryptocurrency | `delets.cash` | 100% | 100% |   |
 | Cryptocurrency | `prostocash.com` | 80% | 100% |   |
-| Cryptocurrency | `ramon.money` | 60% | 80% |   |
-| Cryptocurrency | `superchange.net` | 100% | 75% |   |
-| Cryptocurrency | `www.bestchange.ru` | 80% | 100% |   |
-| Cryptocurrency | `www.netex24.net` | 40% | 100% | **INTERESTING** |
+| Cryptocurrency | `superchange.net` | 100% | 100% |   |
+| Cryptocurrency | `www.netex24.net` | 60% | 100% |   |
 | DDoS Defense | `solidwall.ru` | 100% | 100% |   |
-| Finance | `178.248.236.218` | 80% | 100% |   |
-| Finance | `194.84.25.79` | 80% | 80% |   |
-| Finance | `3dsec.sberbank.ru` | 0% | 0% |   |
-| Finance | `alfabank.ru` | 60% | 100% |   |
-| Finance | `ds1.mirconnect.ru` | 100% | 100% |   |
-| Finance | `ds2.mirconnect.ru` | 80% | 100% |   |
-| Finance | `my.bank-hlynov.ru` | 100% | 100% |   |
-| Finance | `server.nspk.ru` | 0% | 0% |   |
-| Finance | `www.sberbank.ru` | 60% | 60% |   |
-| Freelance | `advego.com` | 100% | 100% |   |
-| Government | `109.207.1.118` | 0% | 0% |   |
-| Government | `193.148.44.187` | 100% | 100% |   |
-| Government | `193.148.44.189` | 80% | 100% |   |
-| Government | `193.148.44.29` | 0% | 0% |   |
+| Finance | `185.170.2.9` | 80% | 100% |   |
+| Finance | `194.84.25.79` | 60% | 100% |   |
+| Finance | `78.46.94.184` | 100% | 100% |   |
+| Finance | `acs3.sbrf.ru` | 0% | 0% |   |
+| Finance | `acs4.sbrf.ru` | 0% | 0% |   |
+| Finance | `auth.tcsbank.ru` | 100% | 100% |   |
+| Finance | `scr.online.sberbank.ru` | 60% | 80% |   |
+| Finance | `uat-ds1.mirconnect.ru` | 80% | 100% |   |
+| Finance | `uat-ds2.mirconnect.ru` | 40% | 100% | **INTERESTING** |
+| Government | `193.148.44.189` | 100% | 80% |   |
+| Government | `beta.fss.ru` | 0% | 0% |   |
+| Government | `bgp.by` | 100% | 75% |   |
 | Government | `cloud.rkn.gov.ru` | 0% | 0% |   |
-| Government | `docs.fss.ru` | 100% | 100% |   |
-| Government | `es.pfrf.ru` | 80% | 100% |   |
-| Government | `fss.gov.ru` | 100% | 100% |   |
-| Government | `government.ru` | 40% | 0% |   |
-| Government | `kremlin.ru` | 40% | 25% |   |
-| Government | `mininform.gov.by` | 0% | 0% |   |
-| Government | `pfr.gov.ru` | 80% | 80% |   |
-| Government | `portal.fss.ru` | 100% | 100% |   |
-| Government | `president.gov.by` | 80% | 100% |   |
-| Government | `rkn.gov.ru` | 80% | 100% |   |
-| Government | `www.belneftekhim.by` | 80% | 100% |   |
-| Government | `www.kgb.by` | 0% | 0% |   |
-| Government | `www.mvd.gov.by` | 0% | 0% |   |
-| Government | `www.nalog.gov.ru` | 100% | 100% |   |
-| Industry | `b2b.sibur.ru` | 80% | 100% |   |
-| Industry | `lukoil.ru` | 100% | 100% |   |
-| Industry | `rosneft.com` | 20% | 80% | **INTERESTING** |
-| Industry | `tektorg.ru` | 40% | 75% |   |
-| Industry | `www.eurosib.ru` | 0% | 100% | **INTERESTING** |
-| Industry | `www.polymetalinternational.com` | 80% | 100% |   |
-| Industry | `www.severstal.com` | 0% | 100% | **INTERESTING** |
-| Industry | `www.tmk-group.ru` | 100% | 100% |   |
-| Media | `gazeta.ru` | 20% | 50% |   |
-| Media | `grodnonews.by` | 80% | 100% |   |
-| Media | `radiostalica.by` | 100% | 80% |   |
-| Media | `ria.ru` | 80% | 100% |   |
-| Media | `tvzvezda.ru` | 40% | 100% | **INTERESTING** |
-| Media | `www.belarus.by` | 80% | 100% |   |
-| Media | `www.tula.ru` | 80% | 100% |   |
-| Media | `www.tvr.by` | 0% | 0% |   |
-| Social Media | `5.61.23.11` | 80% | 100% |   |
-| Time | `46.17.202.90` | 0% | 0% |   |
-| Time | `62.76.102.63` | 100% | 100% |   |
+| Government | `mail.rkn.gov.ru` | 0% | 0% |   |
+| Government | `president.gov.by` | 100% | 80% |   |
+| Government | `school.pfrf.ru` | 60% | 100% |   |
+| Industry | `aaa-srt-apps.lukoil.com` | 0% | 0% |   |
+| Industry | `gazprom.ru` | 0% | 100% | **INTERESTING** |
+| Industry | `nlmk.com` | 100% | 100% |   |
+| Industry | `tektorg.ru` | 100% | 100% |   |
+| Industry | `www.eurosib.ru` | 0% | 75% | **INTERESTING** |
+| Industry | `www.sibur.ru` | 60% | 100% |   |
+| Industry | `www.surgutneftegas.ru` | 80% | 100% |   |
+| Industry | `www.tatneft.ru` | 0% | 0% |   |
+| Industry | `yandex.by` | 80% | 100% |   |
+| Media | `gosuslugi29.ru` | 0% | 100% | **INTERESTING** |
+| Media | `gosuslugi41.ru` | 100% | 100% |   |
+| Media | `grodnonews.by` | 100% | 100% |   |
+| Media | `midural.ru` | 20% | 100% | **INTERESTING** |
+| Media | `pikabu.ru` | 100% | 80% |   |
+| Media | `radiomir.by` | 80% | 100% |   |
+| Media | `riafan.ru` | 100% | 80% |   |
+| Media | `www.admoblkaluga.ru` | 100% | 100% |   |
+| Media | `www.belnovosti.by` | 100% | 100% |   |
+| Media | `www.tvrmogilev.by` | 100% | 100% |   |
+| Media | `www.volgograd.ru` | 0% | 100% | **INTERESTING** |
+| Media | `zarya.by` | 100% | 100% |   |
+| Time | `46.48.118.29` | 0% | 0% |   |
 
 *Additional information:* The above data is gathered via RIPE Atlas. The measurement connects via TCP (i.e. this is *not* application layer) to port 80 with an empty payload. This checks that the port is open and responsive, but not necessarily that the service itself is functioning. However, if the connection *failed* we should reasonably expect that the service is down as well - it is rare that sites do not run HTTP, even if only to redirect to HTTPS.
 
 # Testing Individual Targets on HTTPS (443)
 | Sector | Domain | % Up WW | % Up RU | Remark |
 |--------|--------|---------|---------|--------|
-|  | `109.207.1.123` | 0% | 100% | **INTERESTING** |
-|  | `109.207.1.58` | 0% | 100% | **INTERESTING** |
-|  | `109.207.5.162` | 0% | 90% | **INTERESTING** |
-|  | `109.207.5.34` | 0% | 100% | **INTERESTING** |
-|  | `109.68.213.207` | 0% | 0% |   |
+|  | `109.207.4.98` | 0% | 100% | **INTERESTING** |
+|  | `109.207.5.162` | 0% | 100% | **INTERESTING** |
+|  | `109.238.243.253` | 0% | 0% |   |
 |  | `128.140.175.205` | 100% | 100% |   |
-|  | `138.201.59.236` | 0% | 0% |   |
-|  | `146.120.90.19` | 0% | 0% |   |
-|  | `146.120.90.20` | 0% | 0% |   |
-|  | `146.120.90.28` | 100% | 100% |   |
-|  | `146.120.90.30` | 100% | 100% |   |
-|  | `146.120.90.61` | 100% | 100% |   |
-|  | `146.120.90.73` | 0% | 0% |   |
-|  | `146.158.52.7` | 90% | 100% |   |
-|  | `146.158.54.21` | 100% | 100% |   |
-|  | `151.236.80.51` | 100% | 100% |   |
+|  | `141.101.233.39` | 100% | 100% |   |
+|  | `146.120.90.247` | 90% | 100% |   |
+|  | `146.120.90.29` | 100% | 100% |   |
+|  | `146.120.90.72` | 0% | 0% |   |
+|  | `146.120.90.74` | 0% | 0% |   |
+|  | `146.158.48.24` | 100% | 100% |   |
+|  | `146.158.52.16` | 100% | 100% |   |
+|  | `146.158.52.21` | 90% | 100% |   |
+|  | `151.236.80.50` | 100% | 100% |   |
+|  | `151.236.80.51` | 90% | 100% |   |
 |  | `152.89.216.244` | 0% | 0% |   |
-|  | `159.255.25.50` | 0% | 0% |   |
-|  | `176.67.241.93` | 0% | 0% |   |
-|  | `178.210.92.25` | 0% | 20% |   |
-|  | `178.248.232.153` | 90% | 89% |   |
+|  | `176.112.202.27` | 0% | 0% |   |
+|  | `176.112.203.74` | 0% | 0% |   |
+|  | `176.57.216.109` | 90% | 100% |   |
+|  | `178.170.242.84` | 100% | 100% |   |
+|  | `178.210.71.24` | 0% | 0% |   |
 |  | `178.248.232.188` | 90% | 100% |   |
-|  | `178.248.233.143` | 100% | 100% |   |
-|  | `178.248.233.3` | 100% | 100% |   |
-|  | `178.248.234.2` | 100% | 100% |   |
-|  | `178.248.238.157` | 90% | 100% |   |
+|  | `178.248.232.33` | 90% | 100% |   |
+|  | `178.248.234.39` | 100% | 100% |   |
+|  | `178.248.235.44` | 100% | 100% |   |
+|  | `178.248.235.59` | 100% | 100% |   |
+|  | `178.248.236.155` | 90% | 100% |   |
+|  | `178.248.237.112` | 100% | 89% |   |
+|  | `178.248.237.223` | 0% | 0% |   |
+|  | `178.248.237.57` | 100% | 100% |   |
+|  | `178.248.238.19` | 100% | 100% |   |
+|  | `178.248.238.249` | 100% | 100% |   |
+|  | `178.248.238.59` | 100% | 100% |   |
+|  | `178.248.238.97` | 100% | 100% |   |
 |  | `178.248.239.149` | 0% | 0% |   |
-|  | `178.248.239.19` | 100% | 100% |   |
-|  | `178.248.239.38` | 100% | 100% |   |
-|  | `178.57.71.189` | 0% | 0% |   |
-|  | `185.10.60.69` | 0% | 100% | **INTERESTING** |
-|  | `185.10.60.88` | 0% | 100% | **INTERESTING** |
-|  | `185.104.104.126` | 0% | 100% | **INTERESTING** |
-|  | `185.104.104.127` | 0% | 0% |   |
+|  | `178.248.239.21` | 100% | 100% |   |
+|  | `178.248.239.66` | 100% | 100% |   |
+|  | `185.10.61.125` | 0% | 0% |   |
 |  | `185.111.84.213` | 100% | 100% |   |
-|  | `185.12.152.27` | 0% | 0% |   |
-|  | `185.12.155.115` | 0% | 0% |   |
-|  | `185.12.155.124` | 60% | 100% |   |
-|  | `185.12.155.21` | 90% | 100% |   |
-|  | `185.12.155.29` | 80% | 100% |   |
+|  | `185.12.155.29` | 70% | 100% |   |
 |  | `185.129.103.95` | 100% | 100% |   |
-|  | `185.157.97.98` | 100% | 100% |   |
-|  | `185.170.207.63` | 100% | 100% |   |
-|  | `185.170.207.77` | 100% | 100% |   |
-|  | `185.175.46.102` | 0% | 0% |   |
-|  | `185.178.208.163` | 100% | 56% | **WEIRD** |
-|  | `185.179.199.85` | 90% | 100% |   |
-|  | `185.179.85.96` | 100% | 100% |   |
-|  | `185.200.242.185` | 90% | 100% |   |
-|  | `185.219.40.214` | 100% | 100% |   |
-|  | `185.63.189.178` | 100% | 100% |   |
+|  | `185.137.235.138` | 50% | 33% |   |
+|  | `185.138.254.1` | 90% | 100% |   |
+|  | `185.169.155.116` | 100% | 100% |   |
+|  | `185.169.155.187` | 100% | 100% |   |
+|  | `185.169.155.230` | 100% | 100% |   |
+|  | `185.169.155.245` | 100% | 100% |   |
+|  | `185.169.155.28` | 90% | 100% |   |
+|  | `185.169.155.77` | 100% | 100% |   |
+|  | `185.179.199.49` | 90% | 100% |   |
+|  | `185.179.85.65` | 100% | 88% |   |
+|  | `185.219.40.214` | 90% | 100% |   |
+|  | `185.219.40.33` | 100% | 100% |   |
+|  | `185.31.134.104` | 100% | 100% |   |
 |  | `185.71.67.112` | 100% | 100% |   |
-|  | `185.84.184.5` | 0% | 0% |   |
-|  | `188.68.216.77` | 100% | 100% |   |
-|  | `193.0.214.27` | 80% | 100% |   |
+|  | `185.79.118.12` | 90% | 100% |   |
+|  | `185.79.118.3` | 90% | 100% |   |
+|  | `185.99.8.6` | 0% | 100% | **INTERESTING** |
+|  | `188.246.235.133` | 0% | 0% |   |
+|  | `193.0.214.27` | 100% | 100% |   |
+|  | `193.104.207.65` | 0% | 89% | **INTERESTING** |
+|  | `193.104.241.10` | 90% | 90% |   |
 |  | `193.104.243.71` | 0% | 100% | **INTERESTING** |
-|  | `193.148.44.25` | 90% | 100% |   |
-|  | `193.164.150.212` | 80% | 100% |   |
-|  | `193.37.157.83` | 10% | 0% |   |
-|  | `193.93.29.82` | 10% | 100% | **INTERESTING** |
-|  | `194.1.214.101` | 100% | 100% |   |
-|  | `194.190.12.167` | 80% | 38% | **WEIRD** |
-|  | `194.226.180.66` | 0% | 0% |   |
-|  | `194.226.54.22` | 100% | 100% |   |
-|  | `194.54.14.119` | 90% | 78% |   |
+|  | `193.105.39.10` | 0% | 0% |   |
+|  | `193.107.238.158` | 0% | 0% |   |
+|  | `193.148.44.188` | 100% | 100% |   |
+|  | `193.189.120.88` | 0% | 0% |   |
+|  | `193.189.121.90` | 0% | 0% |   |
+|  | `193.24.8.15` | 100% | 100% |   |
+|  | `193.37.157.11` | 100% | 100% |   |
+|  | `194.226.54.20` | 100% | 100% |   |
+|  | `194.54.14.119` | 90% | 62% |   |
+|  | `194.54.14.168` | 70% | 100% |   |
+|  | `194.58.121.14` | 100% | 100% |   |
+|  | `194.84.190.129` | 0% | 80% | **INTERESTING** |
+|  | `195.112.120.238` | 0% | 0% |   |
 |  | `195.128.124.71` | 0% | 0% |   |
-|  | `195.19.96.198` | 100% | 100% |   |
-|  | `1line.info` | 100% | 100% |   |
-|  | `2.58.68.200` | 0% | 0% |   |
-|  | `212.164.137.229` | 0% | 0% |   |
-|  | `212.164.137.233` | 0% | 0% |   |
-|  | `212.164.137.90` | 0% | 0% |   |
-|  | `212.193.153.140` | 100% | 100% |   |
-|  | `212.193.153.141` | 100% | 100% |   |
-|  | `212.193.157.61` | 100% | 100% |   |
-|  | `212.193.48.97` | 100% | 100% |   |
-|  | `213.159.211.108` | 100% | 100% |   |
-|  | `213.171.56.102` | 0% | 0% |   |
-|  | `213.24.64.95` | 0% | 0% |   |
-|  | `217.172.26.140` | 100% | 100% |   |
+|  | `195.19.220.26` | 100% | 100% |   |
+|  | `195.19.220.27` | 100% | 100% |   |
+|  | `195.19.220.6` | 100% | 100% |   |
+|  | `195.208.1.100` | 100% | 100% |   |
+|  | `195.208.223.118` | 0% | 100% | **INTERESTING** |
+|  | `195.24.68.22` | 0% | 0% |   |
+|  | `195.80.224.185` | 0% | 0% |   |
+|  | `195.98.95.114` | 100% | 100% |   |
+|  | `1c-report.ru` | 90% | 100% |   |
+|  | `212.193.146.216` | 100% | 100% |   |
+|  | `212.193.155.253` | 90% | 100% |   |
+|  | `212.193.156.175` | 100% | 100% |   |
+|  | `212.193.158.154` | 100% | 100% |   |
+|  | `212.24.38.190` | 0% | 0% |   |
+|  | `212.45.14.92` | 0% | 100% | **INTERESTING** |
+|  | `213.159.210.76` | 90% | 100% |   |
+|  | `213.171.56.46` | 0% | 80% | **INTERESTING** |
+|  | `213.180.204.71` | 100% | 100% |   |
+|  | `213.252.120.116` | 0% | 0% |   |
+|  | `213.5.80.161` | 0% | 70% | **INTERESTING** |
+|  | `217.107.75.18` | 90% | 100% |   |
+|  | `217.175.155.160` | 0% | 0% |   |
+|  | `217.175.23.8` | 100% | 100% |   |
 |  | `217.175.24.107` | 90% | 100% |   |
-|  | `217.175.24.86` | 100% | 100% |   |
-|  | `217.175.24.94` | 0% | 0% |   |
-|  | `217.69.139.20` | 90% | 100% |   |
-|  | `223.etp-ets.ru` | 100% | 100% |   |
-|  | `2700790.ru` | 100% | 100% |   |
-|  | `2x2.su` | 80% | 100% |   |
+|  | `217.175.24.192` | 0% | 100% | **INTERESTING** |
+|  | `217.195.76.247` | 100% | 100% |   |
+|  | `217.21.215.38` | 0% | 0% |   |
+|  | `217.21.220.227` | 0% | 100% | **INTERESTING** |
+|  | `223.etp-ets.ru` | 90% | 100% |   |
+|  | `25.1tv.ru` | 100% | 100% |   |
 |  | `31.25.241.43` | 0% | 0% |   |
-|  | `31.31.196.165` | 100% | 100% |   |
+|  | `31.31.196.134` | 90% | 100% |   |
+|  | `31.31.196.202` | 90% | 100% |   |
+|  | `31.31.196.249` | 100% | 100% |   |
 |  | `31.31.198.181` | 100% | 100% |   |
-|  | `31.31.198.45` | 100% | 100% |   |
-|  | `37.16.85.113` | 0% | 0% |   |
-|  | `44.zakazrf.ru` | 0% | 0% |   |
-|  | `46.17.203.33` | 90% | 100% |   |
-|  | `46.17.203.41` | 100% | 100% |   |
-|  | `46.17.203.71` | 100% | 89% |   |
-|  | `46.17.204.245` | 90% | 100% |   |
-|  | `46.17.204.249` | 100% | 100% |   |
-|  | `46.235.53.117` | 0% | 0% |   |
-|  | `46.254.20.38` | 100% | 100% |   |
+|  | `37.18.29.250` | 0% | 100% | **INTERESTING** |
+|  | `37.220.162.180` | 90% | 100% |   |
+|  | `45.130.41.27` | 90% | 100% |   |
+|  | `45.130.41.3` | 100% | 33% | **WEIRD** |
+|  | `46.17.200.241` | 100% | 100% |   |
+|  | `46.17.200.242` | 90% | 100% |   |
+|  | `46.17.203.245` | 100% | 100% |   |
+|  | `46.17.203.33` | 100% | 100% |   |
+|  | `46.17.203.73` | 100% | 100% |   |
+|  | `46.17.206.17` | 100% | 100% |   |
+|  | `46.235.185.176` | 100% | 100% |   |
+|  | `46.235.186.103` | 100% | 100% |   |
+|  | `46.235.189.110` | 100% | 100% |   |
+|  | `46.38.57.241` | 10% | 0% |   |
+|  | `5.188.199.107` | 0% | 0% |   |
 |  | `5.188.28.203` | 0% | 0% |   |
-|  | `5.23.51.195` | 100% | 100% |   |
-|  | `62.109.6.113` | 100% | 100% |   |
-|  | `62.152.56.125` | 90% | 100% |   |
-|  | `77.222.61.196` | 100% | 100% |   |
-|  | `78.142.221.106` | 0% | 100% | **INTERESTING** |
-|  | `78.142.221.76` | 0% | 0% |   |
-|  | `78.41.110.139` | 100% | 100% |   |
-|  | `79.142.100.44` | 100% | 100% |   |
-|  | `79.142.16.48` | 100% | 100% |   |
-|  | `79.142.16.80` | 90% | 100% |   |
-|  | `79.143.30.47` | 100% | 100% |   |
-|  | `80.67.43.33` | 100% | 89% |   |
-|  | `80.87.203.23` | 90% | 100% |   |
-|  | `80.92.37.121` | 50% | 80% |   |
-|  | `81.177.49.49` | 90% | 100% |   |
-|  | `81.19.72.3` | 100% | 100% |   |
-|  | `82.151.111.189` | 0% | 0% |   |
-|  | `82.151.200.14` | 0% | 0% |   |
+|  | `5.3.84.173` | 0% | 0% |   |
+|  | `51.250.35.200` | 0% | 0% |   |
+|  | `62.152.56.125` | 100% | 100% |   |
+|  | `62.76.145.83` | 60% | 100% |   |
+|  | `62.76.145.84` | 50% | 100% | **INTERESTING** |
+|  | `62.76.148.81` | 0% | 0% |   |
+|  | `72.gosuslugi.ru` | 0% | 100% | **INTERESTING** |
+|  | `77.244.221.63` | 100% | 100% |   |
+|  | `78.155.198.128` | 100% | 100% |   |
+|  | `79.171.117.81` | 0% | 0% |   |
+|  | `80.67.43.33` | 90% | 100% |   |
+|  | `80.92.164.136` | 0% | 100% | **INTERESTING** |
+|  | `81.177.164.124` | 0% | 0% |   |
 |  | `82.202.170.70` | 90% | 100% |   |
-|  | `83.169.194.48` | 100% | 100% |   |
+|  | `83.169.194.23` | 100% | 90% |   |
+|  | `83.222.4.160` | 100% | 100% |   |
 |  | `83.69.203.11` | 0% | 0% |   |
-|  | `84.252.144.86` | 100% | 100% |   |
+|  | `84.252.146.28` | 80% | 100% |   |
+|  | `84.252.146.81` | 0% | 0% |   |
+|  | `85.119.149.231` | 90% | 100% |   |
 |  | `85.12.217.152` | 0% | 0% |   |
-|  | `87.245.170.26` | 0% | 100% | **INTERESTING** |
-|  | `87.249.43.123` | 0% | 0% |   |
-|  | `89.107.140.32` | 0% | 0% |   |
+|  | `85.31.124.50` | 0% | 0% |   |
+|  | `87.236.16.207` | 100% | 100% |   |
+|  | `87.236.19.168` | 0% | 0% |   |
+|  | `87.242.66.56` | 100% | 100% |   |
 |  | `89.108.107.180` | 0% | 0% |   |
-|  | `89.223.24.7` | 100% | 100% |   |
-|  | `89.253.232.104` | 0% | 0% |   |
+|  | `89.108.120.14` | 0% | 0% |   |
+|  | `89.108.122.229` | 100% | 100% |   |
 |  | `90.156.201.25` | 100% | 100% |   |
-|  | `90.156.201.62` | 100% | 100% |   |
-|  | `91.201.40.99` | 0% | 0% |   |
-|  | `91.206.147.2` | 0% | 0% |   |
-|  | `91.207.252.198` | 0% | 0% |   |
-|  | `91.208.42.10` | 0% | 0% |   |
-|  | `91.230.251.101` | 100% | 100% |   |
-|  | `91.232.230.180` | 100% | 100% |   |
-|  | `91.239.5.19` | 0% | 0% |   |
-|  | `92.255.104.152` | 90% | 100% |   |
-|  | `92.255.104.40` | 90% | 100% |   |
-|  | `92.255.104.41` | 100% | 100% |   |
-|  | `92.53.124.242` | 0% | 0% |   |
-|  | `92.53.64.62` | 100% | 100% |   |
-|  | `92.53.96.46` | 90% | 100% |   |
-|  | `92.62.112.153` | 100% | 100% |   |
-|  | `93.158.192.155` | 0% | 0% |   |
-|  | `93.174.53.206` | 100% | 100% |   |
-|  | `93.187.73.154` | 0% | 0% |   |
-|  | `94.140.201.116` | 0% | 0% |   |
-|  | `95.131.27.119` | 100% | 100% |   |
+|  | `91.198.68.51` | 0% | 0% |   |
+|  | `91.225.24.41` | 90% | 100% |   |
+|  | `91.230.251.77` | 100% | 100% |   |
+|  | `91.232.230.139` | 100% | 100% |   |
+|  | `91.232.230.164` | 90% | 100% |   |
+|  | `91.232.230.40` | 100% | 100% |   |
+|  | `91.239.5.38` | 100% | 100% |   |
+|  | `92.255.106.45` | 100% | 100% |   |
+|  | `92.53.96.212` | 100% | 100% |   |
+|  | `93.174.48.173` | 0% | 0% |   |
+|  | `94.137.20.250` | 0% | 0% |   |
+|  | `94.140.201.50` | 0% | 0% |   |
+|  | `94.228.125.167` | 0% | 0% |   |
+|  | `94.26.241.164` | 100% | 100% |   |
+|  | `94.79.10.194` | 0% | 100% | **INTERESTING** |
 |  | `95.161.154.198` | 0% | 0% |   |
-|  | `95.163.180.40` | 0% | 0% |   |
+|  | `95.163.181.225` | 0% | 0% |   |
 |  | `95.173.158.38` | 0% | 0% |   |
-|  | `95.181.181.254` | 80% | 88% |   |
-|  | `95.213.164.20` | 100% | 100% |   |
-|  | `aaq.aero` | 0% | 100% | **INTERESTING** |
-|  | `agro.roseltorg.ru` | 100% | 100% |   |
-|  | `aif.ru` | 100% | 100% |   |
+|  | `95.181.181.253` | 0% | 0% |   |
+|  | `95.181.181.62` | 90% | 70% |   |
+|  | `95.213.146.45` | 0% | 0% |   |
+|  | `95.214.62.12` | 10% | 0% |   |
+|  | `9may.shop` | 90% | 100% |   |
+|  | `admin.move.ru` | 100% | 100% |   |
+|  | `admin.tvigle.ru` | 0% | 0% |   |
+|  | `admin.weeek.net` | 100% | 100% |   |
+|  | `agents.lot-online.ru` | 0% | 100% | **INTERESTING** |
+|  | `agro.roseltorg.ru` | 90% | 100% |   |
 |  | `airport-makhachkala.ru` | 100% | 100% |   |
 |  | `airss.ru` | 100% | 100% |   |
-|  | `api.koronapay.com` | 100% | 100% |   |
-|  | `api.mdlp.crpt.ru` | 60% | 89% |   |
-|  | `api.smotrim.ru` | 100% | 100% |   |
-|  | `api.vetrf.ru` | 44% | 100% | **INTERESTING** |
-|  | `api2.vetrf.ru` | 40% | 100% | **INTERESTING** |
-|  | `app.notisend.ru` | 100% | 89% |   |
-|  | `app.weeek.net` | 100% | 100% |   |
-|  | `appletest.nordwindairlines.ru` | 0% | 0% |   |
-|  | `argus.vetrf.ru` | 40% | 100% | **INTERESTING** |
-|  | `armrus.ru` | 70% | 78% |   |
-|  | `avia.gazprom.ru` | 90% | 100% |   |
-|  | `b2b.aviasales.ru` | 100% | 100% |   |
-|  | `binuc.belinfonalog.ru` | 0% | 0% |   |
-|  | `bitrix24.by` | 100% | 100% |   |
-|  | `bki-okb.ru` | 100% | 100% |   |
-|  | `blog.anketolog.ru` | 100% | 80% |   |
-|  | `bt.severstal.com` | 100% | 100% |   |
-|  | `ca.fsrar.ru` | 0% | 0% |   |
-|  | `ca.ntssoft.ru` | 100% | 100% |   |
-|  | `cabinet.kontur.ru` | 100% | 100% |   |
-|  | `cash-ntt.kontur.ru` | 90% | 100% |   |
+|  | `akado.amediateka.ru` | 100% | 100% |   |
+|  | `amp-email.notisend.ru` | 100% | 100% |   |
+|  | `anews.com` | 90% | 100% |   |
+|  | `anex-tour.ru` | 100% | 100% |   |
+|  | `api.amo.io` | 100% | 100% |   |
+|  | `api.kontur.ru` | 100% | 100% |   |
+|  | `api.market-stable.otc.ru` | 0% | 0% |   |
+|  | `api.notisend.ru` | 100% | 100% |   |
+|  | `api.platon.ru` | 100% | 100% |   |
+|  | `api.rts-tender.ru` | 100% | 89% |   |
+|  | `api.sb.mdlp.crpt.ru` | 100% | 100% |   |
+|  | `api.stand1.dev.amo.tm` | 0% | 0% |   |
+|  | `api.zp.ru` | 90% | 100% |   |
+|  | `app.develop.weeek.net` | 100% | 100% |   |
+|  | `apple-store.net.ru` | 90% | 100% |   |
+|  | `archive.mil.ru` | 100% | 100% |   |
+|  | `arsenal.army` | 100% | 100% |   |
+|  | `ati.su` | 100% | 100% |   |
+|  | `atlas.vetrf.ru` | 40% | 100% | **INTERESTING** |
+|  | `auth.lockobank.ru` | 0% | 0% |   |
+|  | `auth.zakaz3.zakazrf.ru` | 0% | 0% |   |
+|  | `autodiscover.nordwindairlines.ru` | 0% | 0% |   |
+|  | `avianity.ru` | 90% | 100% |   |
+|  | `azimuth.aero` | 90% | 90% |   |
+|  | `b.roseltorg.ru` | 100% | 100% |   |
+|  | `balancer.onrealt.ru` | 100% | 100% |   |
+|  | `bankrot.zakazrf.ru` | 0% | 0% |   |
+|  | `biggeek.ru` | 100% | 100% |   |
+|  | `bryansknovosti.ru` | 100% | 100% |   |
+|  | `ca.iac.spb.ru` | 0% | 0% |   |
+|  | `ca.roseltorg.ru` | 90% | 100% |   |
+|  | `ca.rzd.ru` | 0% | 0% |   |
+|  | `cabinet.mirkvartir.ru` | 100% | 100% |   |
 |  | `cdek.by` | 100% | 100% |   |
-|  | `cdp.etpgpb.ru` | 0% | 100% | **INTERESTING** |
-|  | `cheques-utm.egais.ru` | 0% | 0% |   |
-|  | `cherkessk09.ru` | 100% | 100% |   |
-|  | `cloud.platon.ru` | 90% | 100% |   |
-|  | `cloud.tvigle.ru` | 100% | 100% |   |
-|  | `com.roseltorg.ru` | 100% | 100% |   |
+|  | `checkout.qiwi.com` | 100% | 100% |   |
+|  | `chernovik.net` | 0% | 0% |   |
+|  | `click.aeroflot.ru` | 10% | 0% |   |
+|  | `cloud.tektorg.ru` | 100% | 100% |   |
 |  | `comebackalive.info` | 100% | 100% |   |
-|  | `corplogin.roseltorg.ru` | 100% | 100% |   |
-|  | `distribution.severstal.com` | 100% | 100% |   |
-|  | `docliner.taxcom.ru` | 100% | 100% |   |
-|  | `dostavista.ru` | 100% | 100% |   |
-|  | `duma.vetrf.ru` | 40% | 100% | **INTERESTING** |
-|  | `e-trust.gosuslugi.ru` | 90% | 100% |   |
-|  | `ecert.vetrf.ru` | 40% | 100% | **INTERESTING** |
-|  | `ecwid.boxberry.ru` | 100% | 100% |   |
+|  | `corp.ozon.com` | 100% | 100% |   |
+|  | `corp.sdm.ru` | 100% | 100% |   |
+|  | `crm.holodilnik.ru` | 10% | 0% |   |
+|  | `dev-178fz-ip.roseltorg.ru` | 100% | 100% |   |
+|  | `developer.kontur.ru` | 100% | 100% |   |
+|  | `developers.dev.amo.tm` | 0% | 0% |   |
+|  | `digital.gov.ru` | 100% | 100% |   |
+|  | `direct.creditural.ru` | 100% | 100% |   |
+|  | `documents-utm.egais.ru` | 0% | 0% |   |
+|  | `dotochki.com` | 100% | 100% |   |
+|  | `downloads.1c.ru` | 100% | 100% |   |
+|  | `dreamkas.ru` | 100% | 100% |   |
+|  | `dss2.roseltorg.ru` | 100% | 100% |   |
+|  | `ecert.vetrf.ru` | 50% | 100% | **INTERESTING** |
 |  | `edit.biglion.ru` | 100% | 100% |   |
-|  | `eln.fss.ru` | 100% | 88% |   |
-|  | `email.amo.tm` | 100% | 89% |   |
-|  | `esia.gosuslugi.ru` | 100% | 100% |   |
-|  | `etp-ets.ru` | 100% | 100% |   |
-|  | `etpgpb.ru` | 0% | 100% | **INTERESTING** |
-|  | `etpu.ru` | 90% | 100% |   |
-|  | `evotor.ru` | 90% | 100% |   |
-|  | `fabrikabizon.ru` | 100% | 100% |   |
-|  | `files.testing.anketolog.ru` | 0% | 0% |   |
+|  | `edo.etpgpb.ru` | 0% | 100% | **INTERESTING** |
+|  | `elbank.kontur.ru` | 100% | 100% |   |
+|  | `eln.fss.ru` | 90% | 100% |   |
+|  | `esia.gosuslugi.ru` | 90% | 100% |   |
+|  | `evotor.ru` | 100% | 100% |   |
+|  | `fix-sso.sbis.ru` | 100% | 100% |   |
 |  | `flysmartavia.com` | 100% | 100% |   |
-|  | `focus-api.kontur.ru` | 100% | 100% |   |
-|  | `gazeta-n1.ru` | 90% | 100% |   |
-|  | `gitlab-exporter.preprod.more.tv` | 0% | 0% |   |
-|  | `global.ozon.com` | 100% | 100% |   |
-|  | `globalstat.ru` | 100% | 100% |   |
-|  | `gosuslugi.ozon.ru` | 100% | 100% |   |
+|  | `franchise.220-volt.ru` | 0% | 100% | **INTERESTING** |
+|  | `freeipa.beta.aviasales.ru` | 100% | 100% |   |
+|  | `fresh-lab.ru` | 0% | 100% | **INTERESTING** |
+|  | `garsingshop.by` | 100% | 100% |   |
+|  | `gosuslugi.ozon.ru` | 90% | 100% |   |
 |  | `gpn.etpgpb.ru` | 0% | 100% | **INTERESTING** |
-|  | `gr.tvigle.ru` | 0% | 0% |   |
 |  | `grozmer.ru` | 100% | 100% |   |
-|  | `help.rts-tender.ru` | 100% | 89% |   |
-|  | `hochyedy.ru` | 90% | 100% |   |
-|  | `host.amo.tm` | 100% | 100% |   |
-|  | `invitations.1c-edo.keydisk.ru` | 100% | 100% |   |
-|  | `izvmor.ru` | 90% | 100% |   |
-|  | `k-server.1-ofd.ru` | 90% | 90% |   |
-|  | `kabinet.realtymag.ru` | 100% | 100% |   |
-|  | `kim.tektorg.ru` | 100% | 100% |   |
-|  | `kinomax.ru` | 100% | 100% |   |
-|  | `kinosfera-imax.ru` | 90% | 100% |   |
-|  | `komiinform.ru` | 100% | 100% |   |
-|  | `kontur.documentoved.ru` | 100% | 100% |   |
-|  | `lk.fss.ru` | 90% | 100% |   |
-|  | `lmsspeech.aeroflot.ru` | 100% | 100% |   |
-|  | `market.severstal.com` | 100% | 100% |   |
-|  | `md-gazeta.ru` | 80% | 90% |   |
-|  | `merchant.frendi.ru` | 90% | 100% |   |
-|  | `midag.ru` | 90% | 70% |   |
-|  | `mimimi.okko.team` | 100% | 100% |   |
-|  | `minfin.gov.ru` | 0% | 0% |   |
-|  | `mirmol.ru` | 100% | 100% |   |
-|  | `mkset.ru` | 100% | 100% |   |
-|  | `mt.bel.ru` | 100% | 100% |   |
-|  | `mx.notisend.ru` | 100% | 100% |   |
-|  | `mx.sms.notisend.ru` | 90% | 100% |   |
-|  | `my.qiwi.com` | 90% | 100% |   |
+|  | `gu.spb.ru` | 100% | 100% |   |
+|  | `help.vetrf.ru` | 60% | 100% |   |
+|  | `hr.zarplata.ru` | 100% | 100% |   |
+|  | `i.lockobank.ru` | 0% | 0% |   |
+|  | `ib.rencredit.ru` | 0% | 100% | **INTERESTING** |
+|  | `ibank.gebank.ru` | 0% | 0% |   |
+|  | `iom.testing.anketolog.ru` | 0% | 0% |   |
+|  | `join.cms.aeroflot.ru` | 20% | 0% |   |
+|  | `k-server.1-ofd.ru` | 100% | 100% |   |
+|  | `karelinform.ru` | 100% | 100% |   |
+|  | `kbrria.ru` | 0% | 0% |   |
+|  | `kino.1tv.ru` | 90% | 100% |   |
+|  | `kinoteatr.ru` | 100% | 100% |   |
+|  | `komionline.ru` | 100% | 100% |   |
+|  | `legal.nordwindairlines.ru` | 0% | 0% |   |
+|  | `m.sdaminfo.ru` | 100% | 100% |   |
+|  | `mail.server.email.weeek.net` | 100% | 100% |   |
+|  | `mail5.amo.tm` | 100% | 100% |   |
+|  | `market-lk.rts-tender.ru` | 100% | 100% |   |
+|  | `market.otc.ru` | 100% | 100% |   |
+|  | `market.severstal.com` | 90% | 100% |   |
+|  | `mercury.vetrf.ru` | 50% | 100% | **INTERESTING** |
+|  | `milk.crpt.ru` | 100% | 100% |   |
+|  | `minjust.gov.ru` | 0% | 90% | **INTERESTING** |
+|  | `monopoly.ru` | 100% | 100% |   |
+|  | `mt.bel.ru` | 90% | 100% |   |
+|  | `mt.kino-teatr.ru` | 100% | 100% |   |
 |  | `new.tektorg.ru` | 100% | 100% |   |
-|  | `news.severstal.com` | 90% | 100% |   |
-|  | `newsomsk.ru` | 90% | 100% |   |
-|  | `nyaganaero.ru` | 100% | 100% |   |
-|  | `ocsp2.rus-telecom.ru` | 80% | 100% |   |
-|  | `ocspr2012.izhtender.ru` | 100% | 100% |   |
+|  | `newsbryansk.ru` | 100% | 100% |   |
+|  | `ngs55.ru` | 100% | 100% |   |
+|  | `nsqadmin.1c-edo.keydisk.ru` | 90% | 100% |   |
+|  | `obuv22.ru` | 100% | 100% |   |
+|  | `ocsp20.taxcom.ru` | 100% | 100% |   |
+|  | `ocsp2012.izhtender.ru` | 100% | 100% |   |
+|  | `ocsp2012.taxcom.ru` | 0% | 0% |   |
 |  | `ofd-magnit.ru` | 100% | 100% |   |
+|  | `ofd.kontur.ru` | 100% | 100% |   |
+|  | `ofd.nvg.ru` | 100% | 100% |   |
+|  | `okko.tv` | 100% | 100% |   |
+|  | `omskinform.ru` | 100% | 100% |   |
+|  | `online.1c.ru` | 90% | 100% |   |
+|  | `online.akbars.ru` | 0% | 10% |   |
 |  | `online.atol.ru` | 90% | 100% |   |
-|  | `online.rshb.ru` | 80% | 20% | **WEIRD** |
-|  | `onpz.gazprom-neft.ru` | 100% | 100% |   |
-|  | `pamyat-naroda.ru` | 100% | 100% |   |
+|  | `online.rshb.ru` | 60% | 11% | **WEIRD** |
+|  | `online.sberbank.ru` | 10% | 33% |   |
+|  | `online.vtb.ru` | 80% | 88% |   |
+|  | `osago.sberbank.ru` | 90% | 100% |   |
+|  | `otc.ru` | 100% | 100% |   |
 |  | `panel.stage-68d7hn.anketolog.ru` | 0% | 0% |   |
 |  | `parking.spb.ru` | 100% | 100% |   |
-|  | `partner-service.testing.anketolog.ru` | 0% | 0% |   |
-|  | `pioner-cinema.ru` | 100% | 89% |   |
-|  | `postavki.kontur.ru` | 100% | 100% |   |
-|  | `ppls-vc.f5.aeroflot.ru` | 100% | 100% |   |
-|  | `pravdasevera.ru` | 90% | 100% |   |
-|  | `premierzal.ru` | 100% | 100% |   |
-|  | `price.ru` | 100% | 100% |   |
-|  | `profit.ozon.ru` | 90% | 100% |   |
-|  | `prufy.ru` | 100% | 100% |   |
-|  | `push.notisend.ru` | 90% | 100% |   |
-|  | `ra.rosreport.ru` | 10% | 0% |   |
-|  | `ra20.tax23.ru` | 100% | 100% |   |
-|  | `region-am.ru` | 100% | 89% |   |
-|  | `region.ru` | 100% | 90% |   |
-|  | `regservice.keydisk.ru` | 90% | 100% |   |
-|  | `rg.ru` | 90% | 89% |   |
-|  | `riakalm.ru` | 100% | 100% |   |
-|  | `rolls-and-pizza.ru` | 100% | 100% |   |
-|  | `rsbis.ru` | 0% | 0% |   |
-|  | `sale.etprf.ru` | 0% | 100% | **INTERESTING** |
-|  | `sale.zakazrf.ru` | 0% | 0% |   |
-|  | `saratovagro.roseltorg.ru` | 100% | 100% |   |
-|  | `sc.rus-on.ru` | 0% | 0% |   |
-|  | `service.itk23.ru` | 0% | 0% |   |
-|  | `service.notisend.ru` | 90% | 100% |   |
+|  | `pg12.ru` | 100% | 100% |   |
+|  | `pobeda.okko.tv` | 100% | 100% |   |
+|  | `portal.kuzbank.ru` | 90% | 100% |   |
+|  | `promo.sber.ru` | 100% | 100% |   |
+|  | `ptoday.ru` | 100% | 100% |   |
+|  | `push.notisend.ru` | 100% | 100% |   |
+|  | `queries-utm.egais.ru` | 0% | 0% |   |
+|  | `ra.docshell.ru` | 0% | 0% |   |
+|  | `re-store.ru` | 90% | 100% |   |
+|  | `redmine.keydisk.ru` | 100% | 100% |   |
+|  | `region29.ru` | 10% | 89% | **INTERESTING** |
+|  | `reputils.1c.ru` | 80% | 100% |   |
+|  | `rest-domains.hh.ru` | 100% | 100% |   |
+|  | `riastrela.ru` | 100% | 100% |   |
+|  | `rk72.ru` | 100% | 100% |   |
+|  | `rn.tektorg.ru` | 100% | 100% |   |
+|  | `rosleshoz.gov.ru` | 0% | 100% | **INTERESTING** |
+|  | `rosnedra.etpgpb.ru` | 0% | 100% | **INTERESTING** |
+|  | `rostelecom.ru` | 100% | 100% |   |
+|  | `sale.tektorg.ru` | 100% | 100% |   |
+|  | `sbermarket.ru` | 100% | 100% |   |
+|  | `sc.mil.ru` | 90% | 100% |   |
+|  | `sdaminfo.ru` | 100% | 100% |   |
+|  | `search.aviasales.ru` | 100% | 100% |   |
 |  | `shelf.gazprom-neft.ru` | 100% | 100% |   |
-|  | `sila-aero.ru` | 0% | 0% |   |
-|  | `smev03.gosuslugi.ru` | 0% | 100% | **INTERESTING** |
-|  | `smotrim.ru` | 90% | 100% |   |
+|  | `smev3.gosuslugi.ru` | 0% | 100% | **INTERESTING** |
 |  | `smtp.server.email.weeek.net` | 100% | 100% |   |
-|  | `sstorg.ru` | 100% | 100% |   |
-|  | `st-aggregator01.roseltorg.ru` | 100% | 100% |   |
+|  | `soon.sberbank-ast.ru` | 100% | 100% |   |
+|  | `srv.amo.tm` | 100% | 100% |   |
 |  | `stable-dnn.otc.ru` | 0% | 0% |   |
-|  | `star-pro.ru` | 100% | 100% |   |
-|  | `stolicaonego.ru` | 100% | 100% |   |
-|  | `subscribe.anketolog.ru` | 100% | 89% |   |
-|  | `suppliers.severstal.com` | 100% | 100% |   |
-|  | `suz2.crpt.ru` | 90% | 89% |   |
-|  | `sverdlagro.roseltorg.ru` | 80% | 100% |   |
-|  | `thelocals.ru` | 90% | 88% |   |
-|  | `tolknews.ru` | 100% | 100% |   |
-|  | `tours.tutu.ru` | 100% | 100% |   |
+|  | `staffing.severstal.com` | 80% | 100% |   |
+|  | `stage.1tv.ru` | 0% | 0% |   |
+|  | `stolicaonego.ru` | 90% | 100% |   |
+|  | `store.stage-68d7hn.anketolog.ru` | 0% | 0% |   |
+|  | `subscr.1tv.ru` | 100% | 100% |   |
+|  | `support.taxcom.ru` | 100% | 90% |   |
+|  | `sverdlagro.roseltorg.ru` | 100% | 100% |   |
+|  | `t2-aplms.vetrf.ru` | 40% | 100% | **INTERESTING** |
+|  | `tass.ru` | 100% | 100% |   |
+|  | `tortuga.sberbank.ru` | 0% | 100% | **INTERESTING** |
 |  | `track.aeroflot.ru` | 100% | 100% |   |
+|  | `trade.aeroflot.ru` | 100% | 100% |   |
 |  | `travel-safe.aeroflot.ru` | 0% | 0% |   |
+|  | `tsargrad.tv` | 100% | 100% |   |
 |  | `tsp.taxcom.ru` | 100% | 100% |   |
-|  | `tsp2.rosatom.ru` | 100% | 100% |   |
-|  | `turskidki.ru` | 100% | 100% |   |
-|  | `utp.sberbank-ast.ru` | 0% | 100% | **INTERESTING** |
-|  | `v1.ru` | 100% | 100% |   |
-|  | `vesti95.ru` | 0% | 0% |   |
-|  | `visitpiter.ru` | 0% | 0% |   |
-|  | `vologdaregion.ru` | 100% | 100% |   |
+|  | `ufanotes.ru` | 0% | 100% | **INTERESTING** |
+|  | `users.1tv.ru` | 100% | 100% |   |
+|  | `v2.rostec.ru` | 100% | 100% |   |
+|  | `vaynahavia.com` | 100% | 90% |   |
+|  | `voenpro.ru` | 100% | 100% |   |
+|  | `volgograd-trv.ru` | 90% | 100% |   |
+|  | `volgograd24.tv` | 90% | 100% |   |
+|  | `vologda-poisk.ru` | 100% | 100% |   |
 |  | `vseapteki.ru` | 90% | 100% |   |
-|  | `vtb.roseltorg.ru` | 90% | 100% |   |
-|  | `web-ppo3.zakazrf.ru` | 0% | 0% |   |
-|  | `web.amo.tm` | 100% | 100% |   |
-|  | `web.dev.amo.tm` | 0% | 0% |   |
-|  | `webcust.zakazrf.ru` | 0% | 0% |   |
-|  | `websbor.gks.ru` | 0% | 100% | **INTERESTING** |
-|  | `wink.ru` | 90% | 100% |   |
-|  | `www-dev.roseltorg.ru` | 100% | 100% |   |
-|  | `www.1001tur.ru` | 100% | 100% |   |
-|  | `www.afanasy.biz` | 100% | 100% |   |
-|  | `www.amediateka.ru` | 100% | 100% |   |
-|  | `www.amur.life` | 90% | 100% |   |
-|  | `www.asna.ru` | 100% | 89% |   |
-|  | `www.avia35.ru` | 100% | 100% |   |
-|  | `www.avito.ru` | 90% | 100% |   |
-|  | `www.baikal-daily.ru` | 100% | 100% |   |
-|  | `www.banki.ru` | 90% | 100% |   |
-|  | `www.biglion.ru` | 100% | 100% |   |
-|  | `www.bn.ru` | 100% | 89% |   |
-|  | `www.byteks.ru` | 90% | 100% |   |
-|  | `www.chefmarket.ru` | 100% | 100% |   |
-|  | `www.crpt.ru` | 0% | 100% | **INTERESTING** |
+|  | `web.amo.tm` | 80% | 100% |   |
+|  | `web.stand1.dev.amo.tm` | 0% | 0% |   |
+|  | `web4.online.sberbank.ru` | 100% | 100% |   |
+|  | `webinar.weeek.net` | 100% | 100% |   |
+|  | `wink.ru` | 100% | 100% |   |
+|  | `wsc.dev.amo.tm` | 0% | 0% |   |
+|  | `www.airport-norilsk.ru` | 70% | 78% |   |
+|  | `www.ak-krasavia.ru` | 0% | 0% |   |
+|  | `www.b-kontur.ru` | 100% | 100% |   |
+|  | `www.baikal-media.ru` | 100% | 90% |   |
+|  | `www.biglion.ru` | 90% | 100% |   |
+|  | `www.bitrix24.net` | 100% | 100% |   |
+|  | `www.br-tvr.ru` | 0% | 0% |   |
+|  | `www.crpt.ru` | 0% | 89% | **INTERESTING** |
+|  | `www.cryptopro.ru` | 100% | 100% |   |
+|  | `www.delivery-club.ru` | 0% | 100% | **INTERESTING** |
+|  | `www.dme.ru` | 0% | 0% |   |
 |  | `www.documentoved.ru` | 100% | 100% |   |
-|  | `www.kp.ru` | 90% | 100% |   |
-|  | `www.krasaviaport.ru` | 0% | 0% |   |
+|  | `www.donobuv.com` | 90% | 100% |   |
+|  | `www.eapteka.ru` | 100% | 100% |   |
+|  | `www.farpost.ru` | 100% | 100% |   |
+|  | `www.fontanka.ru` | 90% | 100% |   |
+|  | `www.ingosinvest.ru` | 100% | 100% |   |
+|  | `www.kartoteka.ru` | 100% | 100% |   |
+|  | `www.kuzbank.ru` | 0% | 29% |   |
 |  | `www.lamoda.ru` | 100% | 100% |   |
-|  | `www.lesonline.ru` | 100% | 100% |   |
-|  | `www.minsport.gov.ru` | 0% | 80% | **INTERESTING** |
-|  | `www.mirage.ru` | 100% | 100% |   |
-|  | `www.mirkvartir.ru` | 100% | 100% |   |
+|  | `www.marpravda.ru` | 89% | 100% |   |
+|  | `www.mid.ru` | 100% | 100% |   |
+|  | `www.mk.ru` | 50% | 100% | **INTERESTING** |
 |  | `www.moypolk.ru` | 90% | 100% |   |
-|  | `www.nbki.ru` | 100% | 100% |   |
+|  | `www.nucrf.ru` | 0% | 100% | **INTERESTING** |
 |  | `www.nwudc.ru` | 0% | 100% | **INTERESTING** |
-|  | `www.okeydostavka.ru` | 100% | 100% |   |
-|  | `www.pnp.ru` | 100% | 100% |   |
-|  | `www.pomorie.ru` | 100% | 100% |   |
-|  | `www.ralf.ru` | 100% | 100% |   |
-|  | `www.rbc.ru` | 100% | 100% |   |
-|  | `www.riakchr.ru` | 90% | 100% |   |
-|  | `www.rosatom.rts-tender.ru` | 100% | 100% |   |
-|  | `www.rossiya-airlines.com` | 100% | 100% |   |
-|  | `www.rusline.aero` | 100% | 100% |   |
-|  | `www.sberbank.com` | 80% | 100% |   |
-|  | `www.technopark.ru` | 90% | 89% |   |
-|  | `www.unibo.ru` | 100% | 100% |   |
-|  | `www.vetrf.ru` | 40% | 100% | **INTERESTING** |
-|  | `www.vtbcapital-pr.ru` | 100% | 100% |   |
-|  | `www.zarplata.ru` | 100% | 100% |   |
-|  | `www.zet-obuv.ru` | 80% | 100% |   |
-|  | `x5.kontur.ru` | 100% | 100% |   |
-|  | `yocity12.com` | 100% | 100% |   |
-|  | `z2s.ru` | 100% | 100% |   |
+|  | `www.realtymag.ru` | 100% | 100% |   |
+|  | `www.roseltorg.ru` | 100% | 100% |   |
+|  | `www.russianhighways.ru` | 90% | 100% |   |
+|  | `www.stv-it.ru` | 90% | 100% |   |
+|  | `www.superjob.ru` | 90% | 100% |   |
+|  | `www.technopark.ru` | 100% | 100% |   |
+|  | `www.tvigle.ru` | 100% | 100% |   |
+|  | `www.vezdearenda.ru` | 100% | 100% |   |
+|  | `www.vnd12.ru` | 100% | 100% |   |
+|  | `www.vsemayki.ru` | 100% | 100% |   |
+|  | `www.wink.ru` | 90% | 100% |   |
+|  | `www.y-center.ru` | 0% | 89% | **INTERESTING** |
+|  | `yamal.gazprom-neft.ru` | 100% | 100% |   |
+|  | `youla.ru` | 100% | 100% |   |
+| Bookkeeping | `151.236.114.27` | 100% | 100% |   |
+| Bookkeeping | `151.236.114.6` | 100% | 100% |   |
 | Bookkeeping | `185.165.123.70` | 100% | 100% |   |
-| Bookkeeping | `213.5.80.180` | 80% | 100% |   |
-| Courier | `130.193.36.55` | 100% | 100% |   |
-| Courier | `130.193.37.150` | 0% | 0% |   |
-| Courier | `178.248.238.62` | 90% | 100% |   |
-| Courier | `185.165.123.228` | 0% | 0% |   |
-| Courier | `185.165.123.40` | 0% | 0% |   |
-| Courier | `188.130.235.244` | 0% | 0% |   |
-| Courier | `37.18.29.167` | 0% | 0% |   |
-| Courier | `84.201.145.181` | 0% | 0% |   |
-| Courier | `cdek.ru` | 90% | 100% |   |
+| Courier | `178.248.238.62` | 100% | 100% |   |
+| Courier | `185.165.123.206` | 100% | 100% |   |
+| Courier | `188.130.235.210` | 0% | 0% |   |
+| Courier | `188.130.235.84` | 0% | 0% |   |
+| Courier | `api.boxberry.ru` | 100% | 100% |   |
+| Courier | `boxberry.ru` | 90% | 100% |   |
 | Courier | `global.cdek.ru` | 100% | 100% |   |
-| Courier | `jira8.cdek.ru` | 100% | 100% |   |
-| Courier | `lk.boxberry.ru` | 100% | 90% |   |
-| Cryptocurrency | `abcobmen.com` | 100% | 100% |   |
-| Cryptocurrency | `baksman.org` | 100% | 100% |   |
-| Cryptocurrency | `betatransfer.org` | 100% | 100% |   |
-| Cryptocurrency | `multichange.net` | 100% | 100% |   |
-| Cryptocurrency | `prostocash.com` | 100% | 100% |   |
-| Cryptocurrency | `ww-pay.net` | 100% | 100% |   |
-| Cryptocurrency | `www.bestchange.ru` | 100% | 90% |   |
-| DDoS Defense | `solidwall.ru` | 90% | 100% |   |
-| Finance | `185.170.3.9` | 0% | 100% | **INTERESTING** |
-| Finance | `195.208.109.58` | 0% | 90% | **INTERESTING** |
-| Finance | `46.4.106.111` | 100% | 100% |   |
-| Finance | `78.46.94.184` | 100% | 100% |   |
-| Finance | `91.194.226.15` | 0% | 0% |   |
-| Finance | `acs1.sbrf.ru` | 100% | 89% |   |
-| Finance | `acs6.sbrf.ru` | 100% | 100% |   |
-| Finance | `belinvestbank.by` | 90% | 100% |   |
-| Finance | `brrb.by` | 0% | 0% |   |
-| Finance | `dev.nspk.ru` | 90% | 100% |   |
-| Finance | `enter.unicredit.ru` | 100% | 100% |   |
-| Finance | `www.nspk.ru` | 100% | 100% |   |
-| Finance | `www.sberbank.ru` | 80% | 100% |   |
-| Freelance | `advego.com` | 100% | 100% |   |
-| Freelance | `kwork.ru` | 80% | 100% |   |
+| Courier | `lk.boxberry.ru` | 90% | 100% |   |
+| Courier | `mx12.cdek.ru` | 10% | 0% |   |
+| Courier | `static.cdek.ru` | 100% | 100% |   |
+| Cryptocurrency | `24paybank.ne` | 100% | 100% |   |
+| Cryptocurrency | `flashobmen.com` | 100% | 89% |   |
+| Cryptocurrency | `kupibit.me` | 100% | 100% |   |
+| Cryptocurrency | `mine.exchange` | 100% | 88% |   |
+| Cryptocurrency | `superchange.net` | 100% | 100% |   |
+| Cryptocurrency | `www.netex24.net` | 80% | 100% |   |
+| Cryptocurrency | `ychanger.net` | 100% | 100% |   |
+| Finance | `185.170.2.7` | 100% | 89% |   |
+| Finance | `195.208.109.58` | 0% | 100% | **INTERESTING** |
+| Finance | `3dsec.sberbank.ru` | 0% | 100% | **INTERESTING** |
+| Finance | `acs4.sbrf.ru` | 90% | 100% |   |
+| Finance | `bankdabrabyt.by` | 0% | 0% |   |
+| Finance | `ds1.mirconnect.ru` | 90% | 100% |   |
+| Finance | `www.belapb.by` | 0% | 10% |   |
+| Finance | `www.nbrb.by` | 10% | 100% | **INTERESTING** |
+| Finance | `www.tinkoff.ru` | 90% | 100% |   |
+| Finance | `www.vtb.ru` | 90% | 100% |   |
 | Government | `193.148.44.187` | 100% | 100% |   |
-| Government | `autodiscover.fss.ru` | 100% | 100% |   |
-| Government | `bgp.by` | 0% | 0% |   |
-| Government | `data.fss.ru` | 90% | 100% |   |
-| Government | `mail.rkn.gov.ru` | 0% | 0% |   |
-| Government | `portal.fss.ru` | 100% | 100% |   |
-| Government | `rec.gov.by` | 100% | 100% |   |
-| Government | `www.mil.by` | 0% | 0% |   |
-| Industry | `aaa-srt-apps.lukoil.com` | 0% | 0% |   |
-| Industry | `tatneft.ru` | 0% | 100% | **INTERESTING** |
-| Industry | `uralchem.com` | 90% | 100% |   |
-| Industry | `www.nornickel.com` | 100% | 100% |   |
-| Industry | `www.polymetalinternational.com` | 100% | 100% |   |
-| Industry | `www.severstal.com` | 0% | 100% | **INTERESTING** |
-| Industry | `www.tmk-group.ru` | 90% | 100% |   |
+| Government | `195.161.52.80` | 100% | 100% |   |
+| Government | `customs.gov.ru` | 0% | 0% |   |
+| Government | `es.pfrf.ru` | 90% | 100% |   |
+| Government | `government.ru` | 0% | 0% |   |
+| Government | `hosting.pfrf.ru` | 100% | 100% |   |
+| Government | `mail.rkn.gov.ru` | 10% | 0% |   |
+| Government | `pfr.gov.ru` | 90% | 100% |   |
+| Government | `proverki.gov.ru` | 10% | 100% | **INTERESTING** |
+| Government | `wiki.fss.ru` | 90% | 100% |   |
+| Government | `www.kgb.by` | 22% | 11% |   |
+| Industry | `acron.ru` | 100% | 100% |   |
+| Industry | `eurochemgroup.com` | 100% | 100% |   |
+| Industry | `lukoil.ru` | 90% | 100% |   |
+| Industry | `onlinecontract.ru` | 90% | 89% |   |
+| Industry | `transneft.ru` | 100% | 100% |   |
+| Industry | `www.eurosib.ru` | 0% | 100% | **INTERESTING** |
+| Industry | `www.metalloinvest.com` | 100% | 100% |   |
+| Industry | `www.nornickel.com` | 90% | 100% |   |
 | Media | `belta.by` | 100% | 100% |   |
-| Media | `bezformata.com` | 100% | 100% |   |
-| Media | `gosuslugi.astrobl.ru` | 90% | 100% |   |
-| Media | `gosuslugi29.ru` | 0% | 89% | **INTERESTING** |
-| Media | `kommersant.ru` | 100% | 100% |   |
-| Media | `mogilevnews.by` | 0% | 0% |   |
-| Media | `mosreg.ru` | 100% | 100% |   |
-| Media | `radiobrestfm.by` | 100% | 100% |   |
-| Media | `www.admoblkaluga.ru` | 90% | 100% |   |
-| Media | `www.sb.by` | 80% | 100% |   |
+| Media | `gazeta.ru` | 100% | 100% |   |
+| Media | `krd.ru` | 100% | 100% |   |
+| Media | `radiusfm.by` | 0% | 0% |   |
+| Media | `sputniknews.com` | 80% | 90% |   |
+| Media | `www.024.by` | 100% | 100% |   |
+| Media | `www.astrobl.ru` | 100% | 100% |   |
+| Media | `www.stavregion.ru` | 100% | 100% |   |
 | Media | `www.tula.ru` | 100% | 90% |   |
 | Social Media | `217.20.147.1` | 100% | 100% |   |
-| Time | `193.0.214.42` | 100% | 100% |   |
+| Social Media | `ok.ru` | 80% | 100% |   |
+| Time | `217.21.220.247` | 0% | 0% |   |
 
 *Additional information:* The above data is gathered via RIPE Atlas. The measurement connects via SSL/TLS (i.e. this is *not* application layer) to port 443 with the SNI set to the corresponding domain. This checks that the port is open and responsive *and* that a secure connection can be established, but not necessarily that the service itself is functioning. However, if the connection *failed* we may be able to expect that the service is down as well. Not all sites run HTTPS, but for those that were *previously* known to use HTTPS, this would reasonably indicate that those HTTPS services are down.
 
