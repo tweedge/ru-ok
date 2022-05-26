@@ -224,7 +224,7 @@
       "id": 1000446,
       "is_anchor": false,
       "is_public": true,
-      "last_connected": 1653451964,
+      "last_connected": 1653539664,
       "prefix_v4": "178.159.240.0/21",
       "prefix_v6": null,
       "status": {
@@ -245,6 +245,18 @@
         {
           "name": "IPv4",
           "slug": "ipv4"
+        },
+        {
+          "name": "system: Resolves A Correctly",
+          "slug": "system-resolves-a-correctly"
+        },
+        {
+          "name": "system: Resolves AAAA Correctly",
+          "slug": "system-resolves-aaaa-correctly"
+        },
+        {
+          "name": "system: IPv4 Works",
+          "slug": "system-ipv4-works"
         },
         {
           "name": "system: IPv4 Capable",
@@ -271,7 +283,7 @@
           "slug": "beltelecom"
         }
       ],
-      "total_uptime": 66180558,
+      "total_uptime": 66268258,
       "type": "Probe"
     }
   },
@@ -679,7 +691,7 @@
       "id": 1002836,
       "is_anchor": false,
       "is_public": true,
-      "last_connected": 1653452069,
+      "last_connected": 1653539853,
       "prefix_v4": "1.117.192.0/18",
       "prefix_v6": null,
       "status": {
@@ -689,6 +701,14 @@
       },
       "status_since": 1652811533,
       "tags": [
+        {
+          "name": "system: Resolver Mangles Case",
+          "slug": "system-resolver-mangles-case"
+        },
+        {
+          "name": "system: IPv4 Works",
+          "slug": "system-ipv4-works"
+        },
         {
           "name": "system: Auto GEOIP country",
           "slug": "system-auto-geoip-country"
@@ -706,7 +726,236 @@
           "slug": "system-software"
         }
       ],
-      "total_uptime": 23148567,
+      "total_uptime": 23236351,
+      "type": "Probe"
+    }
+  },
+  {
+    "fw": 5040,
+    "mver": "2.4.1",
+    "lts": 34,
+    "endtime": 1653383686,
+    "dst_name": "www.transstroybank.ru",
+    "ttr": 9.944844,
+    "dst_addr": "91.215.42.48",
+    "src_addr": "185.70.105.181",
+    "proto": "TCP",
+    "af": 4,
+    "size": 0,
+    "paris_id": 1,
+    "result": [
+      {
+        "hop": 1,
+        "result": [
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          }
+        ]
+      },
+      {
+        "hop": 2,
+        "result": [
+          {
+            "from": "91.218.245.203",
+            "ttl": 254,
+            "size": 28,
+            "rtt": 5.279
+          },
+          {
+            "from": "91.218.245.203",
+            "ttl": 254,
+            "size": 28,
+            "rtt": 1.52
+          },
+          {
+            "from": "91.218.245.203",
+            "ttl": 254,
+            "size": 28,
+            "rtt": 1.105
+          }
+        ]
+      },
+      {
+        "hop": 3,
+        "result": [
+          {
+            "from": "91.218.245.212",
+            "ttl": 254,
+            "size": 28,
+            "rtt": 1.124
+          },
+          {
+            "from": "91.218.245.212",
+            "ttl": 254,
+            "size": 28,
+            "rtt": 1.181
+          },
+          {
+            "from": "91.218.245.212",
+            "ttl": 254,
+            "size": 28,
+            "rtt": 1.083
+          }
+        ]
+      },
+      {
+        "hop": 4,
+        "result": [
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          }
+        ]
+      },
+      {
+        "hop": 5,
+        "result": [
+          {
+            "from": "10.0.9.181",
+            "ttl": 250,
+            "size": 28,
+            "rtt": 1.504,
+            "itos": 192
+          },
+          {
+            "from": "10.0.9.181",
+            "ttl": 250,
+            "size": 28,
+            "rtt": 1.481,
+            "itos": 192
+          },
+          {
+            "from": "10.0.9.181",
+            "ttl": 250,
+            "size": 28,
+            "rtt": 5.214,
+            "itos": 192
+          }
+        ]
+      },
+      {
+        "hop": 6,
+        "result": [
+          {
+            "from": "91.215.42.48",
+            "ttl": 60,
+            "size": 4,
+            "flags": "SA",
+            "hdropts": [
+              {
+                "mss": 1460
+              }
+            ],
+            "rtt": 2.248
+          },
+          {
+            "from": "91.215.42.48",
+            "ttl": 60,
+            "size": 4,
+            "flags": "SA",
+            "hdropts": [
+              {
+                "mss": 1460
+              }
+            ],
+            "rtt": 1.462
+          },
+          {
+            "from": "91.215.42.48",
+            "ttl": 60,
+            "size": 4,
+            "flags": "SA",
+            "hdropts": [
+              {
+                "mss": 1460
+              }
+            ],
+            "rtt": 2.389
+          }
+        ]
+      }
+    ],
+    "msm_id": 41356729,
+    "prb_id": 1004060,
+    "timestamp": 1653383662,
+    "msm_name": "Traceroute",
+    "from": "185.70.105.181",
+    "type": "traceroute",
+    "group_id": 41356729,
+    "stored_timestamp": 1653483632,
+    "probe_data": {
+      "address_v4": "185.70.105.181",
+      "address_v6": null,
+      "asn_v4": 50867,
+      "asn_v6": null,
+      "country_code": "RU",
+      "description": "Hostkey Moscow",
+      "first_connected": 1649494232,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.6105,
+          55.7375
+        ]
+      },
+      "id": 1004060,
+      "is_anchor": false,
+      "is_public": true,
+      "last_connected": 1653540085,
+      "prefix_v4": "185.70.105.0/24",
+      "prefix_v6": null,
+      "status": {
+        "id": 1,
+        "name": "Connected",
+        "since": "2022-04-09T08:50:32Z"
+      },
+      "status_since": 1649494232,
+      "tags": [
+        {
+          "name": "system: Resolves A Correctly",
+          "slug": "system-resolves-a-correctly"
+        },
+        {
+          "name": "system: Resolves AAAA Correctly",
+          "slug": "system-resolves-aaaa-correctly"
+        },
+        {
+          "name": "system: IPv4 Works",
+          "slug": "system-ipv4-works"
+        },
+        {
+          "name": "system: Auto GEOIP country",
+          "slug": "system-auto-geoip-country"
+        },
+        {
+          "name": "system: IPv4 Capable",
+          "slug": "system-ipv4-capable"
+        },
+        {
+          "name": "system: IPv4 Stable 30d",
+          "slug": "system-ipv4-stable-30d"
+        },
+        {
+          "name": "system: IPv4 Stable 1d",
+          "slug": "system-ipv4-stable-1d"
+        },
+        {
+          "name": "system: Software",
+          "slug": "system-software"
+        }
+      ],
+      "total_uptime": 4045853,
       "type": "Probe"
     }
   },
@@ -901,7 +1150,7 @@
       "id": 1004129,
       "is_anchor": false,
       "is_public": true,
-      "last_connected": 1653452119,
+      "last_connected": 1653539928,
       "prefix_v4": "185.149.163.0/24",
       "prefix_v6": "2a05:2947::/32",
       "status": {
@@ -940,8 +1189,16 @@
           "slug": "system-ipv6-capable"
         },
         {
+          "name": "system: IPv6 Stable 30d",
+          "slug": "system-ipv6-stable-30d"
+        },
+        {
           "name": "system: IPv6 Stable 1d",
           "slug": "system-ipv6-stable-1d"
+        },
+        {
+          "name": "system: IPv4 Stable 30d",
+          "slug": "system-ipv4-stable-30d"
         },
         {
           "name": "system: IPv4 Stable 1d",
@@ -952,7 +1209,122 @@
           "slug": "system-software"
         }
       ],
-      "total_uptime": 2481366,
+      "total_uptime": 2569175,
+      "type": "Probe"
+    }
+  },
+  {
+    "fw": 5060,
+    "mver": "2.5.1",
+    "lts": 120,
+    "endtime": 1653383663,
+    "dst_name": "www.transstroybank.ru",
+    "ttr": 28.616895,
+    "dst_addr": "91.215.42.48",
+    "src_addr": "10.0.9.138",
+    "proto": "TCP",
+    "af": 4,
+    "size": 0,
+    "paris_id": 1,
+    "result": [
+      {
+        "hop": 1,
+        "result": [
+          {
+            "from": "10.0.9.11",
+            "ttl": 64,
+            "size": 40,
+            "rtt": 0.676
+          },
+          {
+            "from": "10.0.9.11",
+            "ttl": 64,
+            "size": 40,
+            "rtt": 0.498
+          },
+          {
+            "from": "10.0.9.11",
+            "ttl": 64,
+            "size": 40,
+            "rtt": 10.349
+          }
+        ]
+      },
+      {
+        "hop": 2,
+        "result": [
+          {
+            "error": "sendto failed: Network is unreachable"
+          }
+        ]
+      }
+    ],
+    "msm_id": 41356729,
+    "prb_id": 12717,
+    "timestamp": 1653383663,
+    "msm_name": "Traceroute",
+    "from": "213.160.133.234",
+    "type": "traceroute",
+    "group_id": 41356729,
+    "stored_timestamp": 1653486778,
+    "probe_data": {
+      "address_v4": "213.160.133.234",
+      "address_v6": null,
+      "asn_v4": 12963,
+      "asn_v6": null,
+      "country_code": "UA",
+      "description": "AS12963 Volz SPF (v3-New)",
+      "first_connected": 1483606333,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.4775,
+          50.4905
+        ]
+      },
+      "id": 12717,
+      "is_anchor": false,
+      "is_public": true,
+      "last_connected": 1653539670,
+      "prefix_v4": "213.160.128.0/19",
+      "prefix_v6": null,
+      "status": {
+        "id": 1,
+        "name": "Connected",
+        "since": "2022-05-25T01:44:14Z"
+      },
+      "status_since": 1653443054,
+      "tags": [
+        {
+          "name": "system: V3",
+          "slug": "system-v3"
+        },
+        {
+          "name": "system: IPv4 Works",
+          "slug": "system-ipv4-works"
+        },
+        {
+          "name": "system: IPv4 Capable",
+          "slug": "system-ipv4-capable"
+        },
+        {
+          "name": "system: IPv4 RFC1918",
+          "slug": "system-ipv4-rfc1918"
+        },
+        {
+          "name": "system: IPv4 Stable 30d",
+          "slug": "system-ipv4-stable-30d"
+        },
+        {
+          "name": "system: IPv4 Stable 90d",
+          "slug": "system-ipv4-stable-90d"
+        },
+        {
+          "name": "system: IPv4 Stable 1d",
+          "slug": "system-ipv4-stable-1d"
+        }
+      ],
+      "total_uptime": 124865827,
       "type": "Probe"
     }
   },
@@ -1090,7 +1462,7 @@
       "id": 14778,
       "is_anchor": false,
       "is_public": true,
-      "last_connected": 1653452111,
+      "last_connected": 1653539918,
       "prefix_v4": "180.150.56.0/23",
       "prefix_v6": null,
       "status": {
@@ -1107,6 +1479,18 @@
         {
           "name": "system: V3",
           "slug": "system-v3"
+        },
+        {
+          "name": "system: Resolves A Correctly",
+          "slug": "system-resolves-a-correctly"
+        },
+        {
+          "name": "system: Resolves AAAA Correctly",
+          "slug": "system-resolves-aaaa-correctly"
+        },
+        {
+          "name": "system: IPv4 Works",
+          "slug": "system-ipv4-works"
         },
         {
           "name": "system: IPv4 Capable",
@@ -1137,7 +1521,7 @@
           "slug": "system-ipv4-stable-1d"
         }
       ],
-      "total_uptime": 217528678,
+      "total_uptime": 217616485,
       "type": "Probe"
     }
   },
@@ -1389,9 +1773,9 @@
     "group_id": 41356729,
     "stored_timestamp": 1653444892,
     "probe_data": {
-      "address_v4": "92.38.57.239",
+      "address_v4": "93.170.28.102",
       "address_v6": null,
-      "asn_v4": 49711,
+      "asn_v4": 50438,
       "asn_v6": null,
       "country_code": "BY",
       "description": "flynet-home",
@@ -1406,15 +1790,15 @@
       "id": 19997,
       "is_anchor": false,
       "is_public": true,
-      "last_connected": 1653451965,
-      "prefix_v4": "92.38.56.0/21",
+      "last_connected": 1653539665,
+      "prefix_v4": "93.170.28.0/22",
       "prefix_v6": null,
       "status": {
         "id": 1,
         "name": "Connected",
-        "since": "2022-05-24T23:06:39Z"
+        "since": "2022-05-26T04:16:38Z"
       },
-      "status_since": 1653433599,
+      "status_since": 1653538598,
       "tags": [
         {
           "name": "Home",
@@ -1427,6 +1811,18 @@
         {
           "name": "system: V3",
           "slug": "system-v3"
+        },
+        {
+          "name": "system: Resolves A Correctly",
+          "slug": "system-resolves-a-correctly"
+        },
+        {
+          "name": "system: Resolves AAAA Correctly",
+          "slug": "system-resolves-aaaa-correctly"
+        },
+        {
+          "name": "system: IPv4 Works",
+          "slug": "system-ipv4-works"
         },
         {
           "name": "system: IPv4 Capable",
@@ -1449,7 +1845,507 @@
           "slug": "system-ipv4-stable-1d"
         }
       ],
-      "total_uptime": 233281632,
+      "total_uptime": 233366993,
+      "type": "Probe"
+    }
+  },
+  {
+    "fw": 5060,
+    "mver": "2.5.1",
+    "lts": 21,
+    "endtime": 1653383676,
+    "dst_name": "www.transstroybank.ru",
+    "ttr": 120.992206,
+    "dst_addr": "91.215.42.48",
+    "src_addr": "172.16.16.10",
+    "proto": "TCP",
+    "af": 4,
+    "size": 0,
+    "paris_id": 1,
+    "result": [
+      {
+        "hop": 1,
+        "result": [
+          {
+            "from": "172.16.16.240",
+            "ttl": 64,
+            "size": 40,
+            "rtt": 0.704
+          },
+          {
+            "from": "172.16.16.240",
+            "ttl": 64,
+            "size": 40,
+            "rtt": 0.705
+          },
+          {
+            "from": "172.16.16.240",
+            "ttl": 64,
+            "size": 40,
+            "rtt": 0.715
+          }
+        ]
+      },
+      {
+        "hop": 2,
+        "result": [
+          {
+            "from": "172.16.16.1",
+            "ttl": 63,
+            "size": 40,
+            "rtt": 1.55
+          },
+          {
+            "from": "172.16.16.1",
+            "ttl": 63,
+            "size": 40,
+            "rtt": 0.947
+          },
+          {
+            "from": "172.16.16.1",
+            "ttl": 63,
+            "size": 40,
+            "rtt": 1.404
+          }
+        ]
+      },
+      {
+        "hop": 3,
+        "result": [
+          {
+            "from": "10.17.0.1",
+            "ttl": 253,
+            "size": 44,
+            "rtt": 1.642,
+            "ittl": 0
+          },
+          {
+            "from": "10.17.0.1",
+            "ttl": 253,
+            "size": 44,
+            "rtt": 1.842,
+            "ittl": 0
+          },
+          {
+            "from": "10.17.0.1",
+            "ttl": 253,
+            "size": 44,
+            "rtt": 1.407,
+            "ittl": 0
+          }
+        ]
+      },
+      {
+        "hop": 4,
+        "result": [
+          {
+            "from": "94.243.239.241",
+            "ttl": 252,
+            "size": 28,
+            "rtt": 1.485
+          },
+          {
+            "from": "94.243.239.241",
+            "ttl": 252,
+            "size": 28,
+            "rtt": 1.416
+          },
+          {
+            "from": "94.243.239.241",
+            "ttl": 252,
+            "size": 28,
+            "rtt": 1.789
+          }
+        ]
+      },
+      {
+        "hop": 5,
+        "result": [
+          {
+            "from": "79.173.82.169",
+            "ttl": 251,
+            "size": 28,
+            "rtt": 2.776
+          },
+          {
+            "from": "79.173.82.169",
+            "ttl": 251,
+            "size": 28,
+            "rtt": 5.383
+          },
+          {
+            "from": "79.173.82.169",
+            "ttl": 251,
+            "size": 28,
+            "rtt": 11.517
+          }
+        ]
+      },
+      {
+        "hop": 6,
+        "result": [
+          {
+            "from": "178.236.130.222",
+            "ttl": 250,
+            "size": 28,
+            "rtt": 3.473
+          },
+          {
+            "from": "178.236.130.222",
+            "ttl": 250,
+            "size": 28,
+            "rtt": 3.754
+          },
+          {
+            "from": "178.236.130.222",
+            "ttl": 250,
+            "size": 28,
+            "rtt": 3.38
+          }
+        ]
+      },
+      {
+        "hop": 7,
+        "result": [
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          }
+        ]
+      },
+      {
+        "hop": 8,
+        "result": [
+          {
+            "from": "10.0.9.41",
+            "ttl": 247,
+            "size": 28,
+            "rtt": 10.981,
+            "itos": 192
+          },
+          {
+            "from": "10.0.9.41",
+            "ttl": 247,
+            "size": 28,
+            "rtt": 10.821,
+            "itos": 192
+          },
+          {
+            "from": "10.0.9.41",
+            "ttl": 247,
+            "size": 28,
+            "rtt": 10.929,
+            "itos": 192
+          }
+        ]
+      },
+      {
+        "hop": 9,
+        "result": [
+          {
+            "from": "91.215.42.48",
+            "ttl": 55,
+            "size": 4,
+            "flags": "SA",
+            "hdropts": [
+              {
+                "mss": 1400
+              }
+            ],
+            "rtt": 11.415
+          },
+          {
+            "from": "91.215.42.48",
+            "ttl": 55,
+            "size": 4,
+            "flags": "SA",
+            "hdropts": [
+              {
+                "mss": 1400
+              }
+            ],
+            "rtt": 12.178
+          },
+          {
+            "from": "91.215.42.48",
+            "ttl": 55,
+            "size": 4,
+            "flags": "SA",
+            "hdropts": [
+              {
+                "mss": 1400
+              }
+            ],
+            "rtt": 11.432
+          }
+        ]
+      }
+    ],
+    "msm_id": 41356729,
+    "prb_id": 20001,
+    "timestamp": 1653383664,
+    "msm_name": "Traceroute",
+    "from": "31.132.210.17",
+    "type": "traceroute",
+    "group_id": 41356729,
+    "stored_timestamp": 1653466741,
+    "probe_data": {
+      "address_v4": null,
+      "address_v6": null,
+      "asn_v4": 48481,
+      "asn_v6": null,
+      "country_code": "RU",
+      "description": "King-Online",
+      "first_connected": 1416585570,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.6075,
+          59.3675
+        ]
+      },
+      "id": 20001,
+      "is_anchor": false,
+      "is_public": false,
+      "last_connected": 1653540030,
+      "prefix_v4": "31.132.208.0/20",
+      "prefix_v6": null,
+      "status": {
+        "id": 1,
+        "name": "Connected",
+        "since": "2022-05-20T00:07:27Z"
+      },
+      "status_since": 1653005247,
+      "tags": [
+        {
+          "name": "Home",
+          "slug": "home"
+        },
+        {
+          "name": "NAT",
+          "slug": "nat"
+        },
+        {
+          "name": "system: V3",
+          "slug": "system-v3"
+        },
+        {
+          "name": "system: Resolves A Correctly",
+          "slug": "system-resolves-a-correctly"
+        },
+        {
+          "name": "system: Resolves AAAA Correctly",
+          "slug": "system-resolves-aaaa-correctly"
+        },
+        {
+          "name": "system: IPv4 Works",
+          "slug": "system-ipv4-works"
+        },
+        {
+          "name": "system: IPv4 Capable",
+          "slug": "system-ipv4-capable"
+        },
+        {
+          "name": "system: IPv4 RFC1918",
+          "slug": "system-ipv4-rfc1918"
+        },
+        {
+          "name": "system: IPv4 Stable 30d",
+          "slug": "system-ipv4-stable-30d"
+        },
+        {
+          "name": "system: IPv4 Stable 90d",
+          "slug": "system-ipv4-stable-90d"
+        },
+        {
+          "name": "system: IPv4 Stable 1d",
+          "slug": "system-ipv4-stable-1d"
+        }
+      ],
+      "total_uptime": 228736531,
+      "type": "Probe"
+    }
+  },
+  {
+    "fw": 4650,
+    "lts": 18,
+    "endtime": 1653383728,
+    "dst_name": "www.transstroybank.ru",
+    "dst_addr": "91.215.42.48",
+    "src_addr": "141.37.130.147",
+    "proto": "TCP",
+    "af": 4,
+    "size": 0,
+    "paris_id": 1,
+    "result": [
+      {
+        "hop": 1,
+        "result": [
+          {
+            "from": "141.37.130.129",
+            "ttl": 71,
+            "size": 28,
+            "rtt": 14.924
+          },
+          {
+            "x": "*"
+          },
+          {
+            "from": "141.37.130.129",
+            "ttl": 71,
+            "size": 28,
+            "rtt": 0.449
+          }
+        ]
+      },
+      {
+        "hop": 2,
+        "result": [
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          }
+        ]
+      },
+      {
+        "hop": 3,
+        "result": [
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          }
+        ]
+      },
+      {
+        "hop": 4,
+        "result": [
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          }
+        ]
+      },
+      {
+        "hop": 5,
+        "result": [
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          }
+        ]
+      },
+      {
+        "hop": 6,
+        "result": [
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          }
+        ]
+      },
+      {
+        "hop": 255,
+        "result": [
+          {
+            "from": "91.215.42.48",
+            "ttl": 51,
+            "size": 4,
+            "flags": "SA",
+            "rtt": 15.203
+          },
+          {
+            "from": "91.215.42.48",
+            "ttl": 51,
+            "size": 4,
+            "flags": "SA",
+            "rtt": 14.692
+          },
+          {
+            "from": "91.215.42.48",
+            "ttl": 51,
+            "size": 4,
+            "flags": "SA",
+            "rtt": 14.863
+          }
+        ]
+      }
+    ],
+    "msm_id": 41356729,
+    "prb_id": 21429,
+    "timestamp": 1653383664,
+    "msm_name": "Traceroute",
+    "from": "141.37.130.147",
+    "type": "traceroute",
+    "group_id": 41356729,
+    "stored_timestamp": 1653484346,
+    "probe_data": {
+      "address_v4": "141.37.130.147",
+      "address_v6": null,
+      "asn_v4": 553,
+      "asn_v6": null,
+      "country_code": "DE",
+      "description": "Hochschule Konstanz Technik, Wirtschaft und Gestaltung - Probe 2",
+      "first_connected": 1632840320,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1785,
+          48.7815
+        ]
+      },
+      "id": 21429,
+      "is_anchor": false,
+      "is_public": true,
+      "last_connected": 1653539822,
+      "prefix_v4": "141.37.0.0/16",
+      "prefix_v6": null,
+      "status": {
+        "id": 1,
+        "name": "Connected",
+        "since": "2022-05-25T19:45:42Z"
+      },
+      "status_since": 1653507942,
+      "tags": [
+        {
+          "name": "system: V3",
+          "slug": "system-v3"
+        },
+        {
+          "name": "system: IPv4 Capable",
+          "slug": "system-ipv4-capable"
+        }
+      ],
+      "total_uptime": 20693838,
       "type": "Probe"
     }
   },
@@ -1732,7 +2628,7 @@
       "id": 23719,
       "is_anchor": false,
       "is_public": false,
-      "last_connected": 1653451993,
+      "last_connected": 1653539718,
       "prefix_v4": "91.192.128.0/24",
       "prefix_v6": null,
       "status": {
@@ -1791,7 +2687,7 @@
           "slug": "system-ipv4-stable-1d"
         }
       ],
-      "total_uptime": 167637943,
+      "total_uptime": 167725668,
       "type": "Probe"
     }
   },
@@ -2094,7 +2990,7 @@
       "id": 34787,
       "is_anchor": false,
       "is_public": true,
-      "last_connected": 1653452721,
+      "last_connected": 1653540670,
       "prefix_v4": "107.208.0.0/12",
       "prefix_v6": null,
       "status": {
@@ -2107,6 +3003,18 @@
         {
           "name": "system: V3",
           "slug": "system-v3"
+        },
+        {
+          "name": "system: Resolves A Correctly",
+          "slug": "system-resolves-a-correctly"
+        },
+        {
+          "name": "system: Resolves AAAA Correctly",
+          "slug": "system-resolves-aaaa-correctly"
+        },
+        {
+          "name": "system: IPv4 Works",
+          "slug": "system-ipv4-works"
         },
         {
           "name": "system: IPv4 Capable",
@@ -2129,7 +3037,310 @@
           "slug": "system-ipv4-stable-1d"
         }
       ],
-      "total_uptime": 15412377,
+      "total_uptime": 15500326,
+      "type": "Probe"
+    }
+  },
+  {
+    "fw": 5060,
+    "mver": "2.5.1",
+    "lts": 13,
+    "endtime": 1653383673,
+    "dst_name": "www.transstroybank.ru",
+    "ttr": 106.817864,
+    "dst_addr": "91.215.42.48",
+    "src_addr": "212.26.128.194",
+    "proto": "TCP",
+    "af": 4,
+    "size": 0,
+    "paris_id": 1,
+    "result": [
+      {
+        "hop": 1,
+        "result": [
+          {
+            "from": "212.26.128.193",
+            "ttl": 64,
+            "size": 40,
+            "rtt": 0.603
+          },
+          {
+            "from": "212.26.128.193",
+            "ttl": 64,
+            "size": 40,
+            "rtt": 0.453
+          },
+          {
+            "from": "212.26.128.193",
+            "ttl": 64,
+            "size": 40,
+            "rtt": 0.448
+          }
+        ]
+      },
+      {
+        "hop": 2,
+        "result": [
+          {
+            "from": "212.26.133.245",
+            "ttl": 254,
+            "size": 28,
+            "rtt": 0.586
+          },
+          {
+            "from": "212.26.133.245",
+            "ttl": 254,
+            "size": 28,
+            "rtt": 0.637
+          },
+          {
+            "from": "212.26.133.245",
+            "ttl": 254,
+            "size": 28,
+            "rtt": 0.673
+          }
+        ]
+      },
+      {
+        "hop": 3,
+        "result": [
+          {
+            "from": "212.26.157.33",
+            "ttl": 253,
+            "size": 28,
+            "rtt": 6.525
+          },
+          {
+            "from": "212.26.157.33",
+            "ttl": 253,
+            "size": 28,
+            "rtt": 1.126
+          },
+          {
+            "from": "212.26.157.33",
+            "ttl": 253,
+            "size": 28,
+            "rtt": 1.233
+          }
+        ]
+      },
+      {
+        "hop": 4,
+        "result": [
+          {
+            "from": "78.154.160.49",
+            "ttl": 252,
+            "size": 28,
+            "rtt": 0.926
+          },
+          {
+            "from": "78.154.160.49",
+            "ttl": 252,
+            "size": 28,
+            "rtt": 0.83
+          },
+          {
+            "from": "78.154.160.49",
+            "ttl": 252,
+            "size": 28,
+            "rtt": 0.943
+          }
+        ]
+      },
+      {
+        "hop": 5,
+        "result": [
+          {
+            "from": "80.93.127.162",
+            "ttl": 250,
+            "size": 28,
+            "rtt": 26.168
+          },
+          {
+            "from": "80.93.127.162",
+            "ttl": 250,
+            "size": 28,
+            "rtt": 26.859
+          },
+          {
+            "from": "80.93.127.162",
+            "ttl": 250,
+            "size": 28,
+            "rtt": 26.113
+          }
+        ]
+      },
+      {
+        "hop": 6,
+        "result": [
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          }
+        ]
+      },
+      {
+        "hop": 7,
+        "result": [
+          {
+            "from": "10.0.81.251",
+            "ttl": 249,
+            "size": 28,
+            "rtt": 32.632
+          },
+          {
+            "from": "10.0.81.251",
+            "ttl": 249,
+            "size": 28,
+            "rtt": 32.529
+          },
+          {
+            "from": "10.0.81.251",
+            "ttl": 249,
+            "size": 28,
+            "rtt": 32.491
+          }
+        ]
+      },
+      {
+        "hop": 8,
+        "result": [
+          {
+            "from": "10.0.8.157",
+            "ttl": 248,
+            "size": 28,
+            "rtt": 34.155,
+            "itos": 192
+          },
+          {
+            "from": "10.0.8.157",
+            "ttl": 248,
+            "size": 28,
+            "rtt": 33.483,
+            "itos": 192
+          },
+          {
+            "from": "10.0.8.157",
+            "ttl": 248,
+            "size": 28,
+            "rtt": 33.585,
+            "itos": 192
+          }
+        ]
+      },
+      {
+        "hop": 9,
+        "result": [
+          {
+            "from": "91.215.42.48",
+            "ttl": 56,
+            "size": 4,
+            "flags": "SA",
+            "hdropts": [
+              {
+                "mss": 1400
+              }
+            ],
+            "rtt": 33.788
+          },
+          {
+            "from": "91.215.42.48",
+            "ttl": 56,
+            "size": 4,
+            "flags": "SA",
+            "hdropts": [
+              {
+                "mss": 1400
+              }
+            ],
+            "rtt": 33.712
+          },
+          {
+            "from": "91.215.42.48",
+            "ttl": 56,
+            "size": 4,
+            "flags": "SA",
+            "hdropts": [
+              {
+                "mss": 1400
+              }
+            ],
+            "rtt": 33.932
+          }
+        ]
+      }
+    ],
+    "msm_id": 41356729,
+    "prb_id": 35333,
+    "timestamp": 1653383661,
+    "msm_name": "Traceroute",
+    "from": "212.26.128.194",
+    "type": "traceroute",
+    "group_id": 41356729,
+    "stored_timestamp": 1653466949,
+    "probe_data": {
+      "address_v4": "212.26.128.194",
+      "address_v6": null,
+      "asn_v4": 8788,
+      "asn_v6": null,
+      "country_code": "UA",
+      "description": "001",
+      "first_connected": 1574279216,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.6385,
+          50.4085
+        ]
+      },
+      "id": 35333,
+      "is_anchor": false,
+      "is_public": true,
+      "last_connected": 1653539800,
+      "prefix_v4": "212.26.128.0/19",
+      "prefix_v6": null,
+      "status": {
+        "id": 1,
+        "name": "Connected",
+        "since": "2022-05-17T10:23:39Z"
+      },
+      "status_since": 1652783019,
+      "tags": [
+        {
+          "name": "system: V3",
+          "slug": "system-v3"
+        },
+        {
+          "name": "system: Resolves A Correctly",
+          "slug": "system-resolves-a-correctly"
+        },
+        {
+          "name": "system: Resolves AAAA Correctly",
+          "slug": "system-resolves-aaaa-correctly"
+        },
+        {
+          "name": "system: IPv4 Works",
+          "slug": "system-ipv4-works"
+        },
+        {
+          "name": "system: IPv4 Capable",
+          "slug": "system-ipv4-capable"
+        },
+        {
+          "name": "system: IPv4 Stable 30d",
+          "slug": "system-ipv4-stable-30d"
+        },
+        {
+          "name": "system: IPv4 Stable 1d",
+          "slug": "system-ipv4-stable-1d"
+        }
+      ],
+      "total_uptime": 36314138,
       "type": "Probe"
     }
   },
@@ -2393,7 +3604,7 @@
       "id": 53076,
       "is_anchor": false,
       "is_public": true,
-      "last_connected": 1653451998,
+      "last_connected": 1653539727,
       "prefix_v4": "178.124.162.0/24",
       "prefix_v6": "2a02:2208::/29",
       "status": {
@@ -2403,6 +3614,22 @@
       },
       "status_since": 1652259125,
       "tags": [
+        {
+          "name": "system: Resolves A Correctly",
+          "slug": "system-resolves-a-correctly"
+        },
+        {
+          "name": "system: Resolves AAAA Correctly",
+          "slug": "system-resolves-aaaa-correctly"
+        },
+        {
+          "name": "system: IPv4 Works",
+          "slug": "system-ipv4-works"
+        },
+        {
+          "name": "system: IPv6 Works",
+          "slug": "system-ipv6-works"
+        },
         {
           "name": "system: IPv4 Capable",
           "slug": "system-ipv4-capable"
@@ -2428,7 +3655,459 @@
           "slug": "system-v4"
         }
       ],
-      "total_uptime": 28095143,
+      "total_uptime": 28182872,
+      "type": "Probe"
+    }
+  },
+  {
+    "fw": 5060,
+    "mver": "2.5.1",
+    "lts": 49,
+    "endtime": 1653383809,
+    "dst_name": "www.transstroybank.ru",
+    "ttr": 21.040875,
+    "dst_addr": "91.215.42.48",
+    "src_addr": "192.168.10.15",
+    "proto": "TCP",
+    "af": 4,
+    "size": 0,
+    "paris_id": 1,
+    "result": [
+      {
+        "hop": 1,
+        "result": [
+          {
+            "from": "192.168.10.1",
+            "ttl": 64,
+            "size": 40,
+            "rtt": 0.993
+          },
+          {
+            "from": "192.168.10.1",
+            "ttl": 64,
+            "size": 40,
+            "rtt": 0.712
+          },
+          {
+            "from": "192.168.10.1",
+            "ttl": 64,
+            "size": 40,
+            "rtt": 0.683
+          }
+        ]
+      },
+      {
+        "hop": 2,
+        "result": [
+          {
+            "from": "192.168.29.1",
+            "ttl": 63,
+            "size": 40,
+            "rtt": 1.148
+          },
+          {
+            "from": "192.168.29.1",
+            "ttl": 63,
+            "size": 40,
+            "rtt": 1.379
+          },
+          {
+            "from": "192.168.29.1",
+            "ttl": 63,
+            "size": 40,
+            "rtt": 1.569
+          }
+        ]
+      },
+      {
+        "hop": 3,
+        "result": [
+          {
+            "from": "10.208.216.1",
+            "ttl": 253,
+            "size": 68,
+            "rtt": 6.256
+          },
+          {
+            "from": "10.208.216.1",
+            "ttl": 253,
+            "size": 68,
+            "rtt": 5.822
+          },
+          {
+            "from": "10.208.216.1",
+            "ttl": 253,
+            "size": 68,
+            "rtt": 6.402
+          }
+        ]
+      },
+      {
+        "hop": 4,
+        "result": [
+          {
+            "from": "172.16.26.1",
+            "ttl": 252,
+            "size": 68,
+            "rtt": 18.926
+          },
+          {
+            "from": "172.16.26.1",
+            "ttl": 252,
+            "size": 68,
+            "rtt": 19.44
+          },
+          {
+            "from": "172.16.26.1",
+            "ttl": 252,
+            "size": 68,
+            "rtt": 19.314
+          }
+        ]
+      },
+      {
+        "hop": 5,
+        "result": [
+          {
+            "from": "192.168.128.138",
+            "ttl": 250,
+            "size": 28,
+            "rtt": 19.994
+          },
+          {
+            "from": "192.168.128.138",
+            "ttl": 250,
+            "size": 28,
+            "rtt": 19.472
+          },
+          {
+            "from": "192.168.128.140",
+            "ttl": 250,
+            "size": 28,
+            "rtt": 15.919
+          }
+        ]
+      },
+      {
+        "hop": 6,
+        "result": [
+          {
+            "from": "172.27.248.54",
+            "ttl": 249,
+            "size": 28,
+            "rtt": 19.871
+          },
+          {
+            "from": "172.27.248.54",
+            "ttl": 249,
+            "size": 28,
+            "rtt": 19.938
+          },
+          {
+            "from": "172.27.248.54",
+            "ttl": 249,
+            "size": 28,
+            "rtt": 19.969
+          }
+        ]
+      },
+      {
+        "hop": 7,
+        "result": [
+          {
+            "from": "172.27.248.34",
+            "ttl": 247,
+            "size": 28,
+            "rtt": 21.528
+          },
+          {
+            "from": "172.27.248.34",
+            "ttl": 247,
+            "size": 28,
+            "rtt": 21.372
+          },
+          {
+            "from": "172.27.248.34",
+            "ttl": 247,
+            "size": 28,
+            "rtt": 20.471
+          }
+        ]
+      },
+      {
+        "hop": 8,
+        "result": [
+          {
+            "x": "*"
+          },
+          {
+            "from": "192.168.44.26",
+            "ttl": 246,
+            "size": 28,
+            "rtt": 20.522
+          },
+          {
+            "x": "*"
+          }
+        ]
+      },
+      {
+        "hop": 9,
+        "result": [
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          }
+        ]
+      },
+      {
+        "hop": 10,
+        "result": [
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          }
+        ]
+      },
+      {
+        "hop": 11,
+        "result": [
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          }
+        ]
+      },
+      {
+        "hop": 12,
+        "result": [
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          },
+          {
+            "from": "172.26.40.7",
+            "ttl": 244,
+            "size": 28,
+            "rtt": 52.577
+          }
+        ]
+      },
+      {
+        "hop": 13,
+        "result": [
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          }
+        ]
+      },
+      {
+        "hop": 14,
+        "result": [
+          {
+            "from": "103.198.140.56",
+            "ttl": 239,
+            "size": 28,
+            "rtt": 174.577
+          },
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          }
+        ]
+      },
+      {
+        "hop": 15,
+        "result": [
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          }
+        ]
+      },
+      {
+        "hop": 16,
+        "result": [
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          }
+        ]
+      },
+      {
+        "hop": 17,
+        "result": [
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          }
+        ]
+      },
+      {
+        "hop": 18,
+        "result": [
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          }
+        ]
+      },
+      {
+        "hop": 19,
+        "result": [
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          }
+        ]
+      },
+      {
+        "hop": 255,
+        "result": [
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          }
+        ]
+      }
+    ],
+    "msm_id": 41356729,
+    "prb_id": 53613,
+    "timestamp": 1653383664,
+    "msm_name": "Traceroute",
+    "from": "49.36.144.126",
+    "type": "traceroute",
+    "group_id": 41356729,
+    "stored_timestamp": 1653507378,
+    "probe_data": {
+      "address_v4": "45.252.76.102",
+      "address_v6": null,
+      "asn_v4": 135212,
+      "asn_v6": null,
+      "country_code": "IN",
+      "description": "Probe - Kullu (H.P.)",
+      "first_connected": 1594915077,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.1475,
+          31.8785
+        ]
+      },
+      "id": 53613,
+      "is_anchor": false,
+      "is_public": true,
+      "last_connected": 1653539702,
+      "prefix_v4": "45.252.76.0/24",
+      "prefix_v6": null,
+      "status": {
+        "id": 1,
+        "name": "Connected",
+        "since": "2022-05-25T17:33:45Z"
+      },
+      "status_since": 1653500025,
+      "tags": [
+        {
+          "name": "Fibre",
+          "slug": "fibre"
+        },
+        {
+          "name": "Office",
+          "slug": "office"
+        },
+        {
+          "name": "Core",
+          "slug": "core"
+        },
+        {
+          "name": "NAT",
+          "slug": "nat"
+        },
+        {
+          "name": "IPv4",
+          "slug": "ipv4"
+        },
+        {
+          "name": "FTTH",
+          "slug": "ftth"
+        },
+        {
+          "name": "system: IPv4 Capable",
+          "slug": "system-ipv4-capable"
+        },
+        {
+          "name": "system: IPv4 RFC1918",
+          "slug": "system-ipv4-rfc1918"
+        },
+        {
+          "name": "system: IPv4 Stable 30d",
+          "slug": "system-ipv4-stable-30d"
+        },
+        {
+          "name": "system: IPv4 Stable 1d",
+          "slug": "system-ipv4-stable-1d"
+        },
+        {
+          "name": "system: V4",
+          "slug": "system-v4"
+        }
+      ],
+      "total_uptime": 52801401,
       "type": "Probe"
     }
   },
@@ -2695,7 +4374,7 @@
       "id": 55193,
       "is_anchor": false,
       "is_public": true,
-      "last_connected": 1653451969,
+      "last_connected": 1653539678,
       "prefix_v4": "46.20.76.0/22",
       "prefix_v6": null,
       "status": {
@@ -2726,6 +4405,18 @@
           "slug": "ftth"
         },
         {
+          "name": "system: Resolves A Correctly",
+          "slug": "system-resolves-a-correctly"
+        },
+        {
+          "name": "system: Resolves AAAA Correctly",
+          "slug": "system-resolves-aaaa-correctly"
+        },
+        {
+          "name": "system: IPv4 Works",
+          "slug": "system-ipv4-works"
+        },
+        {
           "name": "system: IPv4 Capable",
           "slug": "system-ipv4-capable"
         },
@@ -2742,7 +4433,384 @@
           "slug": "system-v4"
         }
       ],
-      "total_uptime": 54268734,
+      "total_uptime": 54356443,
+      "type": "Probe"
+    }
+  },
+  {
+    "fw": 5060,
+    "mver": "2.5.1",
+    "lts": 3,
+    "endtime": 1653383723,
+    "dst_name": "www.transstroybank.ru",
+    "ttr": 128.600083,
+    "dst_addr": "91.215.42.48",
+    "src_addr": "192.168.200.3",
+    "proto": "TCP",
+    "af": 4,
+    "size": 0,
+    "paris_id": 1,
+    "result": [
+      {
+        "hop": 1,
+        "result": [
+          {
+            "from": "192.168.200.1",
+            "ttl": 64,
+            "size": 40,
+            "rtt": 0.994
+          },
+          {
+            "from": "192.168.200.1",
+            "ttl": 64,
+            "size": 40,
+            "rtt": 0.757
+          },
+          {
+            "from": "192.168.200.1",
+            "ttl": 64,
+            "size": 40,
+            "rtt": 0.731
+          }
+        ]
+      },
+      {
+        "hop": 2,
+        "result": [
+          {
+            "from": "100.126.0.1",
+            "ttl": 63,
+            "size": 40,
+            "rtt": 2.345
+          },
+          {
+            "from": "100.126.0.1",
+            "ttl": 63,
+            "size": 40,
+            "rtt": 2.214
+          },
+          {
+            "from": "100.126.0.1",
+            "ttl": 63,
+            "size": 40,
+            "rtt": 1.903
+          }
+        ]
+      },
+      {
+        "hop": 3,
+        "result": [
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          }
+        ]
+      },
+      {
+        "hop": 4,
+        "result": [
+          {
+            "from": "85.21.225.198",
+            "ttl": 250,
+            "size": 144,
+            "rtt": 10.669,
+            "icmpext": {
+              "version": 0,
+              "rfc4884": 1,
+              "obj": [
+                {
+                  "class": 0,
+                  "type": 0
+                }
+              ]
+            }
+          },
+          {
+            "from": "85.21.225.198",
+            "ttl": 250,
+            "size": 144,
+            "rtt": 10.817,
+            "icmpext": {
+              "version": 0,
+              "rfc4884": 1,
+              "obj": [
+                {
+                  "class": 0,
+                  "type": 0
+                }
+              ]
+            }
+          },
+          {
+            "from": "85.21.225.198",
+            "ttl": 250,
+            "size": 144,
+            "rtt": 10.51,
+            "icmpext": {
+              "version": 0,
+              "rfc4884": 1,
+              "obj": [
+                {
+                  "class": 0,
+                  "type": 0
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "hop": 5,
+        "result": [
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          }
+        ]
+      },
+      {
+        "hop": 6,
+        "result": [
+          {
+            "from": "81.211.31.70",
+            "ttl": 250,
+            "size": 68,
+            "rtt": 10.242
+          },
+          {
+            "from": "81.211.31.70",
+            "ttl": 250,
+            "size": 68,
+            "rtt": 10.248
+          },
+          {
+            "from": "81.211.31.70",
+            "ttl": 250,
+            "size": 68,
+            "rtt": 10.143
+          }
+        ]
+      },
+      {
+        "hop": 7,
+        "result": [
+          {
+            "from": "79.104.225.59",
+            "ttl": 247,
+            "size": 68,
+            "rtt": 11.173
+          },
+          {
+            "from": "79.104.225.59",
+            "ttl": 247,
+            "size": 68,
+            "rtt": 11.189
+          },
+          {
+            "from": "79.104.225.59",
+            "ttl": 247,
+            "size": 68,
+            "rtt": 10.999
+          }
+        ]
+      },
+      {
+        "hop": 8,
+        "result": [
+          {
+            "from": "87.229.217.102",
+            "ttl": 248,
+            "size": 28,
+            "rtt": 12.01
+          },
+          {
+            "from": "87.229.217.102",
+            "ttl": 248,
+            "size": 28,
+            "rtt": 10.673
+          },
+          {
+            "from": "87.229.217.102",
+            "ttl": 248,
+            "size": 28,
+            "rtt": 10.763
+          }
+        ]
+      },
+      {
+        "hop": 9,
+        "result": [
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          }
+        ]
+      },
+      {
+        "hop": 10,
+        "result": [
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          }
+        ]
+      },
+      {
+        "hop": 11,
+        "result": [
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          },
+          {
+            "x": "*"
+          }
+        ]
+      },
+      {
+        "hop": 12,
+        "result": [
+          {
+            "from": "91.215.42.48",
+            "ttl": 53,
+            "size": 4,
+            "tos": 40,
+            "flags": "SA",
+            "hdropts": [
+              {
+                "mss": 1380
+              }
+            ],
+            "rtt": 10.891
+          },
+          {
+            "from": "91.215.42.48",
+            "ttl": 53,
+            "size": 4,
+            "tos": 40,
+            "flags": "SA",
+            "hdropts": [
+              {
+                "mss": 1380
+              }
+            ],
+            "rtt": 11.789
+          },
+          {
+            "from": "91.215.42.48",
+            "ttl": 52,
+            "size": 4,
+            "flags": "SA",
+            "hdropts": [
+              {
+                "mss": 1380
+              }
+            ],
+            "rtt": 11.956
+          }
+        ]
+      }
+    ],
+    "msm_id": 41356729,
+    "prb_id": 55742,
+    "timestamp": 1653383662,
+    "msm_name": "Traceroute",
+    "from": "95.27.42.205",
+    "type": "traceroute",
+    "group_id": 41356729,
+    "stored_timestamp": 1653485337,
+    "probe_data": {
+      "address_v4": null,
+      "address_v6": null,
+      "asn_v4": 8402,
+      "asn_v6": null,
+      "country_code": "RU",
+      "description": null,
+      "first_connected": 1618687863,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.2595,
+          59.8985
+        ]
+      },
+      "id": 55742,
+      "is_anchor": false,
+      "is_public": false,
+      "last_connected": 1653539679,
+      "prefix_v4": "95.26.0.0/15",
+      "prefix_v6": null,
+      "status": {
+        "id": 1,
+        "name": "Connected",
+        "since": "2022-05-26T00:55:41Z"
+      },
+      "status_since": 1653526541,
+      "tags": [
+        {
+          "name": "system: Resolves A Correctly",
+          "slug": "system-resolves-a-correctly"
+        },
+        {
+          "name": "system: Resolves AAAA Correctly",
+          "slug": "system-resolves-aaaa-correctly"
+        },
+        {
+          "name": "system: IPv4 Works",
+          "slug": "system-ipv4-works"
+        },
+        {
+          "name": "system: Auto GEOIP city",
+          "slug": "system-auto-geoip-city"
+        },
+        {
+          "name": "system: IPv4 Capable",
+          "slug": "system-ipv4-capable"
+        },
+        {
+          "name": "system: IPv4 RFC1918",
+          "slug": "system-ipv4-rfc1918"
+        },
+        {
+          "name": "system: IPv4 Stable 30d",
+          "slug": "system-ipv4-stable-30d"
+        },
+        {
+          "name": "system: IPv4 Stable 90d",
+          "slug": "system-ipv4-stable-90d"
+        },
+        {
+          "name": "system: IPv4 Stable 1d",
+          "slug": "system-ipv4-stable-1d"
+        },
+        {
+          "name": "system: V4",
+          "slug": "system-v4"
+        }
+      ],
+      "total_uptime": 34786974,
       "type": "Probe"
     }
   }
