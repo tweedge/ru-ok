@@ -2,11 +2,13 @@
 
 **Note: While this repository discusses the results of hacktivism in the Russo-Ukrainian War, I am not personally participating in that hacktivism, and I am not condoning or encouraging hacktivism in this repository. For people looking to help Ukraine, especially nontechnical people who have been using certain webpages to "DDoS" Russia, please look into safe and legal options [listed here](https://www.npr.org/2022/02/25/1082992947/ukraine-support-help).**
 
-This is a very quick project to assess the status of Russian internet properties (via RIPE Atlas) being targeted by hacktivists. Specifically, I am evaluating every target listed in Ukraine's hacktivist "IT ARMY" Telegram group with many unique probes to check for service availability on both HTTP and HTTPS.
+**Important Update: RU-OK? is not currently collecting new measurements. Please see "Soft Stop" under the Methodology section for more details.**
+
+This is a very quick project to assess the status of Russian internet properties (via RIPE Atlas) being targeted by hacktivists. Specifically, I evaluated almost every target listed in Ukraine's hacktivist "IT ARMY" Telegram group with many unique probes between `2022-02-27` and `2022-05-30` to check for service availability.
 
 I wanted to check connectivity from within Russia's borders because I saw many mixed reports across Twitter and Reddit, with international parties (Americans, Ukrainians, etc.) claiming many sites had been knocked offline, where Russians chimed in that many sites remained online for them. The truth is more complex - availability for Russians is being prioritized by many RU-local sites, and international traffic may be facing extreme congestion, or simply be sinkholed in some cases.
 
-The most recent uptime statistics for each site (binned by sector) are also available in [STATUS.md](https://github.com/tweedge/ru-ok/blob/main/STATUS.md), and you can use this to see which sites have the most interesting availability characteristics at-a-glance. There is measurably higher availability for several target sites within Russia's borders, but unless traffic from known RIPE Atlas probes is also filtered (unlikely), Russia is still facing substantial outages in the face of hacktivism. For example, the Kremlin site has been quoted as offline by many people on Reddit and Twitter. From my scanning, we can clearly see that while `kremlin.ru` may appear 'down' internationally, it has near-normal (80%+) availability within Russia - a stark difference.
+The uptime statistics as of `2022-05-30` for each site are also available in the final [STATUS.md](https://github.com/tweedge/ru-ok/blob/main/STATUS.md), and while this project was collecting new measurements you could use this to see which sites have the most interesting availability characteristics daily at-a-glance. You can also use the commit history to look through prior days' summaries. There is measurably higher availability for several target sites within Russia's borders, but unless traffic from known RIPE Atlas probes is also filtered (unlikely), Russia is still facing substantial outages in the face of hacktivism. For example, the Kremlin site has been quoted as offline by many people on Reddit and Twitter. From my scanning, we can clearly see that while `kremlin.ru` may appear 'down' internationally, it has near-normal (80%+) availability within Russia - a stark difference.
 
 ## Why?
 
@@ -37,7 +39,7 @@ So, how can we get a higher-accuracy assessment of the situation without:
 
 ## Methodology
 
-To get a better sense of the global situation, I elected to use [RIPE Atlas](https://atlas.ripe.net/) to run some active measurements against each domain targeted by the IT ARMY of Ukraine Telegram.
+To get a better sense of the global situation, I elected to use [RIPE Atlas](https://atlas.ripe.net/) to run some active measurements against each domain or IP targeted by the IT ARMY of Ukraine Telegram, and did so from `2022-02-27` to `2022-05-30`.
 
 Why RIPE Atlas? Atlas is a project by [RIPE NCC](https://www.ripe.net/) is a global network of probes that measure Internet connectivity and reachability, providing a deep understanding of the state of the Internet. Probes are hosted by ordinary people on their regular home or business network - I am a probe host, as are my parents - and can be used by contributors to run a handful of connectivity tests (ex. ping, traceroute, DNS lookups) against any internet-accessible host. Very importantly, this gives us a view of the internet from the probe's connection without using a VPN (unless the entire network the probe is on is being tunneled through one, which is generally unlikely).
 
@@ -52,9 +54,7 @@ For each measurement:
 * Probes report the data retrieved - or any errors encountered - to RIPE Atlas
 * I collect the measurement information after waiting a minimum of 15 minutes and run analysis on it
 
-Afterwards, results are uploaded to this GitHub. **Edit:** I will be running this analysis every *24 hours* starting March 8th instead of every 12 hours. This is due to RIPE's quotas and the ever-increasing number of targeted sites.
-
-**New:** Due to an ever-increasing number of targets listed by "IT ARMY of Ukraine" this repository will now randomly sample targets, grabbing partial results if/when I run out of credits.
+Afterwards, results are uploaded to this GitHub. **Edit:** I will be running this analysis every *24 hours* starting March 8th instead of every 12 hours. Due to an ever-increasing number of targets listed by "IT ARMY of Ukraine" this repository will now randomly sample targets, grabbing partial results if/when I run out of credits.
 
 ### Measurements Taken
 
@@ -92,13 +92,24 @@ And again on 2022-03-13, IT ARMY instructed readers to DDoS `92.53.97.198` (whic
 
 **TCP results for non-port-80 pings prior to 2022-03-17 are invalid**: This was due to a (dumb, preventable) bug in my code, and I apologize. All webserver tests, which are summarized in this README and in STATUS.md, are however 100% valid. I wasn't doing anything with the TCP data and therefore didn't notice the inconsistent results which pointed to a bug.
 
+### Soft Stop
+
+**As of 2022-05-30, I have stopped collecting new measurements.** The reasons for this are principally:
+
+1. The current dataset answered questions about the development and effectiveness of Ukraine's hacktivist offensive, which was its stated original goal.
+2. The current dataset may also answer some questions about a. the impact of reduced international focus on Ukraine's DDoS-centric hacktivism (both via media cycles moving on, and to more sophisticated hacktivism leading to data breaches, etc.) or b. the reduced impact of DDoS attacks via increased Russian fortification of key websites in the past few months. However, *additional* data collection with this same methodology is unlikely to help better-answer these questions.
+
+This project will restart if these are more questions that data like this can help answer. I am keeping an eye on IT ARMY Telegram, as well as the various predictions of increased/decreased conflict come September, where new data could be valuable. While there aren't new answers I can bring to light currently, the bloody conflict in Ukraine continues, and I again encourage anyone in a position to help to please look into safe and legal options [listed here](https://www.npr.org/2022/02/25/1082992947/ukraine-support-help).
+
+I am extremely thankful to the people I met along the way who helped with this project, provided feedback and support, and offered to donate RIPE Atlas credits to sustain these measurements. In particular, thank you to [Bob Rudis](https://twitter.com/hrbrmstr) and [Kevin Beaumont](https://twitter.com/GossiTheDog) for your support and insight :)
+
 ## FAQ
 
 #### How can I help you measure this stuff?
 
 If you have RIPE Atlas credits, run your own analysis, do new studies, fork this hacked-together code, have fun with it!
 
-If you have spare RIPE Atlas credits that you don't want/need, I'd certainly appreciate any credit donation you can spare! Reach out to me on [Twitter](https://twitter.com/_tweedge) or [Reddit](https://www.reddit.com/user/tweedge) if that's the case and I'll send you my RIPE Atlas email.
+If you have spare RIPE Atlas credits that you don't want/need, I'd certainly appreciate any credit donation you can spare if I restart measurements! Reach out to me on [Twitter](https://twitter.com/_tweedge) or [Reddit](https://www.reddit.com/user/tweedge) if that's the case and I'll send you my RIPE Atlas email.
 
 #### How can I get involved in other ways?
 
